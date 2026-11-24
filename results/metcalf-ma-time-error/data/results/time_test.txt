@@ -1,0 +1,117 @@
+Time test: DASCH ma-plate times vs MPC times of Metcalf's own observations, 1905-1913
+Sites: Taunton (MPC 803, 71.10 W), Winchester (MPC 799, 71.14 W). Telescope series: ma (DASCH).
+offset = DASCH exposure midpoint - MPC time. predA = shift if 'local mean time from noon' was read as LST.
+res_null = offset of the ma plate nearest 0 h; res_A = offset - predA for the ma plate nearest predA.
+n = ma candidates (field contains the MPC position, within +-1 day). disc * = MPC discovery observation.
+class: S = res_A within 0.15 h of -0.26 h; E = within 0.15 h of -0.26 h - exposure time; '-' = neither.
+
+object       d MPC time (UT)    site  n plate    DASCH midpoint    exp  offset   predA res_null   res_A cl
+00581J05Y00C * 1905-12-25T03:21 803  1 ma00026  1905-12-25T08:27   50   +5.09   +5.79    +5.09   -0.70 -
+00603J06D00G * 1906-02-17T00:57 803  1 ma00059  1906-02-17T05:33   61   +4.60   +2.25    +4.60   +2.35 -
+00603          1906-02-17T00:57 803  1 ma00059  1906-02-17T05:33   61   +4.60   +2.25    +4.60   +2.35 -  (same time as above, not counted)
+00604J06D00H * 1906-02-17T00:57 803  1 ma00059  1906-02-17T05:33   61   +4.60   +2.25    +4.60   +2.35 -  (same time as above, not counted)
+00602J06D00J * 1906-02-17T02:43 803  1 ma00060  1906-02-17T04:21   45   +1.63   +2.25    +1.63   -0.62 -
+00603          1906-02-18T01:04 803  2 ma00061  1906-02-18T03:00   50   +1.94   +2.19    +1.94   -0.25 S
+00603          1906-02-24T02:57 803  1 ma00064  1906-02-24T04:28   50   +1.53   +1.79    +1.53   -0.26 S
+00603          1906-03-18T00:42 803  1 ma00073  1906-03-18T00:31   45   -0.19   +0.35    -0.19   -0.54 -
+00599J06H00F * 1906-04-26T04:40 803  2 ma00097  1906-04-26T02:27   29   -2.21   -2.21    -2.21   -0.00 -
+00600J06L00A * 1906-06-15T04:16 803  2 ma00117  1906-06-14T22:15   35   -6.01   -5.49    -6.01   -0.52 -
+00611J06S00M * 1906-09-25T04:20 803  2 ma00144  1906-09-25T15:15   35  +10.91  +11.76    -4.34   -0.85 E
+00611          1906-09-25T04:20 803  2 ma00144  1906-09-25T15:15   35  +10.91  +11.76    -4.34   -0.85 E  (same time as above, not counted)
+00611          1906-09-26T04:16 803  2 ma00144  1906-09-25T15:15   35  -13.01  -12.24   +10.76   -0.77 E
+00620J06U00O * 1906-10-27T03:35 803  1 ma00165  1906-10-27T05:21   30   +1.77   +9.67    +1.77   -7.90 -
+00622J06V00N * 1906-11-14T04:20 803   0 (no ma plate with a time in DASCH metadata)
+0097PJ06V020   1906-11-24T01:00 803  1 ma00193  1906-11-24T08:19   35   +7.32   +7.84    +7.32   -0.52 -
+00636J07C00E * 1907-02-09T01:00 803   0 (no ma plate with a time in DASCH metadata)
+00636          1907-02-13T00:46 803   0 (no ma plate with a time in DASCH metadata)
+00637J07E00N * 1907-03-12T03:59 803  2 ma00263  1907-03-12T04:29   45   +0.50   +0.75    -0.44   -0.25 S
+00637J07E00N   1907-03-16T02:39 803  1 ma00265  1907-03-16T02:19   35   -0.35   +0.50    -0.35   -0.85 E
+00792J07F00C * 1907-03-21T04:57 803   0 (no ma plate with a time in DASCH metadata)
+00792          1907-03-21T04:57 803   0 (no ma plate with a time in DASCH metadata)
+00792          1907-04-03T04:35 803  2 ma00277  1907-04-03T03:03   35   -1.54   -0.69    -1.54   -0.85 E
+00637          1907-04-07T01:39 803  1 ma00281  1907-04-06T23:41   45   -1.96   -0.94    -1.96   -1.02 E
+00792          1907-04-12T04:23 803   0 (no ma plate with a time in DASCH metadata)
+00792          1907-04-18T03:23 803  1 ma00292  1907-04-18T00:52   35   -2.52   -1.67    -2.52   -0.85 E
+00638J07J00G * 1907-05-06T03:04 803   0 (no ma plate with a time in DASCH metadata)
+00645J07R00P * 1907-09-14T02:27 803  1 ma00342  1907-09-14T14:00   40  +11.55  +12.50   +11.55   -0.95 E
+00645          1907-09-14T07:11 803  1 ma00342  1907-09-14T14:00   40   +6.82  -11.44    +6.82   -5.74 -
+00645          1907-09-15T07:29 803  2 ma00344  1907-09-15T14:53   75   +7.39  -11.51    +6.52   -5.10 -
+00655J07V00T * 1907-11-05T04:00 803  1 ma00387  1907-11-05T12:14   36   +8.23   +9.09    +8.23   -0.86 E
+00653          1907-11-28T03:02 803  1 ma00402  1907-11-28T09:47   35   +6.75   +7.59    +6.75   -0.84 E
+00653J07W00C * 1907-11-28T03:03 803  1 ma00402  1907-11-28T09:47   35   +6.75   +7.59    +6.75   -0.84 E
+00653          1907-12-01T01:29 803  1 ma00404  1907-12-01T08:02   35   +6.55   +7.39    +6.55   -0.84 E
+00660          1908-01-09T05:41 803  1 ma00449  1908-01-09T09:40   35   +3.98   +4.83    +3.98   -0.85 E
+00660J08A00N * 1908-01-09T05:41 803  1 ma00449  1908-01-09T09:40   35   +3.98   +4.83    +3.98   -0.85 E  (same time as above, not counted)
+00660          1908-01-11T01:29 803  1 ma00451  1908-01-11T05:56   35   +4.46   +4.71    +4.45   -0.25 S
+00660          1908-02-01T04:11 803  1 ma00464  1908-02-01T06:44   35   +2.56   +3.32    +2.56   -0.76 E
+00611          1908-02-04T02:47 803  1 ma00468  1908-02-04T05:04   35   +2.28   +3.13    +2.28   -0.85 E
+00660          1908-02-05T00:09 803   0 (no ma plate with a time in DASCH metadata)
+01345J08C00E * 1908-02-05T01:49 803  1 ma00470  1908-02-05T03:37   60   +1.80   +3.07    +1.80   -1.27 E
+01345          1908-02-08T04:30 803  3 ma00475  1908-02-08T07:06   50   +2.61   +2.87    -0.73   -0.26 S
+00661J08D00D * 1908-02-23T02:35 803  2 ma00481  1908-02-23T04:13   61   +1.63   +1.89    +1.63   -0.26 S
+00662J08F00F * 1908-03-31T04:23 803   0 (no ma plate with a time in DASCH metadata)
+00755J08G00C * 1908-04-07T04:47 803   0 (no ma plate with a time in DASCH metadata)
+00756          1908-04-27T04:54 803  1 ma00552  1908-04-27T01:44   35   -3.16   -2.31    -3.16   -0.85 E
+00756J08H00D * 1908-04-27T04:54 803  1 ma00552  1908-04-27T01:44   35   -3.16   -2.31    -3.16   -0.85 E  (same time as above, not counted)
+00756          1908-05-02T03:44 803   0 (no ma plate with a time in DASCH metadata)
+00756          1908-05-20T02:06 803   0 (no ma plate with a time in DASCH metadata)
+00675J08Q00H * 1908-08-31T01:39 803  2 ma00607  1908-08-31T14:10   35  +12.52  +13.37    -1.65   -0.85 E
+00673J08S00G * 1908-09-21T05:07 803  2 ma00629  1908-09-21T16:05   45  +10.97  +11.99    -5.12   -1.02 E
+00757J08T00G * 1908-10-01T02:01 803  1 ma00638  1908-10-01T13:06   71  +11.08  +11.34   +11.08   -0.26 S
+00525J08U00J * 1908-10-22T04:17 803  2 ma00666  1908-10-22T13:24   35   +9.11  -13.98    -4.29   -0.91 E
+00525          1908-10-22T04:17 803  2 ma00666  1908-10-22T13:24   35   +9.11  -13.98    -4.29   -0.91 E  (same time as above, not counted)
+00525          1908-10-23T01:15 803  3 ma00668  1908-10-23T10:13   40   +8.97   +9.90    -1.26   -0.93 E
+00690J09U00E * 1909-10-17T01:14 803  2 ma00860  1909-10-17T10:42   35   +9.46  -13.62    -1.24   -0.92 E
+00694J09V00C * 1909-11-08T06:02 803  1 ma00880  1909-11-08T09:54   40   +3.87   +8.86    +3.87   -4.99 -
+00695J09V00D * 1909-11-08T07:39 803  1 ma00882  1909-11-08T11:31   40   +3.87   +8.85    +3.87   -4.98 -
+00691J09X00B * 1909-12-12T02:41 803  1 ma00938  1909-12-12T08:14   50   +5.55   +6.64    +5.55   -1.09 E
+00696J10A00C * 1910-01-11T01:44 803  1 ma00970  1910-01-11T06:09   50   +4.42   +4.67    +4.41   -0.25 S
+00691          1910-02-02T00:41 803  1 ma00989  1910-02-02T02:41   60   +1.99   +3.23    +1.99   -1.24 E
+00696          1910-02-02T02:28 803  1 ma00990  1910-02-02T04:52   35   +2.39   +3.23    +2.39   -0.84 E
+00675J10C00H * 1910-02-08T03:56 803  1 ma01009  1910-02-08T06:31   50   +2.57   +2.83    +2.57   -0.26 S
+00675J10C00H   1910-02-11T01:35 803  1 ma01013  1910-02-11T03:59   50   +2.39   +2.64    +2.39   -0.25 S
+00696          1910-02-15T02:57 803  1 ma01021  1910-02-15T04:24   40   +1.44   +2.38    +1.44   -0.94 E
+00675J10C00H   1910-03-05T02:55 803  1 ma01026  1910-03-05T03:51   50   +0.93   +1.20    +0.93   -0.27 S
+00599          1910-03-15T03:46 803   0 (no ma plate with a time in DASCH metadata)
+00726J11W00C * 1911-11-23T03:40 799  1 ma01199  1911-11-23T10:48   30   +7.14   +7.91    +7.14   -0.77 E
+00729J12C00E * 1912-02-10T02:42 799   0 (no ma plate with a time in DASCH metadata)
+00736J12W00C * 1912-11-17T03:40 799  1 ma01411  1912-11-17T10:59   40   +7.33   +8.25    +7.33   -0.92 E
+00737J12X00C * 1912-12-08T01:57 799  2 ma01426  1912-12-08T07:55   40   +5.96   +6.88    -1.97   -0.92 E
+00739J13C00H * 1913-02-08T01:49 799   0 (no ma plate with a time in DASCH metadata)
+00740J13C00K * 1913-02-11T04:23 799  2 ma01483  1913-02-11T06:10   35   +1.78   +2.62    +1.78   -0.84 E
+00741J13C00J * 1913-02-11T04:23 799  2 ma01483  1913-02-11T06:10   35   +1.78   +2.62    +1.78   -0.84 E  (same time as above, not counted)
+00747J13E00K * 1913-03-08T08:47 799  3 ma01501  1913-03-08T04:11   35   -4.60   +0.97    -4.60   -5.57 -
+00767J13S00D * 1913-09-24T03:09 799  2 ma01617  1913-09-23T14:29   80  -12.67  -12.12   +10.62   -0.55 -
+
+Independent observation times with an ma plate: 54
+null (DASCH time = MPC time): median |res| 2.87 h; |res| <= 1.5 h for 8/54
+A (LMT from noon read as LST): median |res| 0.85 h; |res| <= 1.5 h for 47/54; median res -0.84 h
+chance test: shuffled predA gives |res| <= 1.5 h for mean 11.5/54, max 23/54 in 10,000 shuffles; true predA 47/54 (P < 1e-4)
+fine structure: class S 11, class E 29, neither 14 (of 54)
+
+Per series (same test for every DASCH series with a match; times of exactly 00:00:00 excluded):
+  series  obs date-only  A<=1.5h null<=1.5h shuffle mean/max
+  ac       32         0     9/32      14/32        8.5/14
+  ai       49         0    18/49      21/49       17.3/25
+  ak        1         0     0/1        0/1         0.0/0
+  am       11         0     1/11       6/11        2.1/5
+  b         1         0     0/1        0/1         0.0/0
+  c         1         0     0/1        0/1         0.0/0
+  i         2         0     0/2        1/2         0.0/0
+  ma       54         0    47/54       8/54       11.5/20
+  mb       63         0     5/63      11/63        5.7/11
+  mc        1         0     1/1        0/1         1.0/1
+  md        1         0     1/1        0/1         1.0/1
+
+Cutout check (cutouts.py; z = matched-filter significance at the Horizons position for each time;
+'source' = brightest non-catalog source within 20" of the track, expressed as a time along the track):
+ 653 ma00402 V~13.8: MPC 1907-11-28T03:03 -> z   +8.8 | DASCH 1907-11-28T09:47 -> z   -0.6 | positions 218" apart | brightest source near track: z +14.5, 0" off track, at MPC +0.27 h = DASCH -6.47 h
+ 660 ma00449 V~13.2: MPC 1908-01-09T05:41 -> z   +5.5 | DASCH 1908-01-09T09:40 -> z   -0.8 | positions 136" apart | brightest source near track: z +23.2, 1" off track, at MPC +0.29 h = DASCH -3.69 h
+ 696 ma00970 V~13.4: MPC 1910-01-11T01:44 -> z  +14.1 | DASCH 1910-01-11T06:09 -> z   +0.1 | positions 158" apart | brightest source near track: z +14.3, 0" off track, at MPC -0.02 h = DASCH -4.43 h
+
+Link to the 1908 Pluto candidate: predicted shift (predA, DASCH time - true time) vs the measured along-track
+offset of the candidate (results/candidate_1908.txt, steps 6-7). Pluto moves ~2.9"/h, so +-2" = +-0.7 h.
+  ma00729 DASCH 1908-12-20T06:56: predA +6.10 h; candidate offset -6.30 h along track (plate time earlier)
+  ma00731 DASCH 1908-12-21T06:46: predA +6.04 h; candidate offset -5.95 h along track (plate time earlier)
+  ma00733 DASCH 1908-12-22T06:49: predA +5.97 h; candidate offset -5.43 h along track (plate time earlier)
+  ma00937 DASCH 1909-12-12T07:35: predA +6.64 h; candidate offset -6.56 h along track (plate time earlier)

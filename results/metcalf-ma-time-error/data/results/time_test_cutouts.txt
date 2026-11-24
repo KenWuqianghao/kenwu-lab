@@ -1,0 +1,3 @@
+ 653 ma00402 V~13.8: MPC 1907-11-28T03:03 -> z   +8.8 | DASCH 1907-11-28T09:47 -> z   -0.6 | positions 218" apart | brightest source near track: z +14.5, 0" off track, at MPC +0.27 h = DASCH -6.47 h
+ 660 ma00449 V~13.2: MPC 1908-01-09T05:41 -> z   +5.5 | DASCH 1908-01-09T09:40 -> z   -0.8 | positions 136" apart | brightest source near track: z +23.2, 1" off track, at MPC +0.29 h = DASCH -3.69 h
+ 696 ma00970 V~13.4: MPC 1910-01-11T01:44 -> z  +14.1 | DASCH 1910-01-11T06:09 -> z   +0.1 | positions 158" apart | brightest source near track: z +14.3, 0" off track, at MPC -0.02 h = DASCH -4.43 h

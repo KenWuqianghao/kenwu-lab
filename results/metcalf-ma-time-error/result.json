@@ -1,0 +1,15 @@
+{
+  "slug": "metcalf-ma-time-error",
+  "title": "A systematic time error in the DASCH metadata of J. H. Metcalf's early \"ma\" plates, and Pluto on four Harvard plates of 1908 and 1909",
+  "tier": "Public data",
+  "version": 3,
+  "date": "2026-11-24",
+  "summary": "The DASCH times of Metcalf's 1905-1913 plates read his local mean time as sidereal time. At the corrected times, a faint source is at Pluto's position on four plates.",
+  "abstract": "The DASCH exposure times of the early Harvard \"ma\" plates (J. H. Metcalf, Taunton, 1905-1913) contain a systematic error. The error follows one rule with no free parameter: Metcalf's logged local mean time, counted from noon, was read as local sidereal time. Five independent tests support the rule, including 47 of 54 MPC observation times of Metcalf's own asteroids, 34 of 36 times printed in Astronomische Nachrichten, and the lunar-eclipse plate ma00905. At the corrected times, a faint source is at Pluto's predicted position on ma00731 and ma00733 (1908 Dec 21, 22), more weakly on ma00729 (Dec 20), and on ma00937 (1909 Dec 12). The image on ma00731 was published first by Graham (2026); the two analyses were made independently. The identification is a candidate for expert examination of the glass plates. This work has not been reviewed by experts. The text was produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+  "keywords": ["Pluto", "prediscovery images", "archival photographic plates", "DASCH", "plate metadata", "J. H. Metcalf"],
+  "doi": "10.5281/zenodo.24510122",
+  "concept_doi": "10.5281/zenodo.24508621",
+  "zenodo_id": 24510122,
+  "doi_version": 3,
+  "related": [{"doi": "10.5281/zenodo.24376800", "relation": "cites"}]
+}
