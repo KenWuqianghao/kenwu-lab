@@ -8,7 +8,7 @@ For each Metcalf observation in the MPC (Taunton 803 / Winchester 799, 1905-1913
   res_A    = offset - predA of the ma plate nearest to predA
 Both hypotheses pick their own best plate from the same candidates (same freedom). Residuals wrap to
 [-12, 12) h because DASCH dates and the 24 h cycle can differ by a day. Only ma plates count;
-DASCH times of exactly 00:00:00 (date only) are excluded. Observations at the same time and site
+DASCH times of 00:00 (date only, in any of the DASCH formats) are excluded. Observations at the same time and site
 (several objects on one plate) count once.
 
 Chance test: shuffle predA among the observations (10,000 times) and count how often as many
@@ -37,7 +37,7 @@ def main():
             discs.add((o["obj"], o["t"].isot[:16], o["code"]))
     log = [l.split() for l in open(HERE / "match.log") if l.startswith("[")]
     logobs = [(l[1], l[2], l[3], l[6].split("=")[1].rstrip("h")) for l in log]  # obj, t(min), code, predA
-    rows = [r for r in allrows if r["series"] == "ma" and not r["t_dasch"].endswith("T00:00:00")]
+    rows = [r for r in allrows if r["series"] == "ma" and r["t_dasch"][11:19] not in ("00:00:00", "00:00")]
     by = {}
     for r in rows:
         by.setdefault((r["obj"], r["t_mpc"][:16], r["code"]), []).append(r)
@@ -89,11 +89,11 @@ def main():
       f"true predA {h_true}/{n} (P < 1e-4)")
     P(f"fine structure: class S {cls.count('S')}, class E {cls.count('E')}, neither {cls.count('-')} (of {n})")
     P()
-    P("Per series (same test for every DASCH series with a match; times of exactly 00:00:00 excluded):")
+    P("Per series (same test for every DASCH series with a match; date-only times of 00:00 excluded):")
     P(f"  {'series':6s} {'obs':>4s} {'date-only':>9s} {'A<=1.5h':>8s} {'null<=1.5h':>10s} {'shuffle mean/max':>16s}")
     for ser in sorted({r["series"] for r in allrows}):
         sr = [r for r in allrows if r["series"] == ser]
-        dated = [r for r in sr if not r["t_dasch"].endswith("T00:00:00")]
+        dated = [r for r in sr if r["t_dasch"][11:19] not in ("00:00:00", "00:00")]
         g = {}
         for r in dated:
             g.setdefault((r["t_mpc"][:16], r["code"]), []).append(r)
