@@ -1,0 +1,12 @@
+{
+  "slug": "propose-check",
+  "title": "Propose check: a test of the factory propose step",
+  "tier": "Computer-assisted",
+  "version": 1,
+  "date": "2026-11-24",
+  "summary": "A test result. It exists only to check the publishing workflow and will be removed.",
+  "abstract": "This is a test record for the publishing workflow of this repository. It checks that a Lean file compiles against Mathlib and that a small script reruns. It contains no research result. This work has not been reviewed by experts. The text was produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+  "keywords": [
+    "test"
+  ]
+}
