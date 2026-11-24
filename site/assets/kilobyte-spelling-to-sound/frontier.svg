@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif" font-size="12">
+<rect width="640" height="360" fill="white"/>
+<line x1="60" x2="620" y1="320.0" y2="320.0" stroke="#ddd"/><text x="54" y="324.0" text-anchor="end">0%</text>
+<line x1="60" x2="620" y1="260.0" y2="260.0" stroke="#ddd"/><text x="54" y="264.0" text-anchor="end">10%</text>
+<line x1="60" x2="620" y1="200.0" y2="200.0" stroke="#ddd"/><text x="54" y="204.0" text-anchor="end">20%</text>
+<line x1="60" x2="620" y1="140.0" y2="140.0" stroke="#ddd"/><text x="54" y="144.0" text-anchor="end">30%</text>
+<line x1="60" x2="620" y1="80.0" y2="80.0" stroke="#ddd"/><text x="54" y="84.0" text-anchor="end">40%</text>
+<line x1="60" x2="620" y1="20.0" y2="20.0" stroke="#ddd"/><text x="54" y="24.0" text-anchor="end">50%</text>
+<line x1="193.3" x2="193.3" y1="20" y2="320" stroke="#eee"/><text x="193.3" y="336" text-anchor="middle">512 B</text>
+<line x1="326.7" x2="326.7" y1="20" y2="320" stroke="#eee"/><text x="326.7" y="336" text-anchor="middle">1024 B</text>
+<line x1="460.0" x2="460.0" y1="20" y2="320" stroke="#eee"/><text x="460.0" y="336" text-anchor="middle">2048 B</text>
+<line x1="593.3" x2="593.3" y1="20" y2="320" stroke="#eee"/><text x="593.3" y="336" text-anchor="middle">4096 B</text>
+<text x="350.0" y="354" text-anchor="middle">C source bytes (log scale)</text>
+<text x="14" y="180.0" transform="rotate(-90 14 180.0)" text-anchor="middle">validation phoneme error rate</text>
+<polyline fill="none" stroke="#1f5fa8" stroke-width="2" points="193.3,183.6 326.7,228.4 460.0,241.8 593.3,249.4"/>
+<circle cx="193.3" cy="183.6" r="4" fill="#1f5fa8"/><text x="199.3" y="177.6">s512 22.7%</text>
+<circle cx="326.7" cy="228.4" r="4" fill="#1f5fa8"/><text x="332.7" y="222.4">s1024 15.3%</text>
+<circle cx="460.0" cy="241.8" r="4" fill="#1f5fa8"/><text x="466.0" y="235.8">s2048 13.0%</text>
+<circle cx="593.3" cy="249.4" r="4" fill="#1f5fa8"/><text x="599.3" y="243.4">s4096 11.8%</text>
+<rect x="204.2" y="55.6" width="8" height="8" fill="#c0392b"/><text x="215.2" y="73.6" fill="#c0392b">letter to most common phoneme 43.4%</text>
+<rect x="471.6" y="189.9" width="8" height="8" fill="#c0392b"/><text x="482.6" y="207.9" fill="#c0392b">NRL 1976 rules (rule data only) 21.0%</text>
+</svg>

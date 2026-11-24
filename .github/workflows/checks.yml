@@ -1,0 +1,87 @@
+name: Checks
+
+on:
+  pull_request:
+    paths: ['results/**', 'lean/**', 'tools/**', 'site/**', '.github/workflows/**']
+  push:
+    branches: [main]
+    paths: ['results/**', 'lean/**', 'tools/**', 'site/**', '.github/workflows/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  changed:
+    name: Find changed results
+    runs-on: ubuntu-latest
+    outputs:
+      slugs: ${{ steps.diff.outputs.slugs }}
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          fetch-depth: 0
+      - id: diff
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          if [ -z "$BASE" ] || [ "$BASE" = "0000000000000000000000000000000000000000" ] \
+             || [ "${{ github.event_name }}" = "workflow_dispatch" ] \
+             || git diff --name-only "$BASE" HEAD | grep -qE '^(lean|tools|\.github)/'; then
+            slugs=$(ls results 2>/dev/null || true)
+          else
+            slugs=$(git diff --name-only "$BASE" HEAD | sed -n 's|^results/\([^/]*\)/.*|\1|p' | sort -u)
+          fi
+          json=$(for s in $slugs; do [ -d "results/$s" ] && printf '"%s",' "$s"; done)
+          echo "slugs=[${json%,}]" >> "$GITHUB_OUTPUT"
+          echo "changed results: [${json%,}]"
+
+  site:
+    name: Build the site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.13'
+      - run: sudo apt-get install -y -qq pandoc
+      - run: python3 site/build.py
+
+  check:
+    name: Check ${{ matrix.slug }}
+    needs: changed
+    if: needs.changed.outputs.slugs != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        slug: ${{ fromJSON(needs.changed.outputs.slugs) }}
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.13'
+      - name: Required files and result.json
+        run: python3 tools/check_result.py "results/${{ matrix.slug }}"
+      - name: Lean proofs
+        if: hashFiles(format('results/{0}/lean/*.lean', matrix.slug)) != ''
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          export PATH="$HOME/.elan/bin:$PATH"
+          cd lean
+          lake exe cache get
+          for f in ../results/${{ matrix.slug }}/lean/*.lean; do
+            echo "::group::lean $f"
+            out=$(lake env lean "$f" 2>&1) || { echo "$out"; exit 1; }
+            echo "$out"
+            echo "::endgroup::"
+            if echo "$out" | grep -q "declaration uses 'sorry'"; then echo "sorry in $f"; exit 1; fi
+          done
+      - name: Result checks (checks/ci.sh)
+        working-directory: results/${{ matrix.slug }}
+        run: bash checks/ci.sh
