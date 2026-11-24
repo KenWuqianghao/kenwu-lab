@@ -27,7 +27,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 API = os.environ.get("ZENODO_URL", "https://zenodo.org").rstrip("/") + "/api"
 REPO = os.environ.get("GITHUB_REPOSITORY", "KenWuqianghao/kenwu-lab")
-AUTHOR = {"name": "Wu, Ken"}
+AUTHOR = {"name": "Wu, Qianghao"}
 
 
 def call(method, url, data=None, raw=None, ctype="application/json"):

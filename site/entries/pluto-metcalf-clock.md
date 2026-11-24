@@ -9,7 +9,7 @@ image: assets/pluto-metcalf-clock/stamps.png
 
 Harvard's DASCH project scanned a century of glass sky plates. We searched them for Pluto before its 1930 discovery. On the plates from J. H. Metcalf's observatory in Taunton, Massachusetts (series "ma", 1905 to 1913), the times are wrong.
 
-Peter Graham published the Pluto image on plate MA 731 first ([DOI 10.5281/zenodo.24376800](https://doi.org/10.5281/zenodo.24376800)). He fitted the plate time to the trail of the asteroid (179) Klytaemnestra, 348 minutes before the DASCH time. He gave no cause for the offset. Our position on ma00731 agrees with his to 0.19". Our Zenodo record ([DOI 10.5281/zenodo.24508622](https://doi.org/10.5281/zenodo.24508622)) adds the cause of the time error and two more plates.
+Peter Graham published the Pluto image on plate MA 731 first ([DOI 10.5281/zenodo.24376800](https://doi.org/10.5281/zenodo.24376800)). He fitted the plate time to the trail of the asteroid (179) Klytaemnestra, 348 minutes before the DASCH time. He gave no cause for the offset. Our position on ma00731 agrees with his to 0.19". Our Zenodo record ([DOI 10.5281/zenodo.24508621](https://doi.org/10.5281/zenodo.24508621), all versions) adds the cause of the time error and two more plates.
 
 ## What we found
 
