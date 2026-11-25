@@ -205,6 +205,7 @@ if __name__ == "__main__":
             pending.append(j)
         print(j[1], r if isinstance(r, str) else {k: r.get(k) for k in ("status", "P", "xi", "k", "p_drw", "runtime_s")},
               flush=True)
+    stuck = []
     for j in pending:  # injections whose candidate was handled by another part
         for _ in range(360):
             r = run_one(*j, blind)
@@ -212,3 +213,7 @@ if __name__ == "__main__":
                 break
             time.sleep(10)
         print(j[1], r if isinstance(r, str) else {k: r.get(k) for k in ("status", "k", "p_drw", "runtime_s")}, flush=True)
+        if r == "waiting":
+            stuck.append(j[1])
+    if stuck:
+        sys.exit(f"injections still waiting for their candidate after 1 h: {stuck}")
