@@ -1,0 +1,55 @@
+{
+  "slug": "ternary-legendre-pair-35",
+  "title": "A ternary Legendre pair of length 35",
+  "tier": "Proved in Lean",
+  "version": 1,
+  "date": "2026-11-25",
+  "summary": "A ternary Legendre pair of length 35 exists; this settles one of the two smallest open cases of a conjecture of Kotsireas, Liu and Winterhof, and Lean checks it.",
+  "abstract": "Kotsireas, Liu and Winterhof conjectured that ternary Legendre pairs exist for every length ℓ ≡ −1 (mod 3). They found ternary Legendre pairs for every such length ℓ ≤ 32 and named ℓ = 35 and ℓ = 38 as the smallest open cases. We give a ternary Legendre pair of length 35. This settles the case ℓ = 35. Both sequences of the pair are invariant under the multiplier j ↦ 6j (mod 35). We found the pair with an exact meet-in-the-middle search over the 42 042 000 sequences that have this symmetry and the required symbol composition. The search gives 2400 ordered pairs. Lean 4 with Mathlib checks the existence theorem, stated from the source's definition, with kernel evaluation and only the standard axioms. Two exact checkers in Python also accept the pair. The case ℓ = 38 remains open: our searches in some structured families of length 38 found no pair. This work has not yet been reviewed by experts. The computations, the proofs and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+  "keywords": [
+    "Legendre pairs",
+    "ternary sequences",
+    "periodic autocorrelation",
+    "Butson Hadamard matrices",
+    "multiplier groups",
+    "Lean"
+  ],
+  "related": [
+    {
+      "doi": "10.48550/arXiv.2611.31067",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.48550/arXiv.2212.10953",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.48550/arXiv.2408.16318",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.48550/arXiv.2408.08472",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.48550/arXiv.2609.04589",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.48550/arXiv.2609.25573",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.48550/arXiv.2607.20765",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.48550/arXiv.2604.22423",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.48550/arXiv.2101.10918",
+      "relation": "cites"
+    }
+  ]
+}

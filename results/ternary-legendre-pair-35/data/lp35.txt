@@ -1,0 +1,3 @@
+# Ternary Legendre pair of length 35. Exponent words: digit r means xi_3^r, xi_3 = exp(2*pi*i/3).
+A 02021220020100021222201110110121211
+B 01222010111021021121200221100200122

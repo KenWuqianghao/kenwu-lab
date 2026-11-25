@@ -1,0 +1,18 @@
+{
+  "length": 35,
+  "certificate": {
+    "A": "02021220020100021222201110110121211",
+    "B": "01222010111021021121200221100200122",
+    "composition": [11, 12, 12],
+    "combined_counts_every_nonzero_lag": [22, 24, 24]
+  },
+  "search_35": {
+    "34": {"sequences": 5717712, "pairs": 0},
+    "6": {"sequences": 42042000, "pairs": 2400},
+    "29": {"sequences": 130162032, "pairs": 0},
+    "11": {"sequences": 87150, "pairs": 0},
+    "8": {"sequences": 14840, "pairs": 0},
+    "13": {"sequences": 1400, "pairs": 0},
+    "3": {"sequences": 2, "pairs": 0}
+  }
+}
