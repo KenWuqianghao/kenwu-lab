@@ -19,4 +19,4 @@ The plate cutouts and the Pluto measurements need the DASCH image service. They 
 
 - v4: The time test now excludes date-only DASCH times in all formats (`00:00:00.0Z`, `00:00:00.0`, `00:00`). Version 3 kept 13 such ma rows. The rule still agrees for 47 of 54. Agreement with the DASCH times changes from 8 to 6 of 54, and the best shuffle from 23 to 22 of 54. The paper now states the AN offset as DASCH minus printed time.
 
-Archived on Zenodo: [doi:10.5281/zenodo.24510122](https://doi.org/10.5281/zenodo.24510122)
+Archived on Zenodo: [doi:10.5281/zenodo.24523190](https://doi.org/10.5281/zenodo.24523190)
