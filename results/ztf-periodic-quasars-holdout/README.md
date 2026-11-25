@@ -20,6 +20,8 @@ This work has not yet been reviewed by experts. The computations, the code and t
 
 ## Check it
 
+Run all commands in this section from this folder (`cd results/ztf-periodic-quasars-holdout` from the repository root).
+
 Compare each value in `data/expected.json` with the committed summary `data/summary.json` (relative tolerance 1e-3; 0.01 for the Stouffer Z values). This does not read the paper; `NUMBERS.md` gives the source of each number in the paper. This takes about 1 second and needs only Python 3:
 
 ```sh

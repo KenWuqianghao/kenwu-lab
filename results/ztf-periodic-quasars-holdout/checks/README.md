@@ -44,3 +44,8 @@ python3 -I checks/independent/pcheck.py work/lc data/results_table.csv $(cat che
 On one platform, the fixed seeds make every number exact. Between platforms, the Monte Carlo values can differ a little. A mock light curve is accepted when its fitted period and significance pass a threshold. A floating-point difference near the threshold can accept a different set of mocks, and the random stream then diverges. On Linux aarch64 with OpenBLAS, 6 of the 516 objects get p-values that differ from the committed macOS arm64 values by at most 0.016. This is within the Monte Carlo error of about 0.016 at 1,000 accepted mocks. All counts and all numbers in the paper are the same. The Stouffer Z of the placebo under the SPL null changes from -1.4039 to -1.4013. The CI runner (Linux x86_64) gives the same Stouffer Z to 15 digits.
 
 So `checks/ci.sh` compares the Monte Carlo p-values of `data/results_table.csv` within 0.03 and requires each one to be on the same side of 0.05. It does not compare the accepted-mock counts (`*_n_acc`). `checks/rerun.py` compares the Stouffer Z values within 0.01. All other values use a relative tolerance of 1e-3.
+
+## Missing light curves
+
+`fetch_data.py` retries each download 6 times and then goes on. A candidate or placebo object whose file is missing gets the status `no_lightcurve`, so the status counts differ from `data/expected.json` and the compare step fails. An injection whose host file is missing stops its worker at once with the name of the file. In both cases, run `checks/fetch_data.py` again: it downloads only the missing files.
+

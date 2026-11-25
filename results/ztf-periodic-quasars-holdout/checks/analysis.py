@@ -170,7 +170,9 @@ def run_one(kind, oid, extra, blind):
         pid, cid = extra
         cf = os.path.join(OUT, cid + ".json")
         path = os.path.join(LCDIR, pid + ".csv")
-        if not os.path.exists(cf) or not os.path.exists(path):
+        if not os.path.exists(path):
+            sys.exit(f"{oid}: host light curve {path} is missing; run checks/fetch_data.py again")
+        if not os.path.exists(cf):
             return "waiting"
         c = json.load(open(cf))
         if c.get("status") != "ok":
