@@ -147,8 +147,12 @@ def candidate_stale(cid):
 
 def run_one(kind, oid, extra, blind):
     f = os.path.join(OUT, oid + ".json")
-    if kind == "inj" and candidate_stale(extra[1]):
-        return "waiting"  # another worker will rerun the candidate first
+    if kind == "inj":
+        host = os.path.join(LCDIR, extra[0] + ".csv")
+        if not os.path.exists(host):
+            sys.exit(f"{oid}: host light curve {host} is missing; run checks/fetch_data.py again")
+        if candidate_stale(extra[1]):
+            return "waiting"  # another worker will rerun the candidate first
     if os.path.exists(f):
         status = json.load(open(f)).get("status")
         if kind in ("cand", "plac"):
@@ -170,8 +174,6 @@ def run_one(kind, oid, extra, blind):
         pid, cid = extra
         cf = os.path.join(OUT, cid + ".json")
         path = os.path.join(LCDIR, pid + ".csv")
-        if not os.path.exists(path):
-            sys.exit(f"{oid}: host light curve {path} is missing; run checks/fetch_data.py again")
         if not os.path.exists(cf):
             return "waiting"
         c = json.load(open(cf))
