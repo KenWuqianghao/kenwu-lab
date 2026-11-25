@@ -65,3 +65,5 @@ I. S. Kotsireas, H. Liu and A. Winterhof posed the question and supplied the def
   howpublished = {\url{https://github.com/KenWuqianghao/kenwu-lab/tree/main/results/ternary-legendre-pair-35}}
 }
 ```
+
+Archived on Zenodo: [doi:10.5281/zenodo.24531165](https://doi.org/10.5281/zenodo.24531165)

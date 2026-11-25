@@ -51,5 +51,9 @@
       "doi": "10.48550/arXiv.2101.10918",
       "relation": "cites"
     }
-  ]
+  ],
+  "doi": "10.5281/zenodo.24531165",
+  "concept_doi": "10.5281/zenodo.24531164",
+  "zenodo_id": 24531165,
+  "doi_version": 1
 }
