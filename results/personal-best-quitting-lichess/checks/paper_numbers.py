@@ -90,8 +90,8 @@ for k, l in (("round_number", "Round-number control"), ("injection", "Injected 4
     t = rowB(l, B[k]); rows.append((f"period B {k}", t, f"period_B.json {k}", t))
 rows += [
  ("period B shuffle", "($p<0.005$)", "period_B.json shuffle.p_two_sided", "($p<0.005$)" if B["shuffle"]["p_two_sided"] < 0.005 else "FAIL"),
- ("period B balance", "(gain $z=-4.38$, opponent rating difference $z=-3.44$, log game index $z=3.39$)", "period_B.json balance",
-  f"(gain $z={B['balance']['gain']['z']:.2f}$, opponent rating difference $z={B['balance']['oppdiff']['z']:.2f}$, log game index $z={B['balance']['log_idx']['z']:.2f}$)"),
+ ("period B balance", "(gain $z=-4.38$, opponent rating difference $z=-3.44$, prior blitz games $z=3.09$, log game index $z=3.39$)", "period_B.json balance",
+  f"(gain $z={B['balance']['gain']['z']:.2f}$, opponent rating difference $z={B['balance']['oppdiff']['z']:.2f}$, prior blitz games $z={B['balance']['prior_games']['z']:.2f}$, log game index $z={B['balance']['log_idx']['z']:.2f}$)"),
 ]
 # Values from the independent checker logs.
 L1, LE, LS = LOG("rdcheck_2013_2015.log"), LOG("extra_2013_2015.log"), LOG("stream_2013_2015.log")

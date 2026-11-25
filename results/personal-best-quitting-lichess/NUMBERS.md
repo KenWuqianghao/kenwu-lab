@@ -62,7 +62,7 @@
 | period B round_number | `Round-number control & $+3.46$ & 0.07 & 47.86 \\` | `period_B.json round_number` |
 | period B injection | `Injected 4.5~pp step & $+5.53$ & 0.34 & 16.38 \\` | `period_B.json injection` |
 | period B shuffle | `($p<0.005$)` | `period_B.json shuffle.p_two_sided` |
-| period B balance | `(gain $z=-4.38$, opponent rating difference $z=-3.44$, log game index $z=3.39$)` | `period_B.json balance` |
+| period B balance | `(gain $z=-4.38$, opponent rating difference $z=-3.44$, prior blitz games $z=3.09$, log game index $z=3.39$)` | `period_B.json balance` |
 | independent primary | `$+0.5083$~pp (SE 0.4509)` | `checks/independent/rdcheck_2013_2015.log` |
 | independent period B | `$+0.8833$~pp (SE 0.3235)` | `checks/independent/rdcheck_period_B.log` |
 | independent round number | `$+2.8344$~pp` | `checks/independent/rdcheck_2013_2015.log` |
