@@ -138,8 +138,17 @@ def jobs():
     return out
 
 
+def candidate_stale(cid):
+    """True if the candidate's cached result is no_lightcurve but its light curve now exists."""
+    cf = os.path.join(OUT, cid + ".json")
+    return (os.path.exists(cf) and os.path.exists(os.path.join(LCDIR, cid + ".csv"))
+            and json.load(open(cf)).get("status") == "no_lightcurve")
+
+
 def run_one(kind, oid, extra, blind):
     f = os.path.join(OUT, oid + ".json")
+    if kind == "inj" and candidate_stale(extra[1]):
+        return "waiting"  # another worker will rerun the candidate first
     if os.path.exists(f):
         status = json.load(open(f)).get("status")
         if kind in ("cand", "plac"):

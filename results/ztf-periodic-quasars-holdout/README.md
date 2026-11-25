@@ -20,13 +20,13 @@ This work has not yet been reviewed by experts. The computations, the code and t
 
 ## Check it
 
-Check that the committed summary `data/summary.json` equals `data/expected.json`. The paper takes its numbers from these files; `NUMBERS.md` gives the source of each number. This takes about 1 second and needs only Python 3:
+Compare each value in `data/expected.json` with the committed summary `data/summary.json` (relative tolerance 1e-3; 0.01 for the Stouffer Z values). This does not read the paper; `NUMBERS.md` gives the source of each number in the paper. This takes about 1 second and needs only Python 3:
 
 ```sh
 python3 checks/rerun.py --compare
 ```
 
-Rerun everything from the public data with Python 3.13. The script installs the pinned packages, downloads 430 ZTF light curves (about 90 MB) from IRSA, runs the analysis and compares every number of the paper and every per-object value with the committed files:
+Rerun everything from the public data with Python 3.13. The script installs the pinned packages, downloads 430 ZTF light curves (about 90 MB) from IRSA, runs the analysis, compares the new summary with `data/expected.json`, and compares the per-object table with `data/results_table.csv` (all columns except the accepted-mock counts `*_n_acc`; see [checks/README.md](checks/README.md#platforms)):
 
 ```sh
 python3 -m venv .venv && . .venv/bin/activate
