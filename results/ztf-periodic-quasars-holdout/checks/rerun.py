@@ -33,6 +33,9 @@ def flatten(d, pre=""):
     return out
 
 
+STOUFFER_TOL = 0.01
+
+
 def compare():
     got = flatten(json.load(open(os.path.join(ROOT, "data", "summary.json"))))
     exp = flatten(json.load(open(os.path.join(ROOT, "data", "expected.json"))))
@@ -40,7 +43,10 @@ def compare():
     for k, v in exp.items():
         g = got.get(k, "MISSING")
         if isinstance(v, float) and isinstance(g, (int, float)) and not isinstance(g, bool):
-            ok = math.isclose(v, g, rel_tol=1e-3, abs_tol=1e-6) or (math.isnan(v) and math.isnan(g))
+            # Stouffer Z combines Monte Carlo p-values. They can differ slightly between
+            # platforms (see checks/README.md), so these values get an absolute tolerance.
+            tol = STOUFFER_TOL if k.rsplit(".", 1)[-1].startswith("stouffer_") else 1e-6
+            ok = math.isclose(v, g, rel_tol=1e-3, abs_tol=tol) or (math.isnan(v) and math.isnan(g))
         else:
             ok = v == g
         if not ok:

@@ -33,7 +33,7 @@ python3 -m venv .venv && . .venv/bin/activate
 bash checks/ci.sh
 ```
 
-It ends with `164/164 expected values reproduced`, `results_table.csv: 12900/12900 values reproduced` and `ci: all checks passed`. Run time on an 8-core M1 Pro with two analysis processes (`JOBS=2`): 45 min wall time, including the download (3,511 s CPU). By default the script uses one process per CPU core. [More detail](checks/README.md).
+It ends with `164/164 expected values reproduced`, `results_table.csv: 11868/11868 values reproduced` and `ci: all checks passed`. Run time on an 8-core M1 Pro with two analysis processes (`JOBS=2`): 45 min wall time, including the download (3,511 s CPU). By default the script uses one process per CPU core. [More detail](checks/README.md).
 
 ## Credits
 
