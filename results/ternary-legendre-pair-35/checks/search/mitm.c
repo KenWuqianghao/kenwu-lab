@@ -28,7 +28,7 @@ static void rec_assign(int i,int c0,int c1,int c2,uint64_t code,uint64_t mul){
   if(c1+sz<=H) rec_assign(i+1,c0,c1+sz,c2,code+mul,mul*3);
   if(c2+sz<=H) rec_assign(i+1,c0,c1,c2+sz,code+2*mul,mul*3);
 }
-static int cmp(const void*a,const void*b){uint64_t x=((rec*)a)->key,y=((rec*)b)->key;return x<y?-1:x>y;}
+static int cmp(const void*a,const void*b){const rec*p=a,*q=b;if(p->key!=q->key)return p->key<q->key?-1:1;return (p->code>q->code)-(p->code<q->code);}
 int main(){
   if(scanf("%d %d",&L,&norb)!=2)return 1; H=(L+1)/3; half=L/2;
   for(int i=0;i<norb;i++){scanf("%d",&osz[i]);for(int k=0;k<osz[i];k++)scanf("%d",&orb[i][k]);}
@@ -41,7 +41,7 @@ int main(){
     size_t lo=0,hi=nR;while(lo<hi){size_t m=(lo+hi)/2;if(R[m].key<tk)lo=m+1;else hi=m;}
     for(size_t k=lo;k<nR&&R[k].key==tk;k++){int s2[MAXL],u2[MAXL],v2[MAXL];decode(R[k].code,s2);paf(s2,u2,v2);
       int ok=1;for(int t=1;t<=half;t++)if(u[t]+u2[t]!=-2||v[t]+v2[t]!=0){ok=0;break;}
-      if(ok){found++; if(found<=20){printf("A ");for(int j=0;j<L;j++)printf("%d",s[j]);printf(" B ");for(int j=0;j<L;j++)printf("%d",s2[j]);printf("\n");fflush(stdout);}}}
+      if(ok){found++;printf("A ");for(int j=0;j<L;j++)printf("%d",s[j]);printf(" B ");for(int j=0;j<L;j++)printf("%d",s2[j]);printf("\n");}}
   }
   fprintf(stderr,"pairs found (ordered): %ld\n",found);
   return 0;

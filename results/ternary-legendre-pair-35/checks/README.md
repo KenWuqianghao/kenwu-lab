@@ -24,7 +24,7 @@ Each checker also runs alone: `python3 checks/check_pair.py <A> <B>` and `python
 
 ## Search (`search.py`, `search/mitm.c`, `search/orbits.py`)
 
-For a multiplier g, `orbits.py 35 g` prints the orbits of ⟨g⟩ on Z/35Z. `mitm.c` lists every word that is constant on these orbits and has composition (11, 12, 12). It stores a hash of the exact PAF vector of each word for lags 1 to 17, and looks up the hash of −2 − PAF for each word. Each hash hit is checked exactly in integers. It prints the first 20 pairs and the counts. `search.py` compiles `mitm.c` with `cc -O2`, runs each group, and compares the counts with `data/expected.json`. For g = 6 it also checks that the certificate is one of the printed pairs.
+For a multiplier g, `orbits.py 35 g` prints the orbits of ⟨g⟩ on Z/35Z. `mitm.c` lists every word that is constant on these orbits and has composition (11, 12, 12). It stores a hash of the exact PAF vector of each word for lags 1 to 17, and looks up the hash of −2 − PAF for each word. Each hash hit is checked exactly in integers. It sorts by hash and then by word, so the output order is the same on every platform. It prints every pair and the counts. `search.py` compiles `mitm.c` with `cc -O2`, runs each group, and compares the counts with `data/expected.json`. For g = 6 it also checks that the certificate is one of the printed pairs.
 
 | g | words | ordered pairs | time | peak memory |
 |---|---|---|---|---|
