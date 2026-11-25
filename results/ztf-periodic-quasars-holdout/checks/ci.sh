@@ -8,6 +8,7 @@ cd "$(dirname "$0")/.."
 python3 -m pip install -q -r checks/requirements.txt
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1
 jobs="${JOBS:-$(getconf _NPROCESSORS_ONLN)}"
+rm -rf work/results  # cached analyses must not stand in for a rerun; light curves stay
 committed=$(mktemp)
 cp data/results_table.csv "$committed"
 python3 checks/rerun.py --jobs "$jobs"

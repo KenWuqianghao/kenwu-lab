@@ -141,7 +141,9 @@ def jobs():
 def run_one(kind, oid, extra, blind):
     f = os.path.join(OUT, oid + ".json")
     if os.path.exists(f):
-        return "cached"
+        lc_now = kind in ("cand", "plac") and os.path.exists(os.path.join(LCDIR, oid + ".csv"))
+        if not (lc_now and json.load(open(f)).get("status") == "no_lightcurve"):
+            return "cached"
     seed = int.from_bytes(oid.encode(), "little") % (2 ** 32)
     t0 = time.time()
     if kind in ("cand", "plac"):
@@ -164,7 +166,9 @@ def run_one(kind, oid, extra, blind):
             res.update(injected_P=c["P"], injected_amp=c["amp"], host=pid)
     res.update(id=oid, kind=kind, runtime_s=round(time.time() - t0, 1))
     if not blind:
-        json.dump(res, open(f, "w"), indent=1)
+        with open(f + ".tmp", "w") as fh:
+            json.dump(res, fh, indent=1)
+        os.replace(f + ".tmp", f)
     return res
 
 
@@ -174,6 +178,9 @@ if __name__ == "__main__":
     only = [a for a in sys.argv[3:] if not a.startswith("--")]
     os.makedirs(OUT, exist_ok=True)
     js = jobs()
+    if blind:
+        # Blind mode writes no result files, so an injection cannot read its candidate's fit.
+        js = [j for j in js if j[0] != "inj"]
     if only:
         js = [j for j in js if j[1] in only]
     js = js[part::nparts]

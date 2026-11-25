@@ -61,8 +61,9 @@ def main():
         subprocess.run([PY, os.path.join(ROOT, "checks", "fetch_data.py")], check=True)
         n = int(sys.argv[sys.argv.index("--jobs") + 1]) if "--jobs" in sys.argv else 2
         procs = [subprocess.Popen([PY, os.path.join(ROOT, "checks", "analysis.py"), str(i), str(n)]) for i in range(n)]
-        for p in procs:
-            assert p.wait() == 0
+        codes = [p.wait() for p in procs]
+        if any(codes):
+            sys.exit(f"analysis.py failed: exit codes {codes}")
         subprocess.run([PY, os.path.join(ROOT, "checks", "summarize.py")], check=True, stdout=subprocess.DEVNULL)
     sys.exit(0 if compare() else 1)
 
