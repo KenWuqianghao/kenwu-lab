@@ -18,7 +18,7 @@ This work has not yet been reviewed by experts. The computations and the text we
 
 ## Check it
 
-The quick check needs Python 3.10 or later and no packages. It runs in under a second. It checks each of the 76 numbers that the paper takes from the results against `data/*.json` and the logs of the independent check.
+The quick check needs Python 3.10 or later and no packages. It runs in under a second. It checks each of the 77 numbers that the paper takes from the results against `data/*.json` and the logs of the independent check.
 
 ```sh
 python3 checks/paper_numbers.py

@@ -46,6 +46,7 @@ rows += [
  ("balance gain", "($-0.29$ points, $z=-2.37$)", "balance.gain", f"(${bal['gain']['jump']:+.2f}$ points, $z={bal['gain']['z']:.2f}$)"),
  ("balance oppdiff", "$-13.9$ points, $z=-4.38$", "balance.oppdiff", f"${bal['oppdiff']['jump']:+.1f}$ points, $z={bal['oppdiff']['z']:.2f}$"),
  ("balance log_idx", "$+0.054$, $z=3.74$", "balance.log_idx", f"${bal['log_idx']['jump']:+.3f}$, $z={bal['log_idx']['z']:.2f}$"),
+ ("balance prior_games", "$+69.6$ prior blitz games, $z=3.90$", "balance.prior_games", f"${bal['prior_games']['jump']:+.1f}$ prior blitz games, $z={bal['prior_games']['z']:.2f}$"),
  ("balance log_prev_gap", "($z=0.44$)", "balance.log_prev_gap", f"($z={bal['log_prev_gap']['z']:.2f}$)"),
 ]
 lab = {"quit_24h": "Quit = no new game within 24 h (left limit 3.84\\%)", "quit_90min_start_to_start": "Quit = next start more than 90 min after this start",

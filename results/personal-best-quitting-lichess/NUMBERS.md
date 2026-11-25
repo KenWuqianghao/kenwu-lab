@@ -1,6 +1,6 @@
 # Numbers in the paper and their sources
 
-`python3 checks/paper_numbers.py` checks each row of table 1 automatically: it formats the source value as the paper prints it and finds the text in `paper/paper.tex`. It also checks that `data/results.json` and `data/addendum/addendum.json` equal `data/expected.json`, which `checks/rerun.py` reproduces from the raw data. Last run: 76 numbers, 0 mismatches.
+`python3 checks/paper_numbers.py` checks each row of table 1 automatically: it formats the source value as the paper prints it and finds the text in `paper/paper.tex`. It also checks that `data/results.json` and `data/addendum/addendum.json` equal `data/expected.json`, which `checks/rerun.py` reproduces from the raw data. Last run: 77 numbers, 0 mismatches.
 
 ## 1. Numbers checked by script
 
@@ -26,6 +26,7 @@
 | balance gain | `($-0.29$ points, $z=-2.37$)` | `balance.gain` |
 | balance oppdiff | `$-13.9$ points, $z=-4.38$` | `balance.oppdiff` |
 | balance log_idx | `$+0.054$, $z=3.74$` | `balance.log_idx` |
+| balance prior_games | `$+69.6$ prior blitz games, $z=3.90$` | `balance.prior_games` |
 | balance log_prev_gap | `($z=0.44$)` | `balance.log_prev_gap` |
 | robustness quit_24h | `Quit = no new game within 24 h (left limit 3.84\%) & $+0.12$ & 0.22 \\` | `robustness.quit_24h` |
 | robustness quit_90min_start_to_start | `Quit = next start more than 90 min after this start & $+0.54$ & 0.44 \\` | `robustness.quit_90min_start_to_start` |

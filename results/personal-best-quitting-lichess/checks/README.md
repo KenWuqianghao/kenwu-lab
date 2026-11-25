@@ -7,7 +7,7 @@ All commands run from the result folder.
 | Script | What it does |
 |---|---|
 | `ci.sh` | CI entry point. Makes a temporary venv with `requirements.txt`, runs `paper_numbers.py`, then `rerun.py --skip-2016`. With `PBQ_FULL=1`, it runs the full `rerun.py`. |
-| `paper_numbers.py` | Offline. Checks that each of 76 numbers in `paper/paper.tex` equals its value in `data/*.json` or in `independent/*.log`, and that `data/results.json` and `data/addendum/addendum.json` equal `data/expected.json`. `--markdown` prints the table of `NUMBERS.md`. |
+| `paper_numbers.py` | Offline. Checks that each of 77 numbers in `paper/paper.tex` equals its value in `data/*.json` or in `independent/*.log`, and that `data/results.json` and `data/addendum/addendum.json` equal `data/expected.json`. `--markdown` prints the table of `NUMBERS.md`. |
 | `rerun.py` | Streams the monthly files from database.lichess.org, checks each SHA-256 against the published list, runs `build.py` and `analyze.py` (and `addendum.py` without `--skip-2016`), and compares every number with `data/expected.json` (relative tolerance 1e-9). |
 | `fetch_month.sh`, `extract_headers.py` | Stream one monthly `.pgn.zst` file. Keep 13 header tags as a zstd TSV. The PGN is not stored. |
 | `build.py` | Builds the player-game table (DuckDB): post-game rating, personal best, game index, gap to the next game, sample rules 2, 3, 5, 6, 7 of `PROTOCOL.md`, and the personal-best filter (rule 4) as a column. |

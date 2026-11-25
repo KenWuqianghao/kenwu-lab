@@ -35,6 +35,7 @@ def load(cond):
     d["oppdiff"] = (d.opp - d.pre).astype(float)
     d["log_prev_gap"] = np.log1p(d.prev_gap_min)
     d["log_idx"] = np.log(d.idx.astype(float))
+    d["prior_games"] = d.idx.astype(float) - 1
     return d.drop(columns=["dsec", "pre", "opp", "idx", "prev_gap_min", "next_gap_min", "pb_prev20"])
 
 
@@ -143,7 +144,7 @@ res["primary"]["fics_magnitude_rejected"] = bool(prim["ci"][1] < FICS_JUMP)
 # Controls.
 res["placebo"] = {f"PB{k:+d}": pb_rd(blitz, k=k, side="left" if k < 0 else "right") for k in (-50, -35, -25, 10)}
 res["balance"] = {}
-for cov in ("gain", "oppdiff", "log_prev_gap", "log_idx"):
+for cov in ("gain", "oppdiff", "log_prev_gap", "log_idx", "prior_games"):
     res["balance"][cov] = pb_rd(blitz, y=cov)
 
 rng = np.random.default_rng(SEED)
