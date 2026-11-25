@@ -141,8 +141,13 @@ def jobs():
 def run_one(kind, oid, extra, blind):
     f = os.path.join(OUT, oid + ".json")
     if os.path.exists(f):
-        lc_now = kind in ("cand", "plac") and os.path.exists(os.path.join(LCDIR, oid + ".csv"))
-        if not (lc_now and json.load(open(f)).get("status") == "no_lightcurve"):
+        status = json.load(open(f)).get("status")
+        if kind in ("cand", "plac"):
+            stale = status == "no_lightcurve" and os.path.exists(os.path.join(LCDIR, oid + ".csv"))
+        else:
+            cf = os.path.join(OUT, extra[1] + ".json")
+            stale = status == "candidate_not_ok" and os.path.exists(cf) and json.load(open(cf)).get("status") == "ok"
+        if not stale:
             return "cached"
     seed = int.from_bytes(oid.encode(), "little") % (2 ** 32)
     t0 = time.time()
