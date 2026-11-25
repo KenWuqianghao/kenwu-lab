@@ -15,7 +15,7 @@ Peter Graham published the Pluto image on plate MA 731 first ([DOI 10.5281/zenod
 
 Metcalf logged local mean time counted from noon. DASCH read these values as local sidereal time. The rule has no free parameter. It shifts the time by about +6 h in December.
 
-- It fits 47 of 54 Minor Planet Center times of Metcalf's asteroids. The DASCH times fit 8.
+- It fits 47 of 54 Minor Planet Center times of Metcalf's asteroids. The DASCH times fit 6.
 - It fits 34 of 36 times that Metcalf printed in Astronomische Nachrichten. The DASCH times fit 0.
 - Daylight exposures drop from 14 of 60 ma plates to 1 of 60.
 - On all 4 Pluto plates, a known asteroid trail is at the corrected time (z +41 to +56). It is absent at the DASCH time (z −0.6 to +0.4, control maximum +2.5).
