@@ -1,0 +1,45 @@
+{
+ "slug": "personal-best-quitting-lichess",
+ "title": "Do players quit after a new personal-best rating? A pre-registered, placebo-controlled test on Lichess",
+ "tier": "Public data",
+ "version": 1,
+ "date": "2026-11-25",
+ "summary": "On Lichess blitz 2013-2015, the jump in quitting at a new personal-best rating is +0.51 pp (95% CI -0.38 to +1.39); the 4.5 pp that Anderson and Green found on FICS is outside the interval, and the same method detects the round-number effect.",
+ "abstract": "Anderson and Green (PNAS, 2018) found that blitz players on the Free Internet Chess Server (FICS) quit more often just after they set a new personal-best rating: the probability of quitting jumps by 4.5 percentage points (pp), or 20%. We test the same claim on Lichess with public data. We rebuilt the rating history of every Lichess blitz player from the headers of all 45 million rated games of 2013-2015. Before we computed any quit rate, we fixed the sample, the estimator (local linear regression, triangular kernel, bandwidth 15 rating points, errors clustered by player), the controls and a decision rule. Among 10.8 million player-games after a win, with 37,391 new personal bests, the jump in the probability of quitting (no new game within 60 minutes) is +0.51 pp, 95% confidence interval -0.38 to +1.39 pp, on a quit rate of 18.55% just below the personal best. The interval contains zero, and its upper bound is below 4.5 pp. With the same estimator, a known reference point (ratings that cross a multiple of 100) gives +2.83 pp (z = 28.6), and an added step of 4.5 pp is recovered. Placebo cutoffs and a within-player shuffle show no jump. In a second test, fixed before its data were downloaded, we used 2016, after the Lichess source code added a \"Highest rating\" display to its statistics pages. The jump is +0.88 pp (+0.25 to +1.52). This jump is small and not robust to all variants, and it is not significantly larger than in 2013-2015. The upper bounds of the two primary intervals, 1.39 and 1.52 pp, are about one third of the FICS value. The result is an association on one platform. It does not show that the FICS result is wrong. This work has not yet been reviewed by experts. The computations and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+ "keywords": [
+  "reference points",
+  "personal bests",
+  "quitting",
+  "regression discontinuity",
+  "online chess",
+  "Lichess",
+  "replication",
+  "pre-registration"
+ ],
+ "related": [
+  {
+   "doi": "10.1073/pnas.1706530115",
+   "relation": "cites"
+  },
+  {
+   "doi": "10.1162/rest_a_01145",
+   "relation": "cites"
+  },
+  {
+   "doi": "10.1609/icwsm.v17i1.22164",
+   "relation": "cites"
+  },
+  {
+   "doi": "10.1287/mnsc.2021.03628",
+   "relation": "cites"
+  },
+  {
+   "doi": "10.2139/ssrn.3707943",
+   "relation": "cites"
+  },
+  {
+   "doi": "10.48550/arXiv.2506.13382",
+   "relation": "cites"
+  }
+ ]
+}

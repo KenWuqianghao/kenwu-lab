@@ -1,0 +1,80 @@
+48 files
+121332 835 1s
+5176417 372337 39s
+10097735 834299 74s
+15181854 1404901 112s
+20117377 2028034 149s
+25040352 2599385 184s
+30019599 3129366 220s
+35086137 3747332 258s
+40086555 4383210 294s
+45043493 5036330 330s
+50013850 5705919 366s
+55029211 6403121 398s
+60029211 7088690 428s
+65030445 7789301 461s
+70153112 8525376 495s
+75179069 9259964 528s
+80115488 9988359 560s
+85115488 10709319 589s
+85191421 10719984 589s
+90191421 11414290 621s
+95074678 12077060 655s
+100087791 12759533 692s
+105087791 13435707 723s
+110087659 14111750 759s
+115109168 14775873 796s
+120109168 15415578 827s
+{'games': 123542580, 'selfplay': 1037, 'nodiff_pg': 598026, 'pg': 247083086, 'dupsite': 0} players 981063 848s
+chain (2012, 'anysame', 0) 2
+chain (2012, 'anysame', 3) 2
+chain (2012, 'blitz', 0) 2
+chain (2013, 'anysame', 0) 109174
+chain (2013, 'anysame', 1) 20
+chain (2013, 'anysame', 2) 123
+chain (2013, 'anysame', 3) 2349
+chain (2013, 'blitz', 0) 49679
+chain (2013, 'blitz', 1) 40
+chain (2013, 'blitz', 2) 232
+chain (2013, 'blitz', 3) 1736
+chain (2013, 'cross', 0) 2058
+chain (2013, 'cross', 1) 66
+chain (2013, 'cross', 2) 241
+chain (2013, 'cross', 3) 19772
+chain (2014, 'anysame', 0) 393254
+chain (2014, 'anysame', 1) 63
+chain (2014, 'anysame', 2) 408
+chain (2014, 'anysame', 3) 8621
+chain (2014, 'blitz', 0) 177319
+chain (2014, 'blitz', 1) 110
+chain (2014, 'blitz', 2) 732
+chain (2014, 'blitz', 3) 7550
+chain (2014, 'cross', 0) 7077
+chain (2014, 'cross', 1) 122
+chain (2014, 'cross', 2) 478
+chain (2014, 'cross', 3) 47617
+chain (2015, 'anysame', 0) 1079445
+chain (2015, 'anysame', 1) 196
+chain (2015, 'anysame', 2) 1300
+chain (2015, 'anysame', 3) 10018
+chain (2015, 'blitz', 0) 480499
+chain (2015, 'blitz', 1) 134
+chain (2015, 'blitz', 2) 798
+chain (2015, 'blitz', 3) 6580
+chain (2015, 'cross', 0) 5204
+chain (2015, 'cross', 1) 391
+chain (2015, 'cross', 2) 1395
+chain (2015, 'cross', 3) 93676
+chain (2016, 'anysame', 0) 2920564
+chain (2016, 'anysame', 1) 457
+chain (2016, 'anysame', 2) 2659
+chain (2016, 'anysame', 3) 14938
+chain (2016, 'blitz', 0) 1367102
+chain (2016, 'blitz', 1) 186
+chain (2016, 'blitz', 2) 1035
+chain (2016, 'blitz', 3) 5499
+chain (2016, 'cross', 0) 284
+chain (2016, 'cross', 1) 500
+chain (2016, 'cross', 2) 2089
+chain (2016, 'cross', 3) 186011
+exit 0

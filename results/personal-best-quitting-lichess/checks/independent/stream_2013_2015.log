@@ -1,0 +1,52 @@
+36 files
+121332 1403 1s
+5176417 844984 57s
+10097735 1963292 113s
+15181854 3357414 174s
+20117377 4801484 234s
+25040352 6138958 294s
+30019599 7461165 352s
+35086137 8845065 411s
+40086555 10190055 470s
+45043493 11501414 530s
+{'games': 45043493, 'selfplay': 917, 'nodiff_pg': 447358, 'pg': 90085152, 'dupsite': 0} players 499892 530s
+chain (2012, 'anysame', 0) 2
+chain (2012, 'anysame', 3) 2
+chain (2012, 'blitz', 0) 2
+chain (2013, 'anysame', 0) 109174
+chain (2013, 'anysame', 1) 20
+chain (2013, 'anysame', 2) 123
+chain (2013, 'anysame', 3) 2349
+chain (2013, 'blitz', 0) 49679
+chain (2013, 'blitz', 1) 40
+chain (2013, 'blitz', 2) 232
+chain (2013, 'blitz', 3) 1736
+chain (2013, 'cross', 0) 2058
+chain (2013, 'cross', 1) 66
+chain (2013, 'cross', 2) 241
+chain (2013, 'cross', 3) 19772
+chain (2014, 'anysame', 0) 393254
+chain (2014, 'anysame', 1) 63
+chain (2014, 'anysame', 2) 408
+chain (2014, 'anysame', 3) 8621
+chain (2014, 'blitz', 0) 177319
+chain (2014, 'blitz', 1) 110
+chain (2014, 'blitz', 2) 732
+chain (2014, 'blitz', 3) 7550
+chain (2014, 'cross', 0) 7077
+chain (2014, 'cross', 1) 122
+chain (2014, 'cross', 2) 478
+chain (2014, 'cross', 3) 47617
+chain (2015, 'anysame', 0) 1079257
+chain (2015, 'anysame', 1) 196
+chain (2015, 'anysame', 2) 1300
+chain (2015, 'anysame', 3) 10016
+chain (2015, 'blitz', 0) 480439
+chain (2015, 'blitz', 1) 134
+chain (2015, 'blitz', 2) 798
+chain (2015, 'blitz', 3) 6580
+chain (2015, 'cross', 0) 5204
+chain (2015, 'cross', 1) 391
+chain (2015, 'cross', 2) 1395
+chain (2015, 'cross', 3) 93661
+exit 0
