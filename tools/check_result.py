@@ -9,7 +9,7 @@ import re
 import sys
 from pathlib import Path
 
-from lean_audit import HEADER, strip_comments
+from lean_audit import strip_comments
 
 TIERS = ("Proved in Lean", "Computer-assisted", "Public data")
 REQUIRED = {"slug": str, "title": str, "tier": str, "version": int, "date": str,
@@ -25,14 +25,21 @@ COMPARATOR_KEYS = {"challenge_module", "solution_module", "theorem_names", "perm
 
 
 def imported_modules(text):
-    """Module names in the Lean header, with comments and import modifiers ignored."""
-    mods = []
-    for line in strip_comments(text).split("\n"):
-        if not line.strip():
-            continue
-        if not HEADER.match(line):
+    """Module names in the Lean header, with comments and line breaks ignored.
+
+    Each `import` takes one module name, optionally after `all`. The header ends at the
+    first token that is not `module`, an import modifier, or an import."""
+    tokens, mods, i = strip_comments(text).split(), [], 0
+    while i < len(tokens):
+        if tokens[i] in {"module", "public", "private", "meta"}:
+            i += 1
+        elif tokens[i] == "import":
+            i += 2 if i + 1 < len(tokens) and tokens[i + 1] == "all" else 1
+            if i < len(tokens):
+                mods.append(tokens[i])
+            i += 1
+        else:
             break
-        mods += [w for w in line.split() if w not in {"module", "import", "all", "public", "private", "meta"}]
     return mods
 
 
