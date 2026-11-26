@@ -6,7 +6,8 @@
 Each file is compiled in the shared workspace (lean/) with an appended command that
 collects the axioms of every declaration the file defines. Exit 1 when any of these
 is true: the file does not compile, a declaration uses sorryAx or a project axiom,
-or the file sets debug.skipKernelTC. native_decide axioms pass with a warning: a
+or the source uses debug.skipKernelTC, #exit, an axiom declaration or a
+_native name. native_decide axioms pass with a warning: a
 paper that uses native_decide must say so. Adapted from ProofAudit.lean in
 1337isnot1337/solved-conjectures (MIT).
 """
@@ -30,7 +31,7 @@ run_cmd do
   for (c, _) in env.constants.map₂.toList do
     n := n + 1
     for a in (← collectAxioms c) do
-      if native.contains a || (a.toString.splitOn "._native.native_decide.").length > 1 then
+      if native.contains a || (a.toString.splitOn "._native.native_decide.ax_").length > 1 then
         logInfo m!"LEAN_AUDIT native {c} {a}"
       else unless std.contains a do
         logInfo m!"LEAN_AUDIT bad {c} {a}"
@@ -38,12 +39,24 @@ run_cmd do
 """
 
 
+# Source text that can hide a project axiom from the audit or stop the audit early.
+# Genuine native_decide axioms get generated names, so source never needs `_native`.
+FORBIDDEN = {
+    "sets debug.skipKernelTC": r"skipKernelTC",
+    "uses #exit": r"#exit\b",
+    "declares an axiom": r"^\s*(@\[[^\]]*\]\s*)?((private|protected|noncomputable|unsafe|partial|public)\s+)*axiom\s",
+    "names a _native declaration": r"_native\b",
+}
+HEADER = re.compile(r"^\s*(module\b|((public|private|meta)\s+)*import\s)")
+
+
 def audit(path):
     text = path.read_text()
-    if re.search(r"skipKernelTC", text):
-        return False, "sets debug.skipKernelTC"
+    for reason, pattern in FORBIDDEN.items():
+        if re.search(pattern, text, re.MULTILINE):
+            return False, reason
     lines = text.splitlines(keepends=True)
-    last_import = max((i for i, l in enumerate(lines) if l.startswith("import ")), default=-1)
+    last_import = max((i for i, l in enumerate(lines) if HEADER.match(l)), default=-1)
     lines.insert(last_import + 1, "import Lean\n")
     with tempfile.NamedTemporaryFile("w", suffix=".lean", dir=WORKSPACE, delete=False) as f:
         f.write("".join(lines) + AUDIT)
