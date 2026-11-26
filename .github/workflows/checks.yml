@@ -99,8 +99,9 @@ jobs:
         env:
           SLUG: ${{ matrix.slug }}
         run: |
-          sudo apt-get install -y -qq bubblewrap apparmor apparmor-profiles
-          sudo apparmor_parser -r /usr/share/apparmor/extra-profiles/bwrap-userns-restrict
+          sudo apt-get install -y -qq bubblewrap
+          sudo sysctl -q -w kernel.apparmor_restrict_unprivileged_userns=0
+          bwrap --unshare-all --ro-bind / / true
           curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
           export PATH="$HOME/.elan/bin:$PATH"
           P="$RUNNER_TEMP/comparator"
