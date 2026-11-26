@@ -11,7 +11,9 @@ OpenAI) working under the author's direction.
 ## Layout
 
 - `results/<slug>/` holds one result: `result.json`, `README.md`, `paper/paper.tex`,
-  `paper/paper.pdf`, `checks/ci.sh`, and `lean/*.lean` when Lean checks the proof.
+  `paper/paper.pdf`, `checks/ci.sh`, and `lean/` when Lean checks the proof. `lean/`
+  then holds one proof file, `Challenge.lean` (the main theorems with `sorry` proofs and
+  every definition they use, copied word for word) and `comparator.json`.
 - `lean/` is the shared Lean workspace (Lean v4.36.0, Mathlib v4.36.0).
 - `site/` builds the website: notes in `site/entries/`, papers from `results/`.
 - `tools/check_result.py` checks a result folder. `tools/release.py` archives a new
@@ -20,8 +22,12 @@ OpenAI) working under the author's direction.
 ## How a result is published
 
 1. A pull request adds or changes `results/<slug>/`.
-2. The `Checks` workflow checks the folder, compiles its Lean files against Mathlib, and
-   runs `checks/ci.sh`.
+2. The `Checks` workflow checks the folder, compiles its Lean files against Mathlib with
+   an axiom audit (`tools/lean_audit.py`), and runs `checks/ci.sh`. A separate job runs
+   `lake comparator` in a sandbox on a fresh runner. It checks that the proof file proves
+   exactly the theorems of `Challenge.lean` with only `propext`, `Quot.sound` and
+   `Classical.choice`. A reviewer must read `Challenge.lean`: it is the statement that
+   the check trusts.
 3. Merging the pull request starts `Release and deploy`. For each result whose tag
    `<slug>-v<version>` does not exist, it deposits the paper and the folder on Zenodo,
    writes the DOI into `result.json`, `README.md` and `CHANGELOG.md`, tags the commit,
