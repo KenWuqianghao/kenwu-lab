@@ -50,14 +50,29 @@ FORBIDDEN = {
 HEADER = re.compile(r"^\s*(module\b|((public|private|meta)\s+)*import\s)")
 
 
+def header_end(lines):
+    """Index after the last `module`/`import` line of the header (comments and blanks skipped)."""
+    end, depth = 0, 0
+    for i, line in enumerate(lines):
+        s = line.strip()
+        if depth or s.startswith("/-"):
+            depth += s.count("/-") - s.count("-/")
+            continue
+        if not s or s.startswith("--"):
+            continue
+        if not HEADER.match(line):
+            break
+        end = i + 1
+    return end
+
+
 def audit(path):
     text = path.read_text()
     for reason, pattern in FORBIDDEN.items():
         if re.search(pattern, text, re.MULTILINE):
             return False, reason
     lines = text.splitlines(keepends=True)
-    last_import = max((i for i, l in enumerate(lines) if HEADER.match(l)), default=-1)
-    lines.insert(last_import + 1, "import Lean\n")
+    lines.insert(header_end(lines), "import Lean\n")
     with tempfile.NamedTemporaryFile("w", suffix=".lean", dir=WORKSPACE, delete=False) as f:
         f.write("".join(lines) + AUDIT)
         tmp = Path(f.name)
