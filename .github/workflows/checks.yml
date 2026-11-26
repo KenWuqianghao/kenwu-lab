@@ -111,7 +111,10 @@ jobs:
           printf '[[lean_lib]]\nname = "Challenge"\n\n[[lean_lib]]\nname = "Solution"\n' >> "$P/lakefile.toml"
           src="results/$SLUG/lean"
           cp "$src/Challenge.lean" "$src/comparator.json" "$P/"
-          cp $(ls "$src"/*.lean | grep -v '/Challenge.lean$') "$P/Solution.lean"
+          proofs=()
+          for f in "$src"/*.lean; do [ "$(basename "$f")" = Challenge.lean ] || proofs+=("$f"); done
+          [ "${#proofs[@]}" -eq 1 ]
+          cp -- "${proofs[0]}" "$P/Solution.lean"
           cd "$P"
           lake exe cache get
           lake comparator --config comparator.json

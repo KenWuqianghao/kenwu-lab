@@ -9,6 +9,8 @@ import re
 import sys
 from pathlib import Path
 
+from lean_audit import HEADER, strip_comments
+
 TIERS = ("Proved in Lean", "Computer-assisted", "Public data")
 REQUIRED = {"slug": str, "title": str, "tier": str, "version": int, "date": str,
             "summary": str, "abstract": str, "keywords": list}
@@ -20,6 +22,18 @@ FORBIDDEN_LEAN = re.compile(r"\b(sorry|admit)\b|^\s*axiom\s|implemented_by|debug
 
 STANDARD_AXIOMS = {"propext", "Quot.sound", "Classical.choice"}
 COMPARATOR_KEYS = {"challenge_module", "solution_module", "theorem_names", "permitted_axioms"}
+
+
+def imported_modules(text):
+    """Module names in the Lean header, with comments and import modifiers ignored."""
+    mods = []
+    for line in strip_comments(text).split("\n"):
+        if not line.strip():
+            continue
+        if not HEADER.match(line):
+            break
+        mods += [w for w in line.split() if w not in {"module", "import", "all", "public", "private", "meta"}]
+    return mods
 
 
 def lean_problems(folder, lean):
@@ -34,8 +48,7 @@ def lean_problems(folder, lean):
     solutions = [f for f in lean if f.name != "Challenge.lean"]
     if not challenge.is_file():
         out.append(f"{folder}: missing lean/Challenge.lean")
-    elif any(l.startswith("import") and l.split() != ["import", "Mathlib"]
-             for l in challenge.read_text().splitlines()):
+    elif set(imported_modules(challenge.read_text())) - {"Mathlib"}:
         out.append(f"{challenge}: may import only Mathlib")
     if len(solutions) != 1:
         out.append(f"{folder}: lean/ must hold exactly one proof file besides Challenge.lean")
