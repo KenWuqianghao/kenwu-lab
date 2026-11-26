@@ -1,0 +1,52 @@
+{
+  "slug": "rich-words-five-letters",
+  "title": "A rich word over five letters with critical exponent E*(u_9), and the bound RT(C_5) ≤ E*(u_9) ≈ 2.0592854",
+  "tier": "Computer-assisted",
+  "version": 1,
+  "date": "2026-11-26",
+  "summary": "A morphism π from 9 letters to 5 letters makes π(u_9) rich with critical exponent E*(u_9) ≈ 2.0592854, so the repetition threshold of 5-ary rich words is at most E*(u_9).",
+  "abstract": "A finite word of length n is rich if it has n + 1 distinct palindromic factors, counting the empty word. The repetition threshold RT(C_d) is the infimum of the critical exponents of the infinite rich words over d letters. Let u_d be the fixed point of φ_d: i ↦ 0(i+1) for i < d − 1, d − 1 ↦ 0(d−1)(d−1). Dvořáková and Pelantová conjectured that RT(C_d) = E*(u_{2d−1}), where E* is the asymptotic critical exponent. The conjecture is known for d = 2, 3, 4. Dvořáková, Mol and Pelantová (2026) named a first step for d ≥ 5: find a morphism π: Σ*_{2d−1} → Σ*_d such that π(u_{2d−1}) is rich and has critical exponent E*(u_{2d−1}). We give such a morphism for d = 5. The letter images have lengths 2, 3, 1, 2, 4, 6, 11, 19, 36. So RT(C_5) ≤ E*(u_9) = 1 + 1/(3 − Λ) ≈ 2.0592854490, where Λ is the root of t^5 − 2t^4 − 1 in (2, 3). The proof reduces the critical exponent to bispecial factors and their return words, by a theorem of Dolce, Dvořáková and Pelantová. We describe all bispecial factors of π(u_9) from seven exceptional bispecial factors of u_9 and sixteen infinite chains. A program compares each ratio with 1/(3 − Λ) in exact arithmetic, and bounds the tail of each chain with a closed form. Two programs written separately confirm the result, and a brute-force search on long prefixes agrees with it. The lower bound RT(C_5) ≥ E*(u_9) remains open. This work has not yet been reviewed by experts. The computations, the proofs and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+  "keywords": [
+    "rich words",
+    "palindromes",
+    "critical exponent",
+    "repetition threshold",
+    "bispecial factors",
+    "morphic words",
+    "combinatorics on words"
+  ],
+  "related": [
+    {
+      "doi": "10.48550/arXiv.2611.13676",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.37236/14600",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1016/j.ejc.2025.104124",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1016/j.tcs.2022.10.014",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.37236/13499",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.23638/DMTCS-22-1-6",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1007/978-3-031-97548-6_11",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1016/S0304-3975(99)00320-5",
+      "relation": "cites"
+    }
+  ]
+}
