@@ -1,0 +1,23 @@
+{
+  "slug": "rationality-ngram-random-placebo",
+  "title": "Random words with the same fiction skew show the 1980 \"rationality reversal\" in Google Books",
+  "tier": "Public data",
+  "version": 1,
+  "date": "2026-11-26",
+  "summary": "In a pre-registered placebo test on Google Books English, random word pairs matched in frequency, part of speech and fiction skew show the 1980 turn of the rationality/intuition word ratio as often as the original words (p = 0.126), so the test does not show that the turn is specific to these words beyond their register.",
+  "abstract": "Scheffer, van de Leemput, Weinans and Bollen (PNAS, 2021) reported that in Google Books the frequency of words about rationality and science, relative to words about belief and the senses, rose from 1850 and reversed in the 1980s. We ask if this turn is specific to these word sets. We pre-registered one statistic, the change of slope at 1980 of the log ratio of the two sets, and compared it with 10,000 pairs of random word sets. In the English 1-grams of Google Books Ngram version 3, our ratio agrees with the authors' ratio (correlation 0.99997). The observed change of slope is -0.449 per decade. Against random words matched only in frequency and part of speech, it is extreme (p = 0.0001). The rationality words are rare in fiction and the intuition words are common in fiction. In the pre-registered primary test, the random words were also matched on this fiction skew. Then 12.6% of the pairs have a turn as negative or more negative (p = 0.126, threshold 0.05), and all 10,000 pairs rise before 1980 and fall after it. Thus the test does not show that the turn is specific to these word sets beyond their register. This is a non-rejection: an extra specific turn of 25% of the observed size would be detected with probability 0.77. The matched turn also occurs inside fiction alone and inside non-fiction alone, so the rising share of fiction in the corpus does not explain it alone. Post hoc, the rise before 1980 is more specific to the flag words than the turn. This work has not yet been reviewed by experts. The analysis, the code and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+  "keywords": [
+    "Google Books Ngram",
+    "placebo test",
+    "corpus composition",
+    "register",
+    "culturomics",
+    "pre-registration"
+  ],
+  "related": [
+    {
+      "doi": "10.1073/pnas.2107848118",
+      "relation": "cites"
+    }
+  ]
+}
