@@ -50,21 +50,38 @@ FORBIDDEN = {
 HEADER = re.compile(r"^\s*(module\b|((public|private|meta)\s+)*import\s)")
 
 
+def strip_comments(text):
+    """Replace Lean comments (nested /- -/ blocks and -- lines) with spaces; keep newlines."""
+    out, i, depth = [], 0, 0
+    while i < len(text):
+        two = text[i:i + 2]
+        if two == "/-":
+            depth, i = depth + 1, i + 2
+            out.append("  ")
+        elif depth and two == "-/":
+            depth, i = depth - 1, i + 2
+            out.append("  ")
+        elif not depth and two == "--":
+            j = text.find("\n", i)
+            j = len(text) if j < 0 else j
+            out.append(" " * (j - i))
+            i = j
+        else:
+            out.append(text[i] if text[i] == "\n" or not depth else " ")
+            i += 1
+    return "".join(out)
+
+
 def header_end(lines):
-    """Index after the last `module`/`import` line of the header (comments and blanks skipped)."""
-    end, depth = 0, 0
-    for i, line in enumerate(lines):
-        s = line.strip()
-        if depth or s.startswith("/-"):
-            depth += s.count("/-") - s.count("-/")
-            continue
-        if not s or s.startswith("--"):
+    """Index after the last `module`/`import` line of the header, ignoring comments."""
+    end = 0
+    for i, line in enumerate(strip_comments("".join(lines)).split("\n")):
+        if not line.strip():
             continue
         if not HEADER.match(line):
             break
         end = i + 1
     return end
-
 
 def audit(path):
     text = path.read_text()
