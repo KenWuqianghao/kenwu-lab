@@ -68,20 +68,15 @@ jobs:
           python-version: '3.13'
       - name: Required files and result.json
         run: python3 tools/check_result.py "results/${{ matrix.slug }}"
-      - name: Lean proofs
+      - name: Lean proofs and axiom audit
         if: hashFiles(format('results/{0}/lean/*.lean', matrix.slug)) != ''
         run: |
           curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
           export PATH="$HOME/.elan/bin:$PATH"
           cd lean
           lake exe cache get
-          for f in ../results/${{ matrix.slug }}/lean/*.lean; do
-            echo "::group::lean $f"
-            out=$(lake env lean "$f" 2>&1) || { echo "$out"; exit 1; }
-            echo "$out"
-            echo "::endgroup::"
-            if echo "$out" | grep -q "declaration uses 'sorry'"; then echo "sorry in $f"; exit 1; fi
-          done
+          cd ..
+          python3 tools/lean_audit.py results/${{ matrix.slug }}/lean
       - name: Result checks (checks/ci.sh)
         working-directory: results/${{ matrix.slug }}
         run: bash checks/ci.sh
