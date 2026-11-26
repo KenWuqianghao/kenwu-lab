@@ -1,0 +1,266 @@
+{
+ "per_month": {
+  "lichess_db_standard_rated_2013-01.pgn.zst": 121332,
+  "lichess_db_standard_rated_2013-02.pgn.zst": 123961,
+  "lichess_db_standard_rated_2013-03.pgn.zst": 158635,
+  "lichess_db_standard_rated_2013-04.pgn.zst": 157871,
+  "lichess_db_standard_rated_2013-05.pgn.zst": 179550,
+  "lichess_db_standard_rated_2013-06.pgn.zst": 224679,
+  "lichess_db_standard_rated_2013-07.pgn.zst": 293459,
+  "lichess_db_standard_rated_2013-08.pgn.zst": 325525,
+  "lichess_db_standard_rated_2013-09.pgn.zst": 325098,
+  "lichess_db_standard_rated_2013-10.pgn.zst": 410899,
+  "lichess_db_standard_rated_2013-11.pgn.zst": 486752,
+  "lichess_db_standard_rated_2013-12.pgn.zst": 577987,
+  "lichess_db_standard_rated_2014-01.pgn.zst": 697470,
+  "lichess_db_standard_rated_2014-02.pgn.zst": 692264,
+  "lichess_db_standard_rated_2014-03.pgn.zst": 795061,
+  "lichess_db_standard_rated_2014-04.pgn.zst": 810275,
+  "lichess_db_standard_rated_2014-05.pgn.zst": 905285,
+  "lichess_db_standard_rated_2014-06.pgn.zst": 961638,
+  "lichess_db_standard_rated_2014-07.pgn.zst": 1048280,
+  "lichess_db_standard_rated_2014-08.pgn.zst": 1013084,
+  "lichess_db_standard_rated_2014-09.pgn.zst": 999960,
+  "lichess_db_standard_rated_2014-10.pgn.zst": 1111083,
+  "lichess_db_standard_rated_2014-11.pgn.zst": 1208332,
+  "lichess_db_standard_rated_2014-12.pgn.zst": 1335672,
+  "lichess_db_standard_rated_2015-01.pgn.zst": 1483517,
+  "lichess_db_standard_rated_2015-02.pgn.zst": 1482876,
+  "lichess_db_standard_rated_2015-03.pgn.zst": 1727126,
+  "lichess_db_standard_rated_2015-04.pgn.zst": 1771107,
+  "lichess_db_standard_rated_2015-05.pgn.zst": 2117918,
+  "lichess_db_standard_rated_2015-06.pgn.zst": 2304189,
+  "lichess_db_standard_rated_2015-07.pgn.zst": 2435364,
+  "lichess_db_standard_rated_2015-08.pgn.zst": 2599852,
+  "lichess_db_standard_rated_2015-09.pgn.zst": 2833738,
+  "lichess_db_standard_rated_2015-10.pgn.zst": 3387050,
+  "lichess_db_standard_rated_2015-11.pgn.zst": 3582991,
+  "lichess_db_standard_rated_2015-12.pgn.zst": 4142985
+ },
+ "alpha_d": {
+  "1": NaN,
+  "2": 0.9695534138220966,
+  "3": 1.2950042101601233,
+  "4": 1.5543722842657925,
+  "5": 1.718038244308657,
+  "6": 1.8577089332134604,
+  "7": 1.9535114619022032,
+  "8": 2.0638196956185104,
+  "9": 2.139374513472029,
+  "10": 2.231728661073614,
+  "11": 2.303350004142083,
+  "12": 2.381577320328018
+ },
+ "n_nodes": {
+  "1": 20,
+  "2": 400,
+  "3": 8051,
+  "4": 82859,
+  "5": 444013,
+  "6": 1437704,
+  "7": 3348653,
+  "8": 6373064,
+  "9": 10303636,
+  "10": 15017440,
+  "11": 19865097,
+  "12": 24698017
+ },
+ "n_games_ge_d": {
+  "1": 44832865,
+  "2": 44691510,
+  "3": 44486419,
+  "4": 44380269,
+  "5": 44325526,
+  "6": 44267433,
+  "7": 44220894,
+  "8": 44134800,
+  "9": 44074892,
+  "10": 43988213,
+  "11": 43915708,
+  "12": 43813236
+ },
+ "N": 44832865,
+ "odd_nomove": {
+  "lichess_db_standard_rated_2013-01.pgn.zst": [
+   121332,
+   0,
+   0
+  ],
+  "lichess_db_standard_rated_2013-02.pgn.zst": [
+   123961,
+   0,
+   0
+  ],
+  "lichess_db_standard_rated_2013-03.pgn.zst": [
+   158635,
+   0,
+   0
+  ],
+  "lichess_db_standard_rated_2013-04.pgn.zst": [
+   157871,
+   0,
+   0
+  ],
+  "lichess_db_standard_rated_2013-05.pgn.zst": [
+   179550,
+   0,
+   0
+  ],
+  "lichess_db_standard_rated_2013-06.pgn.zst": [
+   224679,
+   0,
+   0
+  ],
+  "lichess_db_standard_rated_2013-07.pgn.zst": [
+   293459,
+   0,
+   0
+  ],
+  "lichess_db_standard_rated_2013-08.pgn.zst": [
+   325525,
+   0,
+   0
+  ],
+  "lichess_db_standard_rated_2013-09.pgn.zst": [
+   325098,
+   0,
+   0
+  ],
+  "lichess_db_standard_rated_2013-10.pgn.zst": [
+   410899,
+   0,
+   140
+  ],
+  "lichess_db_standard_rated_2013-11.pgn.zst": [
+   486752,
+   0,
+   260
+  ],
+  "lichess_db_standard_rated_2013-12.pgn.zst": [
+   577987,
+   0,
+   275
+  ],
+  "lichess_db_standard_rated_2014-01.pgn.zst": [
+   697470,
+   0,
+   130
+  ],
+  "lichess_db_standard_rated_2014-02.pgn.zst": [
+   692264,
+   0,
+   130
+  ],
+  "lichess_db_standard_rated_2014-03.pgn.zst": [
+   795061,
+   0,
+   112
+  ],
+  "lichess_db_standard_rated_2014-04.pgn.zst": [
+   810275,
+   0,
+   188
+  ],
+  "lichess_db_standard_rated_2014-05.pgn.zst": [
+   905285,
+   0,
+   89
+  ],
+  "lichess_db_standard_rated_2014-06.pgn.zst": [
+   961638,
+   0,
+   230
+  ],
+  "lichess_db_standard_rated_2014-07.pgn.zst": [
+   1048280,
+   0,
+   160
+  ],
+  "lichess_db_standard_rated_2014-08.pgn.zst": [
+   1013084,
+   0,
+   210
+  ],
+  "lichess_db_standard_rated_2014-09.pgn.zst": [
+   999960,
+   0,
+   96
+  ],
+  "lichess_db_standard_rated_2014-10.pgn.zst": [
+   1111083,
+   0,
+   219
+  ],
+  "lichess_db_standard_rated_2014-11.pgn.zst": [
+   1208332,
+   0,
+   959
+  ],
+  "lichess_db_standard_rated_2014-12.pgn.zst": [
+   1335672,
+   0,
+   14504
+  ],
+  "lichess_db_standard_rated_2015-01.pgn.zst": [
+   1483517,
+   0,
+   13720
+  ],
+  "lichess_db_standard_rated_2015-02.pgn.zst": [
+   1482876,
+   0,
+   12677
+  ],
+  "lichess_db_standard_rated_2015-03.pgn.zst": [
+   1727126,
+   0,
+   15607
+  ],
+  "lichess_db_standard_rated_2015-04.pgn.zst": [
+   1771107,
+   0,
+   14311
+  ],
+  "lichess_db_standard_rated_2015-05.pgn.zst": [
+   2117918,
+   0,
+   19639
+  ],
+  "lichess_db_standard_rated_2015-06.pgn.zst": [
+   2304189,
+   0,
+   19917
+  ],
+  "lichess_db_standard_rated_2015-07.pgn.zst": [
+   2435364,
+   0,
+   19777
+  ],
+  "lichess_db_standard_rated_2015-08.pgn.zst": [
+   2599852,
+   0,
+   22009
+  ],
+  "lichess_db_standard_rated_2015-09.pgn.zst": [
+   2833738,
+   0,
+   10939
+  ],
+  "lichess_db_standard_rated_2015-10.pgn.zst": [
+   3387050,
+   0,
+   13368
+  ],
+  "lichess_db_standard_rated_2015-11.pgn.zst": [
+   3582991,
+   0,
+   12785
+  ],
+  "lichess_db_standard_rated_2015-12.pgn.zst": [
+   4142985,
+   0,
+   18177
+  ]
+ },
+ "d_cr": 7.421442140188346
+}

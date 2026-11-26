@@ -1,0 +1,14 @@
+numpy==2.5.5
+scipy==1.18.1
+powerlaw==2.0.0
+mpmath==1.4.1
+tqdm==4.70.1
+matplotlib==3.11.2
+contourpy==1.4.0
+cycler==0.12.1
+fonttools==4.68.0
+kiwisolver==1.5.1
+packaging==26.4
+pillow==13.0.0
+pyparsing==3.3.3
+python-dateutil==4.0.0
