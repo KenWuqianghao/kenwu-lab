@@ -72,15 +72,18 @@ def strip_comments(text):
     return "".join(out)
 
 
-def header_end(lines):
-    """Index after the last `module`/`import` line of the header, ignoring comments."""
-    end = 0
-    for i, line in enumerate(strip_comments("".join(lines)).split("\n")):
-        if not line.strip():
-            continue
-        if not HEADER.match(line):
-            break
-        end = i + 1
+def header_end(text):
+    """Character offset just after the last `module`/`import` line of the header.
+
+    Comments are ignored. The offset is in `text` itself, because strip_comments keeps
+    every character position."""
+    stripped, end, pos = strip_comments(text), 0, 0
+    for line in stripped.split("\n"):
+        if line.strip():
+            if not HEADER.match(line):
+                break
+            end = pos + len(line.rstrip())
+        pos += len(line) + 1
     return end
 
 def audit(path):
@@ -88,10 +91,9 @@ def audit(path):
     for reason, pattern in FORBIDDEN.items():
         if re.search(pattern, text, re.MULTILINE):
             return False, reason
-    lines = text.splitlines(keepends=True)
-    lines.insert(header_end(lines), "import Lean\n")
+    cut = header_end(text)
     with tempfile.NamedTemporaryFile("w", suffix=".lean", dir=WORKSPACE, delete=False) as f:
-        f.write("".join(lines) + AUDIT)
+        f.write(text[:cut] + "\nimport Lean\n" + text[cut:] + AUDIT)
         tmp = Path(f.name)
     try:
         proc = subprocess.run(["lake", "env", "lean", str(tmp)], cwd=WORKSPACE,
