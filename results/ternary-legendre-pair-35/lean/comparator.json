@@ -1,0 +1,6 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": ["exists_ternary_legendre_pair_35"],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"]
+}

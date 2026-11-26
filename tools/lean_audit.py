@@ -19,6 +19,7 @@ import tempfile
 from pathlib import Path
 
 WORKSPACE = Path(__file__).resolve().parent.parent / "lean"
+CHALLENGE = "Challenge.lean"  # sorry by design; lake comparator checks the proof against it
 
 AUDIT = r"""
 
@@ -118,7 +119,8 @@ def audit(path):
 def main(args):
     files = []
     for a in map(Path, args):
-        files += sorted(p for p in a.rglob("*.lean") if ".lake" not in p.parts) if a.is_dir() else [a]
+        files += sorted(p for p in a.rglob("*.lean")
+                        if ".lake" not in p.parts and p.name != CHALLENGE) if a.is_dir() else [a]
     if not files:
         print("lean-audit: no .lean files", file=sys.stderr)
         return 2

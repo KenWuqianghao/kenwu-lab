@@ -80,3 +80,41 @@ jobs:
       - name: Result checks (checks/ci.sh)
         working-directory: results/${{ matrix.slug }}
         run: bash checks/ci.sh
+
+  comparator:
+    name: Comparator ${{ matrix.slug }}
+    needs: changed
+    if: needs.changed.outputs.slugs != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        slug: ${{ fromJSON(needs.changed.outputs.slugs) }}
+    steps:
+      - uses: actions/checkout@v7.0.1
+      # A fresh runner: the submitted proof must not have been compiled outside the sandbox.
+      - name: Sandboxed statement and axiom check (lake comparator)
+        if: hashFiles(format('results/{0}/lean/Challenge.lean', matrix.slug)) != ''
+        env:
+          SLUG: ${{ matrix.slug }}
+        run: |
+          sudo apt-get install -y -qq bubblewrap
+          sudo sysctl -q -w kernel.apparmor_restrict_unprivileged_userns=0
+          bwrap --unshare-all --ro-bind / / true
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          export PATH="$HOME/.elan/bin:$PATH"
+          P="$RUNNER_TEMP/comparator"
+          mkdir -p "$P"
+          cp lean/lake-manifest.json lean/lean-toolchain "$P/"
+          awk '/^\[\[lean_lib\]\]/{exit} !/^defaultTargets/ {print}' lean/lakefile.toml > "$P/lakefile.toml"
+          printf '[[lean_lib]]\nname = "Challenge"\n\n[[lean_lib]]\nname = "Solution"\n' >> "$P/lakefile.toml"
+          src="results/$SLUG/lean"
+          cp "$src/Challenge.lean" "$src/comparator.json" "$P/"
+          proofs=()
+          for f in "$src"/*.lean; do [ "$(basename "$f")" = Challenge.lean ] || proofs+=("$f"); done
+          [ "${#proofs[@]}" -eq 1 ]
+          cp -- "${proofs[0]}" "$P/Solution.lean"
+          cd "$P"
+          lake exe cache get
+          lake comparator --config comparator.json
