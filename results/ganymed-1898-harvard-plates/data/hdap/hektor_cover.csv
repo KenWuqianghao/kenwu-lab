@@ -1,0 +1,19 @@
+plate,inst,start,end,exposure_s,object,accref,mjd_mid,ra,dec,V,offset_deg,edge_deg
+G965,Wolf's Doppelastrograph,1895-02-14T19:56:13,1895-02-14T21:56:13,7200.0,,http://dc.g-vo.org/getproduct/lswscans/data/part2/Wolf/FITS/G965.fits,13238.872372685,151.02227,18.99847,14.13,5.41,0.05
+G962,Wolf's Doppelastrograph,1895-02-14T20:24:13,1895-02-14T22:24:13,7200.0,,http://dc.g-vo.org/getproduct/lswscans/data/part2/Wolf/FITS/G962.fits,13238.891817129683,151.01937,18.99884,14.13,5.4,0.09
+G963,Wolf's Doppelastrograph,1895-02-14T20:24:13,1895-02-15T00:10:13,12600.0,,http://dc.g-vo.org/getproduct/lswscans/data/part2/Wolf/FITS/G963.fits,13238.928622685373,151.01387,18.99954,14.13,6.36,0.26
+G1139,Wolf's Doppelastrograph,1896-03-15T20:46:41,1896-03-15T23:16:41,9000.0,Beta Vir,http://dc.g-vo.org/getproduct/lswscans/data/part2/Wolf/FITS/G1139.fits,13633.917835648172,177.11979,-5.63564,14.14,6.77,3.74
+B262a,Bruce Astrograph,1901-08-17T20:54:31,1901-08-17T22:24:31,5400.0,,http://dc.g-vo.org/getproduct/lswscans/data/part2/Bruceplatten/B262a.fits,15613.902442129795,344.17501,-8.56264,14.57,6.21,0.81
+G2281,Wolf's Doppelastrograph,1901-08-23T22:11:20,1901-08-23T23:31:20,4800.0,h Aqr,http://dc.g-vo.org/getproduct/lswscans/data/part2/Wolf/FITS/G2281.fits,15619.952314815018,343.4059,-8.69622,14.48,2.69,3.39
+G2282,Wolf's Doppelastrograph,1901-08-23T22:11:25,1901-08-24T01:03:25,10320.0,h Aqr,http://dc.g-vo.org/getproduct/lswscans/data/part2/Wolf/FITS/G2282.fits,15619.984317129478,343.40175,-8.69695,14.48,3.07,2.97
+G2283,Wolf's Doppelastrograph,1901-08-23T23:43:20,1901-08-24T01:03:20,4800.0,h Aqr,http://dc.g-vo.org/getproduct/lswscans/data/part2/Wolf/FITS/G2283.fits,15620.016203703824,343.39761,-8.69767,14.47,2.68,3.43
+G2720,Wolf's Doppelastrograph,1902-09-24T19:33:34,1902-09-24T22:53:34,12000.0,,http://dc.g-vo.org/getproduct/lswscans/data/part2/Wolf/FITS/G2720.fits,16016.884421296418,5.29263,12.8928,14.49,6.23,0.03
+G3620,Wolf's Doppelastrograph,1904-11-14T23:05:30,1904-11-15T00:25:30,4800.0,,http://dc.g-vo.org/getproduct/lswscans/data/part2/Wolf/FITS/G3620.fits,16798.98993055569,71.61801,44.4617,14.58,1.32,3.07
+G3621,Wolf's Doppelastrograph,1904-11-14T23:05:35,1904-11-15T00:25:35,4800.0,,http://dc.g-vo.org/getproduct/lswscans/data/part2/Wolf/FITS/G3621.fits,16798.989988425747,71.618,44.4617,14.58,1.1,3.09
+G3623,Wolf's Doppelastrograph,1904-11-15T00:47:31,1904-11-15T02:47:31,7200.0,,http://dc.g-vo.org/getproduct/lswscans/data/part2/Wolf/FITS/G3623.fits,16799.074664351996,71.60415,44.46284,14.58,1.13,3.15
+G3624,Wolf's Doppelastrograph,1904-11-15T00:47:36,1904-11-15T02:47:36,7200.0,,http://dc.g-vo.org/getproduct/lswscans/data/part2/Wolf/FITS/G3624.fits,16799.074722222053,71.60414,44.46284,14.58,1.31,3.0
+G3641,Wolf's Doppelastrograph,1904-12-20T04:14:34,1904-12-20T05:14:34,3600.0,,http://dc.g-vo.org/getproduct/lswscans/data/part2/Wolf/FITS/G3641.fits,16834.19761574082,65.46878,43.85161,14.54,3.37,1.0
+G3642,Wolf's Doppelastrograph,1904-12-20T04:14:39,1904-12-20T05:48:39,5400.0,,http://dc.g-vo.org/getproduct/lswscans/data/part2/Wolf/FITS/G3642.fits,16834.20947916666,65.46693,43.85106,14.54,3.76,0.69
+G3643,Wolf's Doppelastrograph,1904-12-20T05:18:34,1904-12-20T05:48:34,1800.0,,http://dc.g-vo.org/getproduct/lswscans/data/part2/Wolf/FITS/G3643.fits,16834.231643518433,65.46347,43.85002,14.54,3.4,0.93
+G3652,Wolf's Doppelastrograph,1904-12-27T20:32:09,1904-12-27T21:32:09,3600.0,,http://dc.g-vo.org/getproduct/lswscans/data/part2/Wolf/FITS/G3652.fits,16841.876493055373,64.34888,43.46232,14.61,3.17,1.1
+G3653,Wolf's Doppelastrograph,1904-12-27T20:32:14,1904-12-27T21:32:14,3600.0,,http://dc.g-vo.org/getproduct/lswscans/data/part2/Wolf/FITS/G3653.fits,16841.876550925896,64.34887,43.46232,14.61,2.8,1.26
