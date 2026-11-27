@@ -1,0 +1,58 @@
+sha256 mismatches: none
++ /private/tmp/verify-personal-best-quitting-lichess/.venv/bin/python -I /private/tmp/verify-personal-best-quitting-lichess/checks/build.py /tmp/verify-personal-best-quitting-lichess/work/rerun/hdr /tmp/verify-personal-best-quitting-lichess/work/rerun/player_games_2013_2015.parquet
+players 499966 27s
+player-games written 112s
+bucket 0 done 131s
+bucket 1 done 151s
+bucket 2 done 169s
+bucket 3 done 189s
+bucket 4 done 207s
+bucket 5 done 226s
+bucket 6 done 246s
+bucket 7 done 266s
+player-games 90085152, duplicates dropped 0
+rows out (27436615, 11315253) total 278s
++ /private/tmp/verify-personal-best-quitting-lichess/.venv/bin/python -I /private/tmp/verify-personal-best-quitting-lichess/checks/analyze.py /tmp/verify-personal-best-quitting-lichess/work/rerun/player_games_2013_2015.parquet /tmp/verify-personal-best-quitting-lichess/work/rerun/results.json
+{
+ "sample": {
+  "player_games_all_speeds_after_rules_2_3_5_6_7": 27436615,
+  "blitz_after_pb_filter": 10755282,
+  "blitz_new_pb_events": 37391,
+  "blitz_players": 26722
+ },
+ "primary": {
+  "jump": 0.005082668337712537,
+  "se": 0.004508772697267401,
+  "ci": [
+   -0.0037545261489315696,
+   0.013919862824356644
+  ],
+  "z": 1.127284225437435,
+  "left_limit": 0.18545751755393053,
+  "relative": 0.02740610574728798,
+  "n": 185385,
+  "players": 14903,
+  "decision": "Null, smaller than FICS",
+  "fics_magnitude_rejected": true
+ }
+}
++ /private/tmp/verify-personal-best-quitting-lichess/.venv/bin/python -I /private/tmp/verify-personal-best-quitting-lichess/checks/build.py /tmp/verify-personal-best-quitting-lichess/work/rerun/hdr:/tmp/verify-pbq-2016 /tmp/verify-pbq-2016/player_games_2013_2016.parquet
+players 981140 75s
+player-games written 312s
+bucket 0 done 395s
+bucket 1 done 478s
+bucket 2 done 566s
+bucket 3 done 644s
+bucket 4 done 712s
+bucket 5 done 777s
+bucket 6 done 839s
+bucket 7 done 900s
+player-games 247083086, duplicates dropped 0
+rows out (83115895, 36280660) total 943s
++ /private/tmp/verify-personal-best-quitting-lichess/.venv/bin/python -I /private/tmp/verify-personal-best-quitting-lichess/checks/addendum.py /tmp/verify-pbq-2016/player_games_2013_2016.parquet /tmp/verify-personal-best-quitting-lichess/work/rerun/addendum
+A {'jump': 0.005082668337712537, 'se': 0.004508772697267401, 'ci': [-0.0037545261489315696, 0.013919862824356644], 'left_limit': 0.18545751755393053, 'n': 185385, 'players': 14903, 'decision': 'Null, smaller than FICS'}
+B {'jump': 0.008832556814252879, 'se': 0.0032353431679084475, 'ci': [0.002491284205152322, 0.015173829423353435], 'left_limit': 0.1986313775543725, 'n': 407350, 'players': 37708, 'decision': 'Supported'}
+B-A {'diff': 0.0037498884765403417, 'se': 0.005549457329303094, 'ci': [-0.0071270478888937235, 0.014626824841974407], 'z': 0.6757216524108774, 'salience_prediction_supported': False}
+mismatches: 0
+RERUN PASS
+exit 0

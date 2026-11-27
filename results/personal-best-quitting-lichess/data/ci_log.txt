@@ -1,0 +1,49 @@
+# bash checks/ci.sh from a clean copy of release/ (commit 1cf78fc content, before README.md and result.json were added), new venv, Python 3.13.18 Homebrew, macOS M1 Pro.
+# Command: cd /tmp/pbq_ci/personal-best-quitting-lichess && /Users/kenwu/research/_bin/run-heavy 6600 env HEAVY_THREADS=2 PYTHON=/opt/homebrew/opt/python@3.13/bin/python3.13 bash checks/ci.sh
+# Date: 2026-11-25. Wall time 12 min 42 s. Exit code 0.
+
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: /private/tmp/pbq.eXAtps/venv/bin/python -m pip install --upgrade pip
+paper numbers checked: 76, mismatches: 0
+sha256 mismatches: none
++ /private/tmp/pbq.eXAtps/venv/bin/python -I /private/tmp/pbq_ci/personal-best-quitting-lichess/checks/build.py /tmp/pbq.eXAtps/work/hdr /tmp/pbq.eXAtps/work/player_games_2013_2015.parquet
+players 499966 16s
+player-games written 62s
+bucket 0 done 72s
+bucket 1 done 83s
+bucket 2 done 94s
+bucket 3 done 104s
+bucket 4 done 114s
+bucket 5 done 125s
+bucket 6 done 135s
+bucket 7 done 146s
+player-games 90085152, duplicates dropped 0
+rows out (27436615, 11315253) total 153s
++ /private/tmp/pbq.eXAtps/venv/bin/python -I /private/tmp/pbq_ci/personal-best-quitting-lichess/checks/analyze.py /tmp/pbq.eXAtps/work/player_games_2013_2015.parquet /tmp/pbq.eXAtps/work/results.json
+{
+ "sample": {
+  "player_games_all_speeds_after_rules_2_3_5_6_7": 27436615,
+  "blitz_after_pb_filter": 10755282,
+  "blitz_new_pb_events": 37391,
+  "blitz_players": 26722
+ },
+ "primary": {
+  "jump": 0.005082668337712537,
+  "se": 0.004508772697267401,
+  "ci": [
+   -0.0037545261489315696,
+   0.013919862824356644
+  ],
+  "z": 1.127284225437435,
+  "left_limit": 0.18545751755393053,
+  "relative": 0.02740610574728798,
+  "n": 185385,
+  "players": 14903,
+  "decision": "Null, smaller than FICS",
+  "fics_magnitude_rejected": true
+ }
+}
+mismatches: 0
+RERUN PASS
+/Users/kenwu/research/_bin/run-heavy 6600 env HEAVY_THREADS=2  bash   1258.46s user 76.87s system 175% cpu 12:41.85 total
+exit 0

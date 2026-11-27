@@ -1,0 +1,60 @@
+sha256 mismatches: none
++ /private/tmp/pbq_clone/.venv/bin/python -I /private/tmp/pbq_clone/checks/build.py /private/tmp/pbq_clone/work/rerun/hdr /private/tmp/pbq_clone/work/rerun/player_games_2013_2015.parquet
+players 499966 29s
+player-games written 118s
+bucket 0 done 139s
+bucket 1 done 160s
+bucket 2 done 181s
+bucket 3 done 198s
+bucket 4 done 215s
+bucket 5 done 231s
+bucket 6 done 248s
+bucket 7 done 265s
+player-games 90085152, duplicates dropped 0
+rows out (27436615, 11315253) total 276s
++ /private/tmp/pbq_clone/.venv/bin/python -I /private/tmp/pbq_clone/checks/analyze.py /private/tmp/pbq_clone/work/rerun/player_games_2013_2015.parquet /private/tmp/pbq_clone/work/rerun/results.json
+{
+ "sample": {
+  "player_games_all_speeds_after_rules_2_3_5_6_7": 27436615,
+  "blitz_after_pb_filter": 10755282,
+  "blitz_new_pb_events": 37391,
+  "blitz_players": 26722
+ },
+ "primary": {
+  "jump": 0.005082668337712537,
+  "se": 0.004508772697267401,
+  "ci": [
+   -0.0037545261489315696,
+   0.013919862824356644
+  ],
+  "z": 1.127284225437435,
+  "left_limit": 0.18545751755393053,
+  "relative": 0.02740610574728798,
+  "n": 185385,
+  "players": 14903,
+  "decision": "Null, smaller than FICS",
+  "fics_magnitude_rejected": true
+ }
+}
++ /private/tmp/pbq_clone/.venv/bin/python -I /private/tmp/pbq_clone/checks/build.py /private/tmp/pbq_clone/work/rerun/hdr:/tmp/pbq_rerun2016 /tmp/pbq_rerun2016/player_games_2013_2016.parquet
+players 981140 68s
+player-games written 289s
+bucket 0 done 368s
+bucket 1 done 442s
+bucket 2 done 510s
+bucket 3 done 578s
+bucket 4 done 647s
+bucket 5 done 713s
+bucket 6 done 781s
+bucket 7 done 848s
+player-games 247083086, duplicates dropped 0
+rows out (83115895, 36280660) total 892s
++ /private/tmp/pbq_clone/.venv/bin/python -I /private/tmp/pbq_clone/checks/addendum.py /tmp/pbq_rerun2016/player_games_2013_2016.parquet /private/tmp/pbq_clone/work/rerun/addendum
+A {'jump': 0.005082668337712537, 'se': 0.004508772697267401, 'ci': [-0.0037545261489315696, 0.013919862824356644], 'left_limit': 0.18545751755393053, 'n': 185385, 'players': 14903, 'decision': 'Null, smaller than FICS'}
+B {'jump': 0.008832556814252879, 'se': 0.0032353431679084475, 'ci': [0.002491284205152322, 0.015173829423353435], 'left_limit': 0.1986313775543725, 'n': 407350, 'players': 37708, 'decision': 'Supported'}
+B-A {'diff': 0.0037498884765403417, 'se': 0.005549457329303094, 'ci': [-0.0071270478888937235, 0.014626824841974407], 'z': 0.6757216524108774, 'salience_prediction_supported': False}
+mismatches: 0
+RERUN PASS
+real 2644.21
+user 4385.74
+sys 328.26
