@@ -1,0 +1,289 @@
+{
+ "n_plates_bamberg_swapped": 18681,
+ "n_plates_sanmiguel_swapped": 870,
+ "n_plates_muottas_swapped": 93,
+ "n_plates_schatzalp_swapped": 38,
+ "bamberg_n": 18947,
+ "bamberg_D6_true_site": 0.0013,
+ "bamberg_D6_shifted": 0.1067,
+ "bamberg_b": 7,
+ "bamberg_c": 2004,
+ "bamberg_M": -0.97,
+ "bamberg_verdict": "refuted",
+ "bamberg_D6_recorded_site": 0.06,
+ "sanmiguel_n": 858,
+ "sanmiguel_D6_true_site": 0.0,
+ "sanmiguel_D6_shifted": 0.035,
+ "sanmiguel_verdict": "refuted",
+ "injection_detected": true,
+ "injection_D6": 0.0921,
+ "vatican_n": 544,
+ "vatican_D6": 0.4081,
+ "vatican_D0": 0.3235,
+ "vatican_D6_HB": 0.002,
+ "vatican_HB_b": 222,
+ "vatican_HB_c": 1,
+ "vatican_frac_HA_APP_lt3": 0.2739,
+ "vatican_frac_HA_HB_lt3": 0.7022,
+ "vatican_ha_b": 241,
+ "vatican_ha_c": 8,
+ "vatican_ha_p_lt_1e-50": true,
+ "vatican_D6_HA": 0.487,
+ "potsdam4_explore": [
+  0.31,
+  0.586,
+  0.31
+ ],
+ "potsdam5_explore": [
+  0.672,
+  0.902,
+  0.672
+ ],
+ "control101_HB_b": 107,
+ "control101_HB_c": 0,
+ "control101_D6_HB": 0.0,
+ "control101_ha_diff": 0.0061,
+ "control101_ha_b": 97,
+ "control101_ha_c": 13,
+ "control101_ha_p_lt_1e-16": true,
+ "potsdam4_D6": 0.2755,
+ "potsdam5_D6": 0.6721,
+ "vatican_n_timed": 544,
+ "vatican_n_dated": 543,
+ "vatican_first_date": "1951-05-19",
+ "vatican_last_date": "1953-12-26",
+ "vatican_n_day_dr4": 222,
+ "vatican_n_near_vs_same_differ_by_a_day": 222,
+ "vatican_n_night_dr4": 322,
+ "vatican_placeholder_exposure_id": "139402",
+ "vatican_D6_near": 0.0018,
+ "vatican_D6_same": 0.0018,
+ "vatican_median_abs_correction_h": 4.8856,
+ "vatican_max_abs_correction_h": 11.816,
+ "vatican_frac_dated_correction_gt_10min": 0.9816,
+ "vatican_night_median_abs_correction_h": 3.5552,
+ "vatican_night_frac_correction_lt_1h": 0.2019,
+ "vatican_target_below_0_dr4": 0.2812,
+ "vatican_target_below_0_HB": 0.0018,
+ "vatican_target_below_20_dr4": 0.5129,
+ "vatican_target_below_20_HB": 0.0074,
+ "vatican_night_target_below_0_dr4": 0.2391,
+ "vatican_night_target_below_0_HB": 0.0031,
+ "vatican_perm_D6_mean": 0.4156,
+ "vatican_perm_D6_min": 0.3824,
+ "vatican_perm_target_below_20_mean": 0.093,
+ "vatican_perm_target_below_20_min": 0.0699,
+ "vatican_perm_HA_lt3_mean": 0.6352,
+ "vatican_perm_HA_lt3_max": 0.6581,
+ "blocks": {
+  "101|Hamburg-Bergedorf, Germany": [
+   14039,
+   0.0079,
+   0.0078,
+   -1.26,
+   0.546,
+   ""
+  ],
+  "102|Hamburg-Bergedorf, Germany": [
+   6501,
+   0.0775,
+   0.0746,
+   -1.2,
+   0.551,
+   ""
+  ],
+  "103|Hamburg-Bergedorf, Germany": [
+   9624,
+   0.0201,
+   0.0169,
+   -0.98,
+   0.54,
+   ""
+  ],
+  "104|Calar Alto Observatory, Spain": [
+   3194,
+   0.0013,
+   0.0013,
+   0.13,
+   0.537,
+   ""
+  ],
+  "105|Bonn, Germany": [
+   1427,
+   0.0,
+   0.0,
+   -1.43,
+   0.546,
+   ""
+  ],
+  "106|Hamburg-Bergedorf, Germany": [
+   4943,
+   0.0006,
+   0.0006,
+   -0.48,
+   0.548,
+   ""
+  ],
+  "107|Hamburg-Bergedorf, Germany": [
+   2223,
+   0.0013,
+   0.0013,
+   -1.48,
+   0.572,
+   ""
+  ],
+  "108|La Silla, Chile": [
+   1251,
+   0.0032,
+   0.0032,
+   0.03,
+   0.556,
+   ""
+  ],
+  "109|Hamburg-Bergedorf, Germany": [
+   2025,
+   0.0217,
+   0.0217,
+   -0.79,
+   0.545,
+   ""
+  ],
+  "110|Hamburg-Bergedorf, Germany": [
+   901,
+   0.0799,
+   0.0444,
+   -0.91,
+   0.619,
+   ""
+  ],
+  "111|Hamburg-Bergedorf, Germany": [
+   2119,
+   0.0142,
+   0.0118,
+   -0.53,
+   0.518,
+   ""
+  ],
+  "1|Potsdam-Telegrafenberg": [
+   5050,
+   0.0412,
+   0.0406,
+   -0.63,
+   0.551,
+   ""
+  ],
+  "202|Boyden Observatory, Bloemfontein, South Africa": [
+   2718,
+   0.0004,
+   0.0004,
+   -1.36,
+   0.543,
+   ""
+  ],
+  "203|Boyden Observatory, Bloemfontein, South Africa": [
+   12565,
+   0.0115,
+   0.011,
+   -1.71,
+   0.529,
+   ""
+  ],
+  "204|Mount John Observatory, Lake Tekapo, New Zealand": [
+   5266,
+   0.0023,
+   0.0023,
+   -0.42,
+   0.496,
+   ""
+  ],
+  "205|Observatorio de Fisica Cosmica, San Miguel, Argentina": [
+   858,
+   0.0,
+   0.0,
+   -0.07,
+   0.543,
+   "refuted"
+  ],
+  "206|Boyden Observatory, Bloemfontein, South Africa": [
+   693,
+   0.0,
+   0.0,
+   -1.65,
+   0.531,
+   ""
+  ],
+  "207|Boyden Observatory, Bloemfontein, South Africa": [
+   698,
+   0.0,
+   0.0,
+   -1.28,
+   0.518,
+   ""
+  ],
+  "208|Dr. Remeis-Observatory, Bamberg, Germany": [
+   18947,
+   0.0013,
+   0.0007,
+   -0.97,
+   0.56,
+   "refuted"
+  ],
+  "208|Muottas Muragl, Switzerland": [
+   93,
+   0.0108,
+   0.0,
+   -3.25,
+   0.501,
+   "inconclusive"
+  ],
+  "2|Potsdam-Telegrafenberg": [
+   979,
+   0.0,
+   0.0,
+   -0.5,
+   0.586,
+   ""
+  ],
+  "301|Tartu, Estonia (MPC code 075)": [
+   2805,
+   0.0011,
+   0.0011,
+   -1.7,
+   0.517,
+   ""
+  ],
+  "401|Karl Schwarzschild Observatorium, Germany": [
+   4083,
+   0.0054,
+   0.0,
+   0.66,
+   0.552,
+   ""
+  ],
+  "4|Potsdam-Telegrafenberg": [
+   98,
+   0.2755,
+   0.2653,
+   -1.03,
+   0.655,
+   ""
+  ],
+  "501|Castel Gandolfo, Italy": [
+   544,
+   0.4081,
+   0.3235,
+   -2.96,
+   0.589,
+   ""
+  ],
+  "5|Potsdam-Telegrafenberg": [
+   61,
+   0.6721,
+   0.623,
+   -10.98,
+   0.576,
+   ""
+  ]
+ },
+ "injection_M": 1.34
+}
