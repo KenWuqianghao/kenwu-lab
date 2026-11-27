@@ -48,5 +48,9 @@
       "doi": "10.1016/S0304-3975(99)00320-5",
       "relation": "cites"
     }
-  ]
+  ],
+  "doi": "10.5281/zenodo.24580785",
+  "concept_doi": "10.5281/zenodo.24580784",
+  "zenodo_id": 24580785,
+  "doi_version": 1
 }

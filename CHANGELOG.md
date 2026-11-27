@@ -2,6 +2,11 @@
 
 Each result is versioned on its own and tagged `<slug>-vN`.
 
+## rich-words-five-letters v1 (2026-11-27)
+
+- A morphism π from 9 letters to 5 letters makes π(u_9) rich with critical exponent E*(u_9) ≈ 2.0592854, so the repetition threshold of 5-ary rich words is at most E*(u_9).
+- Zenodo: [10.5281/zenodo.24580785](https://doi.org/10.5281/zenodo.24580785)
+
 ## earth-rotation-quake-forecast v1 (2026-11-27)
 
 - ComCat lists 66 M≥7 earthquakes in 2018-2022, 1.04 times the 1900-2017 rate, so a pre-registered score of the 2017 Bilham-Bendick Earth-rotation forecast (+25-30%) is inconclusive; a held-out test of its five-year lag gives no support but has only 17% power.

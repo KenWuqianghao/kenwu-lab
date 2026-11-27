@@ -64,3 +64,5 @@ The programs use [Python](https://www.python.org/), [SymPy](https://www.sympy.or
   howpublished = {\url{https://github.com/KenWuqianghao/kenwu-lab/tree/main/results/rich-words-five-letters}}
 }
 ```
+
+Archived on Zenodo: [doi:10.5281/zenodo.24580785](https://doi.org/10.5281/zenodo.24580785)
