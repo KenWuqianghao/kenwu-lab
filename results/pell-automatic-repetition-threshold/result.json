@@ -1,0 +1,43 @@
+{
+  "slug": "pell-automatic-repetition-threshold",
+  "title": "The repetition threshold for binary Pell-automatic sequences is 7/3",
+  "tier": "Computer-assisted",
+  "version": 1,
+  "date": "2026-11-27",
+  "summary": "The repetition threshold of the binary Pell-automatic sequences is 7/3; this settles the Pell case of a remark of Allouche, Rampersad and Shallit, with a 4-state squarefree Pell automaton that Walnut and a second decision procedure check.",
+  "abstract": "The critical exponent of an infinite word is the supremum of the exponents of its finite factors. The repetition threshold of a set of infinite words is the infimum of their critical exponents. Allouche, Rampersad and Shallit proved that the repetition threshold of the binary Fibonacci-automatic sequences and of the binary Tribonacci-automatic sequences is 7/3. They wrote that 7/3 is likely the critical exponent for many other binary generalized automatic sequences, such as the Pell-automatic sequences. We prove that the repetition threshold of the binary Pell-automatic sequences is 7/3, and that one Pell-automatic sequence attains it. The upper bound uses a 4-state Pell automaton whose output word s over 4 letters is squarefree. The theorem prover Walnut proves that s is squarefree, and a separate decision procedure that does not use Walnut confirms it. A 21-uniform morphism of Karhumäki and Shallit then gives a binary Pell-automatic sequence with critical exponent exactly 7/3. The lower bound follows the argument of Allouche, Rampersad and Shallit, with Durand's theorem for substitutions. We give the non-erasing substitution that this argument needs for the Pell numeration system. The proof is computer-assisted and uses published lemmas that we do not prove again. The method is the method of Allouche, Rampersad and Shallit, applied to one more numeration system; the general question for other numeration systems remains open. This work has not yet been reviewed by experts. The computations, the proofs and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+  "keywords": [
+    "repetition threshold",
+    "critical exponent",
+    "Pell numeration system",
+    "automatic sequences",
+    "squarefree words",
+    "Walnut"
+  ],
+  "related": [
+    {
+      "doi": "10.48550/arXiv.2406.06513",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1007/978-3-030-28796-2_6",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.4171/JEMS/294",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1016/j.jcta.2003.12.004",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.4204/EPTCS.63.25",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.48550/arXiv.1603.06017",
+      "relation": "cites"
+    }
+  ]
+}

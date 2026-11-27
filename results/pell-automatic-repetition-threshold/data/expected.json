@@ -1,0 +1,25 @@
+{
+  "decide_square": "no (i,n) with n>=1 and all matches",
+  "decide_top_states": 442377,
+  "decide_D_M_states": 151,
+  "controls_run": 32,
+  "controls_detected": 32,
+  "prefix": {
+    "psq_prefix60": "010230131012010231202301023130102301310120231301310120102301",
+    "subst_equals_greedy_letters": 100000,
+    "random_dfaos_agree": 200,
+    "psq_square_free_prefix": 50000,
+    "h_prefix_length": 200000,
+    "h_max_exponent": "7/3",
+    "h_first_73_factor": [
+      8,
+      7,
+      3
+    ],
+    "h_prefix24": "011010011001001101001100",
+    "control_changed_letter_square": true,
+    "control_thue_morse_max_exponent": "2/1"
+  },
+  "controls_period_ge_2": 11,
+  "controls_no_square_in_prefix": 1
+}
