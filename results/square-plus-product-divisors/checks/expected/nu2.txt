@@ -1,0 +1,1 @@
+checked N=8n+6 <= 700 failures: 0

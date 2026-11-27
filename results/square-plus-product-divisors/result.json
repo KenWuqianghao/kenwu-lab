@@ -1,0 +1,47 @@
+{
+  "slug": "square-plus-product-divisors",
+  "title": "Divisor sums over N − k² modulo 4 for N ≡ 6 (mod 8): a proof of a conjecture of Jirattikansakul, Kittipassorn, Kongsiri, Moonwichit and Sriamorn",
+  "tier": "Proved in Lean",
+  "version": 1,
+  "date": "2026-11-27",
+  "summary": "The sum of σ0(N − k²) over 1 ≤ k < √N is divisible by 4 for every N ≡ 6 (mod 8); this proves Conjecture 7 of Jirattikansakul et al. (N = 16n + 6) with an elementary proof by involutions, and Lean checks it.",
+  "abstract": "Let S(N) = ∑_{1≤k<√N} σ0(N − k²), where σ0(m) is the number of positive divisors of m. Jirattikansakul, Kittipassorn, Kongsiri, Moonwichit and Sriamorn proved that S(N) ≡ 0 (mod 4) for N = An + B with (A, B) ∈ {(16, 14), (36, 30), (72, 42), (196, 70), (252, 114)}, and they conjectured that S(N) ≡ 0 (mod 4) for all N = 16n + 6 (their Conjecture 7). We prove this conjecture. More generally, we prove that S(N) ≡ 0 (mod 4) for every N ≡ 6 (mod 8), as their computations suggest. The class N ≡ 14 (mod 16) is their case (16, 14), so for that class our proof is a new proof of a known result. Their proof uses a congruence of Keith for partitions into exactly two part sizes, which was proved with modular forms. Our proof is elementary. It counts the solutions of k² + ab = N with involutions, one of which is Zagier's involution from his one-sentence proof of Fermat's two-squares theorem. Lean 4 with Mathlib checks the theorem and Conjecture 7 from the definitions, with only the standard axioms. With Theorem 4 of the source, the result gives ν2(N) ≡ −σ1(N)/2 (mod 4) for all N ≡ 6 (mod 8), where ν2(N) is the number of partitions of N with exactly two part sizes. This consequence is not checked in Lean. This work has not yet been reviewed by experts. The computations, the proofs and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+  "keywords": [
+    "divisor function",
+    "sums of a square and a product",
+    "partitions into two part sizes",
+    "congruences",
+    "Zagier involution",
+    "Lean"
+  ],
+  "related": [
+    {
+      "doi": "10.48550/arXiv.2604.25394",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1142/S1793042117500130",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.48550/arXiv.1502.00366",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.48550/arXiv.2507.13566",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1142/S1793042126500569",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1007/BF01187402",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.2307/2323918",
+      "relation": "cites"
+    }
+  ]
+}
