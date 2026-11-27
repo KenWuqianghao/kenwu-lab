@@ -1,0 +1,39 @@
+{
+  "slug": "morse-link-2adic-conjecture",
+  "title": "A counterexample to Gao and Gu's 2-adic conjecture for weighted Morse link numbers",
+  "tier": "Proved in Lean",
+  "version": 1,
+  "date": "2026-11-26",
+  "summary": "Gao and Gu's Conjecture 4.12 on the 2-adic valuations of weighted Morse link numbers is false for k = 2, and Lean checks it; the failure comes from n = 3, and the version for n ≥ 4 stays open.",
+  "abstract": "Let L^(k)_n be the weighted Catalan number with weight b(x) = (2x+1)^(2k), and let C_n be the Catalan number. The case k = 1 counts the combinatorial types of Morse links. Gao and Gu conjectured that for every positive integer k there are a 2-adic integer α_k and an integer c_k ≥ 0 such that ξ₂(L^(k)_n − C_n) = s₂(n) + ξ₂(n − α_k) + c_k for all n ≥ 2. This generalizes a conjecture of Postnikov for k = 1. We show that the conjecture is false for k = 2. The exact values ξ₂(L^(2)_n − C_n) = 4, 13 and 11 at n = 2, 3 and 19 are incompatible with every choice of α_2 and c_2. Lean 4 with Mathlib checks the theorem from the definition of weighted Catalan numbers by Dyck paths, with only the standard axioms. The failure comes from the index n = 3 alone. The version of the conjecture for n ≥ 4 remains open: it fits our data for k ≤ 24 and n ≤ 200. In the same data, the version for n ≥ 2 fails exactly for k ≡ 2 (mod 4). These two statements are computed, not proved. This work has not yet been reviewed by experts. The computations, the proofs and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+  "keywords": [
+    "weighted Catalan numbers",
+    "Morse links",
+    "Dyck paths",
+    "2-adic valuation",
+    "counterexample",
+    "Lean"
+  ],
+  "related": [
+    {
+      "doi": "10.48550/arXiv.1908.03914",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1016/j.jnt.2021.03.007",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.48550/arXiv.2611.26953",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.48550/arXiv.2510.14956",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.48550/arXiv.2604.04900",
+      "relation": "cites"
+    }
+  ]
+}

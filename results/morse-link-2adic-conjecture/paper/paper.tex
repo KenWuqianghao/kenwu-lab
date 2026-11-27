@@ -1,0 +1,172 @@
+\documentclass[11pt]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{fancyvrb}
+\usepackage{newunicodechar}
+\newunicodechar{ℤ}{\ensuremath{\mathbb{Z}}}
+\newunicodechar{ℕ}{\ensuremath{\mathbb{N}}}
+\newunicodechar{α}{\ensuremath{\alpha}}
+\newunicodechar{∀}{\ensuremath{\forall}}
+\newunicodechar{¬}{\ensuremath{\neg}}
+\newunicodechar{→}{\ensuremath{\to}}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue,citecolor=black}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Z}{\mathbb{Z}}
+
+\title{A counterexample to Gao and Gu's 2-adic conjecture\\ for weighted Morse link numbers}
+\author{Qianghao Wu}
+\date{November 26, 2026}
+
+\begin{document}
+\emergencystretch=3em
+\maketitle
+
+\begin{abstract}
+Let $L^{(k)}_n$ be the weighted Catalan number with weight $b(x)=(2x+1)^{2k}$, and let $C_n$ be the Catalan number. The case $k=1$ counts the combinatorial types of Morse links. Gao and Gu conjectured that for every positive integer $k$ there are a 2-adic integer $\alpha_k$ and an integer $c_k\ge 0$ such that $\xi_2(L^{(k)}_n-C_n)=s_2(n)+\xi_2(n-\alpha_k)+c_k$ for all $n\ge 2$. This generalizes a conjecture of Postnikov for $k=1$. We show that the conjecture is false for $k=2$. The exact values $\xi_2(L^{(2)}_n-C_n)=4$, $13$ and $11$ at $n=2$, $3$ and $19$ are incompatible with every choice of $\alpha_2$ and $c_2$. Lean~4 with Mathlib checks the theorem from the definition of weighted Catalan numbers by Dyck paths, with only the standard axioms. In our data, the failure comes from the index $n=3$ alone. The version of the conjecture for $n\ge 4$ remains open: it fits our data for $k\le 24$ and $n\le 200$. In the same data, the version for $n\ge 2$ fails exactly for $k\equiv 2 \pmod 4$. These two statements are computed, not proved. This work has not yet been reviewed by experts. The computations, the proofs and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.
+\end{abstract}
+
+\section{Introduction}
+
+A \emph{Dyck path} of semilength $n$ is a lattice path from $(0,0)$ to $(2n,0)$ with steps $(1,1)$ (up) and $(1,-1)$ (down) that never goes below the $x$-axis. Let $b:\Z_{\ge0}\to\Z$. Gao and Gu~\cite[Definition~1.1]{GG} give each up step the weight $b(y)$, where $y$ is the height at the start of the step, and each down step the weight $1$. The weight of a path is the product of the weights of its steps. The \emph{weighted Catalan number} $C^b_n$ is the sum of the weights of all Dyck paths of semilength $n$. For $b\equiv 1$ this is the Catalan number $C_n$. For $b(x)=(2x+1)^2$, $C^b_n$ is the number $L_n$ of combinatorial types of Morse links of order $n$~\cite{Pos,GG}.
+
+For an integer $m\ne 0$, $\xi_2(m)$ is the exponent of the highest power of $2$ that divides $m$, and $s_2(n)$ is the sum of the binary digits of $n$~\cite[p.~2]{GG}. For a 2-adic integer $x\ne 0$, $\xi_2(x)$ is the usual 2-adic valuation.
+
+\paragraph{History.} Gao and Gu~\cite[Section~1]{GG} summarize the work on the 2-adic valuations of weighted Catalan numbers. It is well known that $\xi_2(C_n)=s_2(n+1)-1$. Postnikov and Sagan gave a sufficient condition on $b$ for $\xi_2(C^b_n)=\xi_2(C_n)$ for all $n$~\cite[Theorem~1.3]{GG}. For polynomial $b$, Konvalinka conjectured a necessary and sufficient condition and An proved it; Konvalinka also extended the result of Postnikov and Sagan to weighted $q$-Catalan numbers (all as described in~\cite[Section~1]{GG}). Gao and Gu relaxed the conditions of Postnikov and Sagan~\cite[Theorem~2.1]{GG}, extended the method to weighted $q$-Catalan numbers, and proved some periodicity conjectures of Postnikov on Morse link numbers modulo $m$~\cite[Section~4]{GG}. They also stated a number of conjectures. Inagaki and Pramatarova~\cite{IP26} recently gave infinitely many counterexamples to one of them, Conjecture~2.14 of~\cite{GG}, which is about when $\xi_2(C^b_n)=\xi_2(C_n)$. The same authors study multidimensional weighted Catalan numbers and their periodicity~\cite{IP25,IP26b}.
+
+\paragraph{The conjecture.} Postnikov~\cite[Conjecture~3.4]{Pos} stated a 2-adic pattern for $L_n-C_n$. Gao and Gu rephrase it as follows~\cite[Section~4.3]{GG}:
+\begin{quote}
+Conjecture 4.11. There exists a 2-adic integer $\alpha=\dots010111_2$ such that $\xi_2(L_n-C_n)=s_2(n)+\xi_2(n-\alpha)+2$ for all $n\ge2$.
+\end{quote}
+They then state~\cite[Conjecture~4.12]{GG}, quoted word for word from arXiv:1908.03914v1:
+\begin{quote}
+Conjecture 4.12. Let $k$ be a positive integer and $L^{(k)}_n$ denote the weighted Catalan numbers with weight $b(x)=(2x+1)^{2k}$. There exists a 2-adic integer $\alpha_k$ and nonnegative integer $c_k$ such that
+\[\xi_2(L^{(k)}_n-C_n)=s_2(n)+\xi_2(n-\alpha_k)+c_k\]
+for all $n\ge2$.
+\end{quote}
+So $L^{(1)}_n=L_n$, and Conjecture~4.11 is the case $k=1$. The paper also appeared in the Journal of Number Theory~\cite{GGjnt}. We did not read the journal text. We quote the arXiv version, which is the only arXiv version.
+
+\paragraph{Result.} Conjecture~4.12 is false for $k=2$ (Theorem~\ref{thm:main}). The proof uses three exact values. In our data, the obstruction comes from $n=3$ only: if the range is changed to $n\ge 4$, the data for $k\le 24$ and $n\le 200$ fit the conjecture (Section~\ref{sec:survey}). So the result suggests a change of the range from $n\ge2$ to $n\ge4$ for some $k$. The changed statement is open. It says nothing about the 2-adic pattern for large $n$, and it does not touch Postnikov's case $k=1$.
+
+\paragraph{Prior work on this question.} We searched the two public collections of AI-produced results that we know of, GitHub and Zenodo archives, the citations of~\cite{GG} in Semantic Scholar and OpenAlex, and the web. We found no earlier settlement of Conjecture~4.12. The work of Inagaki and Pramatarova~\cite{IP26} treats only Conjecture~2.14. Their weights $b_t(x)=(4t+1)x^3-x^2+1$ are not of the form $(2x+1)^{2k}$, so their construction does not apply to Conjecture~4.12. Zhu and Huang~\cite{ZH} study only the case $k=1$, Conjecture~4.11. In their computations the 2-adic integer $\alpha$ is replaced by the integer $25431$; Postnikov's digits of $\alpha$ give $\alpha\equiv 549719\pmod{2^{20}}$~\cite[Conjecture~3.4]{Pos}.
+
+\section{The result}
+
+\begin{theorem}\label{thm:main}
+Let $b(x)=(2x+1)^4$. There is no 2-adic integer $\alpha$ and no integer $c\ge 0$ such that $\xi_2(L^{(2)}_n-C_n)=s_2(n)+\xi_2(n-\alpha)+c$ for all $n\ge2$. Hence Conjecture~4.12 of~\cite{GG} is false.
+\end{theorem}
+
+Table~\ref{tab:values} gives the values that the proof uses. Write $d(n)=\xi_2(L^{(2)}_n-C_n)-s_2(n)$. If the conjecture holds for $k=2$, then $d(n)=\xi_2(n-\alpha)+c$ for all $n\ge 2$.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{rrrrr}
+\toprule
+$n$ & $L^{(2)}_n-C_n$ & $\xi_2(L^{(2)}_n-C_n)$ & $s_2(n)$ & $d(n)$\\
+\midrule
+2 & $80=2^4\cdot 5$ & 4 & 1 & 3\\
+3 & $57344=2^{13}\cdot 7$ & 13 & 2 & 11\\
+4 & $2^4\cdot 10127819$ & 4 & 1 & 3\\
+19 & $2^{11}\cdot q$, $q$ odd, 87 digits & 11 & 3 & 8\\
+\bottomrule
+\end{tabular}
+\caption{Exact values for $k=2$. The row $n=4$ is not needed for the proof. We list it because the first proof that we found used it.}
+\label{tab:values}
+\end{table}
+
+For $n=2$: the Dyck paths are $UUDD$ and $UDUD$, with weights $b(0)b(1)=81$ and $b(0)^2=1$. So $L^{(2)}_2=82$ and $C_2=2$. For $n=3$, the five Dyck paths give
+\[L^{(2)}_3=b(0)^3+2\,b(0)^2b(1)+b(0)b(1)^2+b(0)b(1)b(2)=1+162+6561+50625=57349,\]
+and $C_3=5$. The values at $n=4$ and $n=19$ come from the exact computation in Section~\ref{sec:check}. At $n=19$,
+$L^{(2)}_{19}$ is the 90-digit integer
+\begin{Verbatim}[fontsize=\small]
+262020221225210556799916770024587452855383082
+581687788664501643846958138224055459691426774
+\end{Verbatim}
+(one number in two lines), and $C_{19}=1767263190$.
+
+\section{Proof}
+
+\begin{lemma}\label{lem:dvd}
+Let $x$ be a nonzero 2-adic integer and $0\le j\le \xi_2(x)$. Then $2^j$ divides $x$ in $\Z_2$.
+\end{lemma}
+\begin{proof}
+$x=2^{\xi_2(x)}u$ with $u$ a unit of $\Z_2$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Suppose that $\alpha\in\Z_2$ and $c\ge0$ satisfy the identity for all $n\ge 2$. Each $n-\alpha$ is nonzero, because the left side is finite. By Table~\ref{tab:values}:
+\[
+\xi_2(2-\alpha)+c=3,\qquad \xi_2(3-\alpha)+c=11,\qquad \xi_2(19-\alpha)+c=8.
+\]
+The first equation gives $c\le 3$, so $j=8-c\ge 5$. The second and third give $\xi_2(3-\alpha)=11-c\ge j$ and $\xi_2(19-\alpha)=8-c=j$. By Lemma~\ref{lem:dvd}, $2^j$ divides $3-\alpha$ and $19-\alpha$, so $2^j$ divides their difference $16$ in $\Z_2$. Since $j\ge 5$, $2^5$ divides $16$ in $\Z_2$, and so in $\Z$. This is false.
+\end{proof}
+
+\begin{remark}
+The argument shows more: the values at $n=2,3$ force $c=3$ and $\alpha\equiv 3+2^8\pmod{2^9}$. Then $\xi_2(19-\alpha)=\xi_2(16)=4$, while the identity needs $8-3=5$. Every other $n\le 18$ agrees with these $\alpha$ and $c$. So $n=19$ is the first index that shows the contradiction. If $n=3$ is removed, no contradiction appears for $k\le 24$ and $n\le 200$ (Section~\ref{sec:survey}).
+\end{remark}
+
+\section{How the result was checked}\label{sec:check}
+
+\paragraph{Lean.} The file \texttt{lean/GaoGu412.lean} states and proves Theorem~\ref{thm:main} in Lean~4 with Mathlib~\cite{Lean,Mathlib} (Lean and Mathlib v4.36.0). The statement uses these definitions:
+\begin{itemize}
+\item A path is a list of Booleans: \texttt{true} is an up step, \texttt{false} is a down step. The height after a list is the number of up steps minus the number of down steps.
+\item \texttt{IsDyckPath n s}: $s$ has length $2n$, the height of every prefix of $s$ is $\ge 0$, and the height of $s$ is $0$.
+\item \texttt{weight b s}: the product over the up steps of $b$ at the height of the prefix before the step.
+\item \texttt{weightedCatalan b n}: the sum of \texttt{weight b s} over all $s$ of length $2n$ with \texttt{IsDyckPath n s}. Then \texttt{L k n} uses $b(x)=(2x+1)^{2k}$ and \texttt{C n} uses $b\equiv1$.
+\item \texttt{Conjecture412 k}: there are $\alpha\in\Z_2$ (\texttt{ℤ\_[2]}) and $c\in\mathbb N$ such that for all $n\ge 2$, $n-\alpha\ne 0$ and \texttt{padicValInt 2 (L k n - C n)} equals the binary digit sum of $n$ plus \texttt{(n - α).valuation} plus $c$.
+\end{itemize}
+The source statement implies the condition $n-\alpha\neq0$: every weight is at least $1$ and $b(1)>1$, so $L^{(k)}_n-C_n>0$ for $n\ge2$; the left side is finite, so $\xi_2(n-\alpha)$ must be finite. So the source conjecture for $k$ implies \texttt{Conjecture412 k}, and a disproof of \texttt{Conjecture412 2} disproves the source. Mathlib's \texttt{PadicInt.valuation} gives the value $0$ at $0$, which is why the condition is written out. The main theorems are
+\begin{Verbatim}[fontsize=\small]
+theorem conjecture_4_12_false_k2 : ¬ Conjecture412 2
+theorem conjecture_4_12_false : ¬ ∀ k : ℕ, 0 < k → Conjecture412 k
+\end{Verbatim}
+The proof shows by induction that \texttt{weightedCatalan} satisfies the height recursion~\eqref{eq:rec} below. It then evaluates the recursion with a list of 40 heights, and checks the valuations at $n=2,3,19$ of Table~\ref{tab:values} by kernel reduction (\texttt{decide +kernel}). It does not use \texttt{native\_decide}. The command \texttt{\#print axioms} prints \texttt{[propext, Classical.choice, Quot.sound]} for both theorems. The file \texttt{lean/Challenge.lean} repeats the definitions and the two statements, and \texttt{lake comparator} confirms that the proof file proves exactly these statements. On one core of an Apple M1 Pro, the proof file compiles in about 3 minutes.
+
+\paragraph{Python.} Two exact checkers in Python use only integers. The first computes $C^b_n$ in three ways: brute-force enumeration of Dyck paths for $n\le 10$, the height recursion
+\begin{equation}\label{eq:rec}
+f_0(h)=[h=0],\qquad f_{m+1}(h)=b(h)\,f_m(h+1)+f_m(h-1)\ (h\ge 0),\qquad C^b_n=f_{2n}(0),
+\end{equation}
+where $f_m(h)$ is the weighted number of paths with $m$ steps that start at height $h$, stay at height $\ge0$ and end at height $0$ (with $f_m(-1)=0$), and the first-return recursion that corresponds to the continued fraction of~\cite[Proposition~1.2]{GG}. The three agree for $n\le 40$. A second checker, written separately, gives the same values of $d(n)$. The certificate script compares the values with \texttt{data/expected.json}. It also tests all residues of $\alpha$ modulo $2^{12}$ and all $c\le 3$ at $n=2,3,19$, and finds no solution; this test is exhaustive, because the identity needs $\xi_2(n-\alpha)\le 11$ at these $n$. As a control, the same test for $k=1$ and $c=2$ on $2\le n\le 40$ accepts the residues of $\alpha$ that end in $010111_2$, as Conjecture~4.11 predicts.
+
+\section{Computations for other $k$}\label{sec:survey}
+
+For $1\le k\le 24$ and $2\le n\le 200$ we computed $d_k(n)=\xi_2(L^{(k)}_n-C_n)-s_2(n)$ exactly and tested whether some $\alpha_k$ and $c_k$ fit. The test uses $\xi_2(n-\alpha)=m$ if and only if $\alpha\equiv n+2^m\pmod{2^{m+1}}$. It is exact for the finite range. The data show the following. These are observations for the stated range only. We do not prove them.
+\begin{itemize}
+\item For $n\ge 2$, no $(\alpha_k,c_k)$ fits exactly when $k\equiv 2\pmod 4$, that is, $k=2,6,10,14,18,22$. For the other 18 values of $k$, a fit exists.
+\item For $n\ge 4$, a fit exists for every $k\le 24$, with exactly one value of $c_k$. For $k=2$, the fit is $c_2=3$ and $\alpha_2\equiv 1010110011_2 \pmod{2^{10}}$.
+\item In every case with a fit, $c_k=\xi_2(k)+2$.
+\item For $k=1$, the data fit with $c_1=2$ and $\alpha_1\equiv 101010111_2\pmod{2^{9}}$. This agrees with the digits $\dots010111_2$ of Conjecture~4.11.
+\end{itemize}
+
+\section{Limits}
+
+\begin{itemize}
+\item Proved (in Lean and by hand): Conjecture~4.12 as stated, with ``for all $n\ge2$'', is false, because it fails for $k=2$.
+\item In our data, the failure comes from the single index $n=3$. A reader can regard the result as a correction of the range for some $k$. The conjecture with ``for all $n\ge4$'' remains open. Our data for $k\le 24$ and $n\le 200$ support it.
+\item Not proved: that the conjecture fails for every $k\equiv2\pmod 4$, and that $c_k=\xi_2(k)+2$. Both are observations for $k\le 24$ and $n\le 200$.
+\item Our result does not apply to Conjecture~4.11 (the case $k=1$). Our data fit it for $2\le n\le 200$.
+\item We read the arXiv version~\cite{GG} of the source. We did not read the text of the journal version~\cite{GGjnt}. If the journal version changes the range of Conjecture~4.12, then our result applies to the arXiv statement only.
+\item The Python programs are not formally verified. The Lean proof does not depend on them.
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{GG} Y.~Gao and A.~Gu, Arithmetic of weighted Catalan numbers, arXiv:1908.03914v1 (2019). \url{https://arxiv.org/abs/1908.03914}
+\bibitem{GGjnt} Y.~Gao and A.~Gu, Arithmetic of weighted Catalan numbers, J.~Number Theory 226 (2021), 213--242. \href{https://doi.org/10.1016/j.jnt.2021.03.007}{doi:10.1016/j.jnt.2021.03.007}
+\bibitem{IP26} R.~Inagaki and D.~Pramatarova, Counterexamples to a conjecture of Gao and Gu on weighted Catalan numbers, arXiv:2611.26953v1 (2026). \url{https://arxiv.org/abs/2611.26953}
+\bibitem{IP25} R.~Inagaki and D.~Pramatarova, On weighted and bounded multidimensional Catalan numbers, arXiv:2510.14956v1 (2025). \url{https://arxiv.org/abs/2510.14956}
+\bibitem{IP26b} R.~Inagaki and D.~Pramatarova, On semisymmetric height and a multidimensional generalization of weighted Catalan numbers, arXiv:2604.04900v1 (2026). \url{https://arxiv.org/abs/2604.04900}
+\bibitem{Pos} A.~Postnikov, Counting Morse curves and links, preprint. \url{https://math.mit.edu/~apost/papers/morse-brief.pdf}
+\bibitem{ZH} X.~Zhu and X.~Huang, Computational code and data for the partial resolution of the Gao-Gu Conjecture 4.11 (weighted Catalan 2-adic valuation), Zenodo (2026). \href{https://doi.org/10.5281/zenodo.24046429}{doi:10.5281/zenodo.24046429}
+\bibitem{Lean} The Lean 4 theorem prover. \url{https://github.com/leanprover/lean4}
+\bibitem{Mathlib} The Mathlib Community, Mathlib. \url{https://github.com/leanprover-community/mathlib4}
+\end{thebibliography}
+
+\end{document}
