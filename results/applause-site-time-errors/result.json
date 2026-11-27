@@ -1,0 +1,35 @@
+{
+  "slug": "applause-site-time-errors",
+  "title": "Swapped site coordinates and a sidereal-time error in the APPLAUSE DR4 plate metadata",
+  "tier": "Public data",
+  "version": 1,
+  "date": "2026-11-27",
+  "summary": "Four APPLAUSE DR4 site records have longitude and latitude exchanged, and the Vatican archive times are local sidereal time stored as UT, which puts 40.8% of its exposures in daylight.",
+  "abstract": "APPLAUSE Data Release 4 (DR4) is a public archive with metadata for 94,090 photographic plates, mostly from Hamburg, Bamberg and Potsdam. Its schema defines site_longitude as the east longitude of the site, site_latitude as its latitude, and ut_mid as the UT of the exposure midpoint. We report two errors in these columns. (1) Four site records have the longitude and the latitude exchanged: Bamberg (18,681 plates), Muottas Muragl (93), Hotel Schatzalp in Davos (38) and San Miguel, Argentina (870). A test that we registered in advance shows that the exchange did not enter ut_mid at Bamberg (n = 18,947 timed exposures) or San Miguel (n = 858): at the true sites, the Sun is above -6° at 0.13% and 0.0% of the midpoints, and the time shift that the exchange implies raises these fractions to 10.7% and 3.5%. Users who take the recorded coordinates get wrong altitudes; for example, 6.0% of the archive-208 exposures then appear to be in twilight or daylight. (2) A negative control found that in the Vatican Observatory archive (archive 501, Castel Gandolfo), 40.8% of the 544 DR4 midpoints have the Sun above -6°. DR4 copies the logged time into ut_mid without change. If the logged time is read as local sidereal time, 0.2% of the midpoints are in daylight or twilight, and the plate centre is below 20° altitude for 0.7% of exposures, against 51.3% for the DR4 midpoints. When the logged times are permuted among exposures, the same reading gives on average 41.6% in daylight or twilight and 9.3% below 20°. The sidereal reading changes all 543 dated midpoints (1951 May 19 to 1953 Dec 26), also those that DR4 puts at night, and leaves one of them in daylight; the median correction is 4.9 h. We give a corrected midpoint for each exposure. The midpoints of Potsdam archives 4 and 5 are also often in daylight; we did not find the cause. This work has not yet been reviewed by experts. The computations and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+  "keywords": [
+    "APPLAUSE",
+    "archival photographic plates",
+    "plate metadata",
+    "sidereal time",
+    "Vatican Observatory",
+    "data quality"
+  ],
+  "related": [
+    {
+      "doi": "10.17876/plate/dr.4",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1051/0004-6361/202348793",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.5281/zenodo.24387450",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.5281/zenodo.24523190",
+      "relation": "cites"
+    }
+  ]
+}

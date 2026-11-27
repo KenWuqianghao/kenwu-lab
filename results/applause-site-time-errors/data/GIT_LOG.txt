@@ -1,0 +1,54 @@
+724f795 2026-11-27 09:46:31 +0100 Verify round 1: verified, six write issues; independent astropy checks
+
+ LOG.md                | 10 ++++++++
+ VERIFY.md             | 40 ++++++++++++++++++++++++++++++
+ checks/verify/swap.py | 32 ++++++++++++++++++++++++
+ checks/verify/vat.py  | 68 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ checks/verify/vat2.py | 26 ++++++++++++++++++++
+ outbox/verify.json    |  3 +++
+ 6 files changed, 179 insertions(+)
+12b4872 2026-11-27 09:33:15 +0100 Sprint result: APPLAUSE DR4 site swap and Vatican sidereal-time error; rerun verified; outbox
+
+ LOG.md                                            |  14 ++++++
+ PRIOR_ART.md                                      |  22 ++++++++++
+ RESULT.md                                         |  46 +++++++++++++++++++
+ STATEMENT.md                                      |  20 +++++++++
+ THIRD_PARTY.md                                    |   8 ++++
+ checks/__pycache__/hourangle_util.cpython-314.pyc | Bin 0 -> 1260 bytes
+ checks/hourangle2.py                              |  29 ++++++++++++
+ checks/hourangle_util.py                          |   9 ++++
+ checks/rerun.py                                   |  51 ++++++++++++++++++++++
+ data/expected.json                                |  34 +++++++++++++++
+ data/explore_rules.txt                            |   6 +--
+ data/hourangle2.json                              |  20 +++++++++
+ data/rerun_output.txt                             |  33 ++++++++++++++
+ outbox/sprint.json                                |   9 ++++
+ 14 files changed, 296 insertions(+), 5 deletions(-)
+3d66c29 2026-11-27 09:28:11 +0100 Addendum 3: corrected hour-angle comparison
+
+ PROTOCOL.md         | 12 ++++++++++++
+ checks/fetch_ra.sh  |  3 +++
+ checks/hourangle.py | 35 +++++++++++++++++++++++++++++++++++
+ data/hourangle.json | 16 ++++++++++++++++
+ 4 files changed, 66 insertions(+)
+15f4e35 2026-11-27 09:25:28 +0100 Protocol addenda 1-2: exploratory sidereal finding at Vatican archive, confirmatory hour-angle test
+
+ PROTOCOL.md               | 21 +++++++++++++++++++++
+ checks/explore_flagged.py | 25 +++++++++++++++++++++++++
+ checks/explore_rules.py   | 39 +++++++++++++++++++++++++++++++++++++++
+ data/explore_flagged.txt  | 42 ++++++++++++++++++++++++++++++++++++++++++
+ data/explore_rules.txt    | 12 ++++++++++++
+ 5 files changed, 139 insertions(+)
+1b7f1f7 2026-11-27 09:24:02 +0100 Run pre-registered analysis; results.json
+
+ checks/__pycache__/analyze.cpython-314.pyc | Bin 0 -> 10070 bytes
+ checks/analyze.py                          |  91 ++++++++++++
+ data/results.json                          | 215 +++++++++++++++++++++++++++++
+ 3 files changed, 306 insertions(+)
+53538d8 2026-11-27 09:22:22 +0100 Pre-register APPLAUSE DR4 site-swap protocol; fetch script
+
+ .gitignore      |  3 +++
+ PROTOCOL.md     | 59 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ checks/fetch.sh |  6 ++++++
+ problem.json    | 13 +++++++++++++
+ 4 files changed, 81 insertions(+)
