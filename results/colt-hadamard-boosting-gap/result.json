@@ -1,0 +1,33 @@
+{
+  "slug": "colt-hadamard-boosting-gap",
+  "title": "The Sylvester–Hadamard game matrix does not have the largest boosting gap: a counterexample to Conjecture 2 of Nie, Warmuth, Vishwanathan and Zhang",
+  "tier": "Proved in Lean",
+  "version": 1,
+  "date": "2026-11-27",
+  "summary": "Conjecture 2 of Nie, Warmuth, Vishwanathan and Zhang (COLT 2013) is false for the Sylvester Hadamard matrix of order 16: at t = 6 a ±1 matrix of value 0 has best value −3/7 < −1/3; Lean checks the disproof from the definitions.",
+  "abstract": "Nie, Warmuth, Vishwanathan and Zhang (COLT 2013) view boosting as a zero-sum game and build game matrices from Hadamard matrices. Let Ĥ be the n × n Hadamard matrix with its first row removed. Their Conjecture 2 states that Ĥ gives the largest gaps among all (n−1) × n matrices with entries ±1 and game value 0: for every such matrix U and every 1 ≤ t ≤ n, the best t-column sub-matrix of Ĥ has a game value at most that of the best t-column sub-matrix of U. We show that the conjecture is false when H is the Sylvester Hadamard matrix of order n = 16. For t = 6, the matrix U obtained from the Hadamard matrix Had.16.3 of Sloane's library by deleting its all-ones row satisfies max val_D(U_6) = −3/7, while max val_D(Ĥ_6) ≥ −1/3. The upper bound for U comes from 8008 exact dual certificates, one for each set of 6 columns. Lean 4 with Mathlib checks the full statement from the definitions, with kernel evaluation of the certificates and only the standard axioms. Two exact checkers in Python also accept the certificates. The counterexample does not refute the weaker reading in which Ĥ can come from any Hadamard matrix of order n. This work has not yet been reviewed by experts. The computations, the proofs and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+  "keywords": [
+    "boosting",
+    "zero-sum games",
+    "Hadamard matrices",
+    "Sylvester matrix",
+    "margin lower bounds",
+    "linear programming duality",
+    "counterexample",
+    "Lean"
+  ],
+  "related": [
+    {
+      "doi": "10.48550/arXiv.1901.10789",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1007/978-3-030-79876-5_37",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1145/3372885.3373824",
+      "relation": "cites"
+    }
+  ]
+}
