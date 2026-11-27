@@ -1,0 +1,37 @@
+candidate A: pi = ['01', '011', '0', '02', '0232', '023432', '02343223432', '0234344343343443432', '023434434334344343234344343343443432']
+h = [2, 3, 1, 2, 4, 6, 11, 19, 36]
+|L2(u)| = 17, j0 = 9, Pu = phi^21(0), |Pu| = 2310194, contains all factors of length <= 4153
+h . v_lam vanishes on roots of t^4-t^3-t^2-t-1: True
+multi-extension bispecial factors of u: 7, lengths [0, 1, 3, 7, 15, 31, 63]
+chain seeds (2x2 bispecials with non-2x2 parent): 16, lengths [1, 2, 2, 4, 4, 8, 8, 16, 16, 32, 32, 64, 64, 127, 128, 128]
+bispecials of u of length <= 40: direct 36, tree 36
+finite part: 51 bispecial factors of z from multi-extension bispecials of u
+0-free bispecial factors of z: 15: ['1', '2', '23', '3', '32', '2343', '23432', '34', '343', '3432', '4', '43', '234344343343443432', '34344343', '434']
+richness criterion ([21, Prop 19] = source Prop 7.4) on them: True
+Lam = 2.0559673967128187031, other roots of P5 have modulus <= 0.888584
+seed |w0|=   1 Bext=[('0', '0'), ('0', '8'), ('8', '0')]: preperiod 0, period 8, exact up to n=60; kappa_Lam=0 for 1/9 return words; min kappa_Lam(nonzero)=2.14; min c over zero-kappa returns=0.4; max err=1.749; critical return: c_i = 2/5 (exact min), eps = 0.545427, m = 3
+seed |w0|=   2 Bext=[('0', '1'), ('8', '1'), ('8', '8')]: preperiod 0, period 8, exact up to n=60; kappa_Lam=0 for 0/9 return words; min kappa_Lam(nonzero)=38.24; min c over zero-kappa returns=+inf; max err=1.584
+seed |w0|=   2 Bext=[('1', '0'), ('1', '8'), ('8', '8')]: preperiod 0, period 8, exact up to n=60; kappa_Lam=0 for 0/9 return words; min kappa_Lam(nonzero)=38.24; min c over zero-kappa returns=+inf; max err=1.584
+seed |w0|=   4 Bext=[('0', '2'), ('8', '2'), ('8', '8')]: preperiod 0, period 8, exact up to n=60; kappa_Lam=0 for 0/9 return words; min kappa_Lam(nonzero)=116.9; min c over zero-kappa returns=+inf; max err=1.495
+seed |w0|=   4 Bext=[('2', '0'), ('2', '8'), ('8', '8')]: preperiod 0, period 8, exact up to n=60; kappa_Lam=0 for 0/9 return words; min kappa_Lam(nonzero)=116.9; min c over zero-kappa returns=+inf; max err=1.495
+seed |w0|=   8 Bext=[('0', '3'), ('8', '3'), ('8', '8')]: preperiod 0, period 8, exact up to n=60; kappa_Lam=0 for 0/9 return words; min kappa_Lam(nonzero)=278.5; min c over zero-kappa returns=+inf; max err=1.42
+seed |w0|=   8 Bext=[('3', '0'), ('3', '8'), ('8', '8')]: preperiod 0, period 8, exact up to n=60; kappa_Lam=0 for 0/9 return words; min kappa_Lam(nonzero)=278.5; min c over zero-kappa returns=+inf; max err=1.42
+seed |w0|=  16 Bext=[('0', '4'), ('8', '4'), ('8', '8')]: preperiod 0, period 8, exact up to n=60; kappa_Lam=0 for 0/9 return words; min kappa_Lam(nonzero)=610.8; min c over zero-kappa returns=+inf; max err=1.382
+seed |w0|=  16 Bext=[('4', '0'), ('4', '8'), ('8', '8')]: preperiod 0, period 8, exact up to n=60; kappa_Lam=0 for 0/9 return words; min kappa_Lam(nonzero)=610.8; min c over zero-kappa returns=+inf; max err=1.382
+seed |w0|=  32 Bext=[('0', '5'), ('8', '5'), ('8', '8')]: preperiod 0, period 8, exact up to n=60; kappa_Lam=0 for 0/9 return words; min kappa_Lam(nonzero)=572.5; min c over zero-kappa returns=+inf; max err=1.239
+seed |w0|=  32 Bext=[('5', '0'), ('5', '8'), ('8', '8')]: preperiod 0, period 8, exact up to n=60; kappa_Lam=0 for 0/9 return words; min kappa_Lam(nonzero)=572.5; min c over zero-kappa returns=+inf; max err=1.239
+seed |w0|=  64 Bext=[('0', '6'), ('8', '6'), ('8', '8')]: preperiod 0, period 8, exact up to n=60; kappa_Lam=0 for 0/9 return words; min kappa_Lam(nonzero)=493.9; min c over zero-kappa returns=+inf; max err=1.124
+seed |w0|=  64 Bext=[('6', '0'), ('6', '8'), ('8', '8')]: preperiod 0, period 8, exact up to n=60; kappa_Lam=0 for 0/9 return words; min kappa_Lam(nonzero)=493.9; min c over zero-kappa returns=+inf; max err=1.124
+seed |w0|= 127 Bext=[('7', '8'), ('8', '7'), ('8', '8')]: preperiod 0, period 8, exact up to n=60; kappa_Lam=0 for 1/9 return words; min kappa_Lam(nonzero)=18.6; min c over zero-kappa returns=0.4; max err=1.125; critical return: c_i = 2/5 (exact min), eps = 0.330842, m = 0
+seed |w0|= 128 Bext=[('0', '7'), ('8', '7'), ('8', '8')]: preperiod 0, period 8, exact up to n=60; kappa_Lam=0 for 0/9 return words; min kappa_Lam(nonzero)=332.3; min c over zero-kappa returns=+inf; max err=1.016
+seed |w0|= 128 Bext=[('7', '0'), ('7', '8'), ('8', '8')]: preperiod 0, period 8, exact up to n=60; kappa_Lam=0 for 0/9 return words; min kappa_Lam(nonzero)=332.3; min c over zero-kappa returns=+inf; max err=1.016
+bilateral-order criterion ([21, Thm 4]) checked on: empty word, 15 0-free, 51 multi-extension offsprings, and chain nodes n <= Nexact (all Bext types of every chain): ok
+
+largest ratio |v|/|r| found: 1003407669558930670046/947249554452041098185 = 1.0592854490 at chain |w0|=127, n=60
+q = 1/(3-Lam) = 1.05928544895;  E*(u_9) = 1 + q = 2.05928544895
+time 992.0 s
+wrote 165 predicted bispecial factors of z (|v| <= 6000) to checks/out/predicted_A.json
+RESULT: ALL CHECKS PASSED
+real 992.39
+user 27.09
+sys 0.55

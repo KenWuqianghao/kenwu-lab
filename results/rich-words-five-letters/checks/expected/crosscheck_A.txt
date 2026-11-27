@@ -1,0 +1,9 @@
+(a) brute force on a prefix of z of length 423334
+    brute-force bispecials with |v| <= 60: 64; predicted: 64; equal: True
+    max |v|/|r| among them: 18/17 = 1.058824
+(b) predicted bispecials with |v| <= 3000 confirmed in z: 149/149
+time 12.9 s
+RESULT: CROSS-CHECK PASSED
+real 12.98
+user 12.45
+sys 0.30

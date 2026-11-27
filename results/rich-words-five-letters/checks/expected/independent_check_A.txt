@@ -1,0 +1,42 @@
+PASS pi uses exactly the letters 0..4
+PASS pi injective on letters
+PASS each pi(i)0 is a palindrome and a complete return word to 0 (class P_ret, marker 0)
+PASS charpoly(M) = +-P5*Q4
+PASS P5 and Q4 irreducible over Q
+PASS Lam = 2.05596739671 in (2,3)
+PASS Lam is the spectral radius of M
+     rho (other P5 roots) = 0.888584 ; max |Q4 root| = 1.927562
+     q = 1.0592854489537, E* = 2.0592854489537
+PASS exact comparison agrees with q on a sample
+PASS 17 two-letter factors of u, all occur in phi^9(0)
+     |phi^21(0)| = 2310194 ; contains every factor of u of length <= 4153
+     |Z| = 7563941 ; contains every factor of z of length <= 4153
+     brute force: 75 bispecial factors of u with length <= 300
+     brute force: 146 bispecial factors of z with length <= 2000
+PASS bilateral-order condition holds for all 146 brute-force bispecial factors of z (|v| <= 2000)
+PASS Prop 7.4 input: all 0-free bispecial factors of z (16, with the empty word) are covered by the brute force and satisfy the condition
+PASS ratio |v|/|r| < q for all 125 brute-force bispecial factors with certified shortest return word
+     not certified by brute force (|v|+gap > 4153): 20 factors, (|v|,gap) = [(629, 5605), (629, 5605), (961, 5605), (961, 5605), (961, 5605), (961, 5605), (1293, 11524), (1293, 11524)]
+     largest brute-force ratio: 18/17 = 1.0588235294
+PASS bispecial factors of u of length <= 1 are eps, 0, 8
+     multi nodes: lengths [0, 1, 3, 7, 15, 31, 63] ; seeds: lengths [1, 2, 2, 4, 4, 8, 8, 16, 16, 32, 32, 64, 64, 127, 128, 128]
+PASS tree expansion of multi nodes stops; all multi nodes and seeds have length <= 300
+PASS tree nodes of length <= 300 equal the brute-force bispecial factors of u (strings and Bext): 75
+PASS for each seed: max gap + |w| <= 4153, so the return words found are all return words
+PASS each of the 16 seeds has exactly 9 return words
+     offspring of multi nodes: 51
+PASS every offspring of a multi node has length <= 2000, is in the brute-force list, and its shortest return word is certified (so its ratio < q is checked above)
+PASS chains: |v(w_n)|/|pi(r)| < q exactly for all 16 seeds, all 9 return words, n <= 1000
+PASS chains: the type sequence (s, t, Bext) has period 8 from n = 0
+     largest chain ratio for n <= 1000: 1.059285448953708 at seed length 127, n = 1000
+PASS predicted bispecial factors of z with |v| <= 2000 equal the brute-force list (146 vs 146)
+PASS predicted shortest return words of chain offspring equal brute force (59 compared)
+PASS bilateral-order condition for chain offspring over 3 periods of every chain (from Bext types)
+PASS numeric eigenvalues: dominant = Lam
+PASS h is orthogonal to the right eigenvectors of the 4 roots of Q4 (numeric, 1e-40)
+PASS exact: h . v_lambda = 0 modulo Q4 (v = nonzero column of adj(M - tI))
+PASS closed form D_n = sum kappa_mu mu^(8N) + c_i agrees with exact D_n (N = 0..12, all seeds, return words, residues)
+PASS tail n > 1000: kappa_Lam = 0 exactly with c_i > 0, or kappa_Lam > 0; bound positive
+     pairs (seed, return word, residue) with kappa_Lam = 0 exactly: 16 ; min c_i there = 0.4 ; smallest nonzero kappa_Lam = 2.1400329 ; max eps = 1.7489281
+PASS at least one chain has kappa_Lam = 0 (ratio tends to q, so E(z) >= 1 + q)
+RESULT: ALL OWN CHECKS PASSED
