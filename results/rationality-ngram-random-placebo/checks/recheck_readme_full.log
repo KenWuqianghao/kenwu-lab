@@ -1,0 +1,190 @@
+
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: /private/tmp/recheck-rnp-1795689973/release/.venv/bin/python3.13 -m pip install --upgrade pip
++ cc -O2 -o work/extract /private/tmp/recheck-rnp-1795689973/release/checks/extract.c
++ bash /private/tmp/recheck-rnp-1795689973/release/checks/fetch_extract.sh work/ext eng 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+done eng 0
+done eng 1
+done eng 2
+done eng 3
+done eng 4
+done eng 5
+done eng 6
+done eng 7
+done eng 8
+done eng 9
+done eng 10
+done eng 11
+done eng 12
+done eng 13
+done eng 14
+done eng 15
+done eng 16
+done eng 17
+done eng 18
+done eng 19
+done eng 20
+done eng 21
+done eng 22
+done eng 23
++ bash /private/tmp/recheck-rnp-1795689973/release/checks/fetch_extract.sh work/ext eng-fiction 0
+done eng-fiction 0
++ git clone -q --depth 1 https://github.com/jbollen/rise_and_fall_of_rationality_in_language work/authors_repo
++ /private/tmp/recheck-rnp-1795689973/release/.venv/bin/python -I /private/tmp/recheck-rnp-1795689973/release/checks/build.py work/ext work/table.npz
+pass1 words 1394247 candidates 40079
+saved 40079
++ /private/tmp/recheck-rnp-1795689973/release/.venv/bin/python -I /private/tmp/recheck-rnp-1795689973/release/checks/analysis.py work/table.npz work/results.json work/authors_repo
+{
+ "corpus": "eng",
+ "control": "FPS",
+ "g_obs": -0.04486851947158281,
+ "p": 0.1257874212578742,
+ "verdict": "REFUTATION"
+}
++ /private/tmp/recheck-rnp-1795689973/release/.venv/bin/python -I /private/tmp/recheck-rnp-1795689973/release/checks/posthoc.py work/table.npz work/posthoc.json
+{
+ "corpus": "eng",
+ "control": "FPS",
+ "g_obs": -0.04486851947158281,
+ "p": 0.21897810218978103,
+ "verdict": "REFUTATION"
+}
+{
+ "corpus": "eng",
+ "control": "FPS",
+ "g_obs": -0.04486851947158281,
+ "p": 0.07529247075292471,
+ "verdict": "REFUTATION"
+}
+{
+ "corpus": "eng",
+ "control": "FPS",
+ "g_obs": -0.04486851947158281,
+ "p": 0.1257874212578742,
+ "verdict": "REFUTATION"
+}
+{
+ "K_sensitivity": {
+  "K=20": {
+   "FPS_p": {
+    "eng": 0.21897810218978103,
+    "fiction": 0.5372462753724627,
+    "nonfiction": 0.1141885811418858
+   },
+   "FP_p_max": 0.0004999500049995
+  },
+  "K=80": {
+   "FPS_p": {
+    "eng": 0.07529247075292471,
+    "fiction": 0.41855814418558146,
+    "nonfiction": 0.050294970502949704
+   },
+   "FP_p_max": 0.0006999300069993001
+  }
+ },
+ "detectable": {
+  "g_obs_per_decade": -0.44868519471582813,
+  "null_median_per_decade": -0.3957341009108106,
+  "null_q05_per_decade": -0.47201988597502414,
+  "null_sd_per_decade": 0.04733010277104297,
+  "excess_over_median_per_decade": -0.052951093805017474,
+  "excess_over_median_share_of_g_obs": 0.11801390914748973,
+  "power_extra_hinge": {
+   "0.10": 0.252,
+   "0.15": 0.422,
+   "0.20": 0.6092,
+   "0.25": 0.7708,
+   "0.30": 0.8854
+  }
+ },
+ "skew_gap": {
+  "observed": -2.075561697610903,
+  "placebo_mean": -1.9517932146420083,
+  "placebo_sd": 0.04152167154131123,
+  "corr_gap_g": 0.311613658751598,
+  "p_after_linear_adjustment": 0.41685831416858316
+ },
+ "fiction_share_of_tokens": {
+  "1850": 0.04102722754609386,
+  "1975": 0.024217377610506085,
+  "2019": 0.3337803186696981
+ },
+ "neighbours_FPS": {
+  "data": [
+   "production",
+   "products",
+   "research",
+   "industry",
+   "areas",
+   "cent",
+   "systems",
+   "results",
+   "solution",
+   "temperature"
+  ],
+  "science": [
+   "issue",
+   "rights",
+   "loss",
+   "judgment",
+   "consideration",
+   "iron",
+   "volume",
+   "et",
+   "rule",
+   "decision"
+  ],
+  "fact": [
+   "business",
+   "office",
+   "war",
+   "land",
+   "point",
+   "question",
+   "country",
+   "means",
+   "line",
+   "history"
+  ],
+  "soul": [
+   "horse",
+   "feeling",
+   "sort",
+   "bar",
+   "husband",
+   "police",
+   "daughter",
+   "evening",
+   "brother",
+   "arms"
+  ],
+  "feel": [
+   "coming",
+   "understand",
+   "ask",
+   "returned",
+   "leave",
+   "wish",
+   "live",
+   "lost",
+   "speak",
+   "gave"
+  ],
+  "god": [
+   "home",
+   "name",
+   "half",
+   "side",
+   "words",
+   "death",
+   "family",
+   "women",
+   "days",
+   "money"
+  ]
+ }
+}
+compared 419 values; mismatches: 0
+PRIMARY {'corpus': 'eng', 'control': 'FPS', 'g_obs': -0.04486851947158281, 'p': 0.1257874212578742, 'verdict': 'REFUTATION'}
+exit=0 elapsed=800s
+rc=0

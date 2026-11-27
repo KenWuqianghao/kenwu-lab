@@ -1,0 +1,121 @@
+{
+ "K_sensitivity": {
+  "K=20": {
+   "FPS_p": {
+    "eng": 0.21897810218978103,
+    "fiction": 0.5372462753724627,
+    "nonfiction": 0.1141885811418858
+   },
+   "FP_p_max": 0.0004999500049995
+  },
+  "K=80": {
+   "FPS_p": {
+    "eng": 0.07529247075292471,
+    "fiction": 0.41855814418558146,
+    "nonfiction": 0.050294970502949704
+   },
+   "FP_p_max": 0.0006999300069993001
+  }
+ },
+ "detectable": {
+  "g_obs_per_decade": -0.44868519471582813,
+  "null_median_per_decade": -0.3957341009108106,
+  "null_q05_per_decade": -0.47201988597502414,
+  "null_sd_per_decade": 0.04733010277104297,
+  "excess_over_median_per_decade": -0.052951093805017474,
+  "excess_over_median_share_of_g_obs": 0.11801390914748973,
+  "power_extra_hinge": {
+   "0.10": 0.252,
+   "0.15": 0.422,
+   "0.20": 0.6092,
+   "0.25": 0.7708,
+   "0.30": 0.8854
+  }
+ },
+ "skew_gap": {
+  "observed": -2.075561697610903,
+  "placebo_mean": -1.9517932146420083,
+  "placebo_sd": 0.04152167154131123,
+  "corr_gap_g": 0.311613658751598,
+  "p_after_linear_adjustment": 0.41685831416858316
+ },
+ "fiction_share_of_tokens": {
+  "1850": 0.04102722754609386,
+  "1975": 0.024217377610506085,
+  "2019": 0.3337803186696981
+ },
+ "neighbours_FPS": {
+  "data": [
+   "production",
+   "products",
+   "research",
+   "industry",
+   "areas",
+   "cent",
+   "systems",
+   "results",
+   "solution",
+   "temperature"
+  ],
+  "science": [
+   "issue",
+   "rights",
+   "loss",
+   "judgment",
+   "consideration",
+   "iron",
+   "volume",
+   "et",
+   "rule",
+   "decision"
+  ],
+  "fact": [
+   "business",
+   "office",
+   "war",
+   "land",
+   "point",
+   "question",
+   "country",
+   "means",
+   "line",
+   "history"
+  ],
+  "soul": [
+   "horse",
+   "feeling",
+   "sort",
+   "bar",
+   "husband",
+   "police",
+   "daughter",
+   "evening",
+   "brother",
+   "arms"
+  ],
+  "feel": [
+   "coming",
+   "understand",
+   "ask",
+   "returned",
+   "leave",
+   "wish",
+   "live",
+   "lost",
+   "speak",
+   "gave"
+  ],
+  "god": [
+   "home",
+   "name",
+   "half",
+   "side",
+   "words",
+   "death",
+   "family",
+   "women",
+   "days",
+   "money"
+  ]
+ }
+}
