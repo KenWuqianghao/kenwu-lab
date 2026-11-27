@@ -46,3 +46,5 @@ Roger Bilham and Rebecca Bendick made the forecast and published the method. The
   howpublished = {\url{https://github.com/KenWuqianghao/kenwu-lab/tree/main/results/earth-rotation-quake-forecast}}
 }
 ```
+
+Archived on Zenodo: [doi:10.5281/zenodo.24580744](https://doi.org/10.5281/zenodo.24580744)

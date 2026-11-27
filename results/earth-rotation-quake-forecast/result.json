@@ -1,63 +1,67 @@
 {
- "slug": "earth-rotation-quake-forecast",
- "title": "An inconclusive score of the 2017 Earth-rotation forecast of more global M≥7 earthquakes",
- "tier": "Public data",
- "version": 1,
- "date": "2026-11-25",
- "summary": "ComCat lists 66 M≥7 earthquakes in 2018-2022, 1.04 times the 1900-2017 rate, so a pre-registered score of the 2017 Bilham-Bendick Earth-rotation forecast (+25-30%) is inconclusive; a held-out test of its five-year lag gives no support but has only 17% power.",
- "abstract": "In 2017, Bilham and Bendick forecast that a slowing of Earth's rotation that began in 2011 would bring a period of at least five years with more global earthquakes of magnitude 7 or more. Their abstract gives a 25–30% increase in such periods. We pre-registered a test of the forecast against the USGS ComCat catalog, and we disclose the counts that were seen before the protocol. ComCat lists 66 M≥7 events in 2018–2022, or 13.2 per year. The 1900–2017 mean is 12.68 per year, so the observed rate is 1.04 times this baseline (95% interval 0.78–1.39). Under a negative binomial model of annual counts, the +25% level is not rejected (p = 0.115), and no increase above the baseline is shown (p = 0.40). The pre-registered verdict is inconclusive: one five-year window cannot separate no increase from an increase of 25%. Under this rule, 61 events or fewer would have refuted the forecast, and 80 or more would have supported it. A held-out test of the five-year lag between rotation slowing and seismicity, on 2018–2025, gives a rate ratio of 0.98 (permutation p = 0.61). This test has a power of only 17% for a 25% effect, so it gives little information. In 1900–2017, the same lag statistic is largest at lags of 6–8 years (rate ratio about 1.1). Over all ten lags, this maximum is at the 97th percentile of a circular-shift null for the raw catalog and at the 86th percentile for a declustered catalog. These are tests of association in count data. This work has not yet been reviewed by experts. The computations, the proofs and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
- "keywords": [
-  "earthquake forecasting",
-  "length of day",
-  "Earth rotation",
-  "global seismicity",
-  "pre-registration",
-  "forecast evaluation"
- ],
- "related": [
-  {
-   "doi": "10.1130/abs/2017AM-300667",
-   "relation": "cites"
-  },
-  {
-   "doi": "10.1002/2017GL074934",
-   "relation": "cites"
-  },
-  {
-   "doi": "10.1126/science.aar3598",
-   "relation": "cites"
-  },
-  {
-   "doi": "10.3389/feart.2022.1041311",
-   "relation": "cites"
-  },
-  {
-   "doi": "10.1007/978-3-031-87558-8_85",
-   "relation": "cites"
-  },
-  {
-   "doi": "10.1073/pnas.1118525109",
-   "relation": "cites"
-  },
-  {
-   "doi": "10.1029/2021GL093550",
-   "relation": "cites"
-  },
-  {
-   "doi": "10.3389/feart.2025.1587650",
-   "relation": "cites"
-  },
-  {
-   "doi": "10.3389/feart.2026.1815784",
-   "relation": "cites"
-  },
-  {
-   "doi": "10.1785/BSSA0640051363",
-   "relation": "cites"
-  },
-  {
-   "doi": "10.1111/j.1365-246X.1994.tb02471.x",
-   "relation": "cites"
-  }
- ]
+  "slug": "earth-rotation-quake-forecast",
+  "title": "An inconclusive score of the 2017 Earth-rotation forecast of more global M≥7 earthquakes",
+  "tier": "Public data",
+  "version": 1,
+  "date": "2026-11-25",
+  "summary": "ComCat lists 66 M≥7 earthquakes in 2018-2022, 1.04 times the 1900-2017 rate, so a pre-registered score of the 2017 Bilham-Bendick Earth-rotation forecast (+25-30%) is inconclusive; a held-out test of its five-year lag gives no support but has only 17% power.",
+  "abstract": "In 2017, Bilham and Bendick forecast that a slowing of Earth's rotation that began in 2011 would bring a period of at least five years with more global earthquakes of magnitude 7 or more. Their abstract gives a 25–30% increase in such periods. We pre-registered a test of the forecast against the USGS ComCat catalog, and we disclose the counts that were seen before the protocol. ComCat lists 66 M≥7 events in 2018–2022, or 13.2 per year. The 1900–2017 mean is 12.68 per year, so the observed rate is 1.04 times this baseline (95% interval 0.78–1.39). Under a negative binomial model of annual counts, the +25% level is not rejected (p = 0.115), and no increase above the baseline is shown (p = 0.40). The pre-registered verdict is inconclusive: one five-year window cannot separate no increase from an increase of 25%. Under this rule, 61 events or fewer would have refuted the forecast, and 80 or more would have supported it. A held-out test of the five-year lag between rotation slowing and seismicity, on 2018–2025, gives a rate ratio of 0.98 (permutation p = 0.61). This test has a power of only 17% for a 25% effect, so it gives little information. In 1900–2017, the same lag statistic is largest at lags of 6–8 years (rate ratio about 1.1). Over all ten lags, this maximum is at the 97th percentile of a circular-shift null for the raw catalog and at the 86th percentile for a declustered catalog. These are tests of association in count data. This work has not yet been reviewed by experts. The computations, the proofs and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+  "keywords": [
+    "earthquake forecasting",
+    "length of day",
+    "Earth rotation",
+    "global seismicity",
+    "pre-registration",
+    "forecast evaluation"
+  ],
+  "related": [
+    {
+      "doi": "10.1130/abs/2017AM-300667",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1002/2017GL074934",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1126/science.aar3598",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.3389/feart.2022.1041311",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1007/978-3-031-87558-8_85",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1073/pnas.1118525109",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1029/2021GL093550",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.3389/feart.2025.1587650",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.3389/feart.2026.1815784",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1785/BSSA0640051363",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1111/j.1365-246X.1994.tb02471.x",
+      "relation": "cites"
+    }
+  ],
+  "doi": "10.5281/zenodo.24580744",
+  "concept_doi": "10.5281/zenodo.24580743",
+  "zenodo_id": 24580744,
+  "doi_version": 1
 }

@@ -2,6 +2,11 @@
 
 Each result is versioned on its own and tagged `<slug>-vN`.
 
+## earth-rotation-quake-forecast v1 (2026-11-27)
+
+- ComCat lists 66 M≥7 earthquakes in 2018-2022, 1.04 times the 1900-2017 rate, so a pre-registered score of the 2017 Bilham-Bendick Earth-rotation forecast (+25-30%) is inconclusive; a held-out test of its five-year lag gives no support but has only 17% power.
+- Zenodo: [10.5281/zenodo.24580744](https://doi.org/10.5281/zenodo.24580744)
+
 ## lunar-phase-us-precipitation v1 (2026-11-27)
 
 - A reported lunar-phase signal in US daily precipitation (Cerveny et al. 2010) does not replicate in held-out 2009-2026 data; in 1895-2008 its national statistic is not significant under a null that keeps the correlation between stations, and its station rate is at the 0.05 boundary.
