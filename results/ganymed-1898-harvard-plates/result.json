@@ -1,0 +1,42 @@
+{
+  "slug": "ganymed-1898-harvard-plates",
+  "title": "(1036) Ganymed on Harvard plates of 1898, 26 years before its discovery, and a candidate image of (624) Hektor from 1901",
+  "tier": "Public data",
+  "version": 1,
+  "date": "2026-11-27",
+  "summary": "A pre-registered search of public Harvard plate scans finds the near-Earth asteroid (1036) Ganymed on plates of 1898-1899, 26 years before its 1924 discovery; a weaker signal of the Jupiter Trojan (624) Hektor on Heidelberg plates of 1901 is a candidate only.",
+  "abstract": "The earliest observation of the near-Earth asteroid (1036) Ganymed in the JPL Small-Body Database and in the Minor Planet Center observation list is its discovery on 1924 Oct 23. We searched the public scans of six Harvard plates of 1898-1899 for it with a test that we registered in advance: plates, predicted positions, statistic and decision rule were committed before any image was downloaded. Three of the six plates pass the per-plate threshold (i21050 of 1898 Aug 14, i21576 of 1898 Nov 1 and i21780 of 1898 Nov 26). The probability of three or more passes under the per-plate null rates, which come from 300 random regions on each plate, is 5.1e-4, below the registered threshold of 1e-3. A source is at the predicted position on five plates. Their measured positions are 0.4\" to 2.4\" from the JPL Horizons ephemeris, and they are up to 97 degrees apart on the sky. On i21050 the result depends on the centroid method (2.4\" to 13.5\"). The images are 26 years older than the discovery. A second, weaker result concerns the Jupiter Trojan (624) Hektor, whose earliest catalogued observation is 1907 Feb 11; the earliest catalogued observation of any Jupiter Trojan is 1904 Sep 13. Two registered searches of Harvard plates did not detect Hektor. A third registered search, of 15 Heidelberg plates, passed its rule: three plates of 1901 Aug 23 give p = 0.0015, 0.0050 and 0.0065 (Fisher p = 1.5e-5). An independent measurement gives larger values (p = 0.009, 0.023, 0.040; Fisher 6.6e-4), and all three plates are from one night. We therefore report the Hektor signal as a candidate detection only. Neither result has been checked on the glass plates. This work has not yet been reviewed by experts. The computations and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+  "keywords": [
+    "(1036) Ganymed",
+    "(624) Hektor",
+    "precovery",
+    "archival photographic plates",
+    "DASCH",
+    "HDAP",
+    "pre-registration",
+    "Jupiter Trojans",
+    "near-Earth asteroids"
+  ],
+  "related": [
+    {
+      "doi": "10.48550/arXiv.2611.02371",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.5281/zenodo.24387450",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.5281/zenodo.24523190",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1017/S1743921312000166",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.3847/1538-4357/aae386",
+      "relation": "cites"
+    }
+  ]
+}

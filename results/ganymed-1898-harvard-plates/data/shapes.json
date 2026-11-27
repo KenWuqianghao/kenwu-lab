@@ -1,0 +1,86 @@
+{
+ "i21050": {
+  "exptime_min": 14,
+  "trail_pred_pa_deg": 123.3155382839294,
+  "trail_pred_length_arcsec": 10.554587764826083,
+  "source": {
+   "pa_deg": 28.217331634037286,
+   "length_arcsec": 46.407544643601284,
+   "width_arcsec": 21.92762286780087
+  },
+  "stars_n": 12,
+  "stars_pa_mean_deg": 27.56362585327784,
+  "stars_length_median_arcsec": 43.19291512207293,
+  "stars_width_median_arcsec": 14.651427623649752
+ },
+ "i21576": {
+  "exptime_min": 12,
+  "trail_pred_pa_deg": 69.32248960680424,
+  "trail_pred_length_arcsec": 35.46196118915121,
+  "source": {
+   "pa_deg": 72.10125595757236,
+   "length_arcsec": 39.23814901385119,
+   "width_arcsec": 16.913310398999002
+  },
+  "stars_n": 1,
+  "stars_pa_mean_deg": 77.67041714779373,
+  "stars_length_median_arcsec": 28.607107816682962,
+  "stars_width_median_arcsec": 16.43034096029818
+ },
+ "i21780": {
+  "exptime_min": 13,
+  "trail_pred_pa_deg": 46.208305233887586,
+  "trail_pred_length_arcsec": 14.716968876069169,
+  "source": {
+   "pa_deg": 61.628799576688664,
+   "length_arcsec": 23.385591210998896,
+   "width_arcsec": 16.26465279848249
+  },
+  "stars_n": 2,
+  "stars_pa_mean_deg": 56.570215615478446,
+  "stars_length_median_arcsec": 24.414174908907086,
+  "stars_width_median_arcsec": 15.915209166034721
+ },
+ "ac00115": {
+  "exptime_min": 63,
+  "trail_pred_pa_deg": 19.146653897617398,
+  "trail_pred_length_arcsec": 51.720379761861196,
+  "source": {
+   "pa_deg": 10.160680625529501,
+   "length_arcsec": 53.991164433443956,
+   "width_arcsec": 34.54863452399418
+  },
+  "stars_n": 3,
+  "stars_pa_mean_deg": 2.651939575456616,
+  "stars_length_median_arcsec": 45.808342642149206,
+  "stars_width_median_arcsec": 35.652030890453226
+ },
+ "i22152": {
+  "exptime_min": 10,
+  "trail_pred_pa_deg": 163.38996720275514,
+  "trail_pred_length_arcsec": 9.319372824035929,
+  "source": {
+   "pa_deg": 172.86497724606338,
+   "length_arcsec": 20.015036055957673,
+   "width_arcsec": 12.336240298906263
+  },
+  "stars_n": 5,
+  "stars_pa_mean_deg": 10.924002557823593,
+  "stars_length_median_arcsec": 21.005040724428532,
+  "stars_width_median_arcsec": 13.041301763442867
+ },
+ "ac00044": {
+  "exptime_min": 94,
+  "trail_pred_pa_deg": 45.46644429310609,
+  "trail_pred_length_arcsec": 188.8371877239207,
+  "source": {
+   "pa_deg": 120.49619123946192,
+   "length_arcsec": 19.694127817559362,
+   "width_arcsec": 12.759382194623537
+  },
+  "stars_n": 1,
+  "stars_pa_mean_deg": 44.345676864186295,
+  "stars_length_median_arcsec": 20.843320337919042,
+  "stars_width_median_arcsec": 11.714698246592397
+ }
+}

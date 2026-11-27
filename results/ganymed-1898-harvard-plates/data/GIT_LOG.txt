@@ -1,0 +1,16 @@
+49358e0 | author 2026-11-27 16:57:53 +0100 | committer 2026-11-27 16:57:53 +0100 | Verify round 2: verified (295/295 rerun; Hektor signal confirmed as weak candidate; 6 write issues)
+b18c458 | author 2026-11-27 16:43:47 +0100 | committer 2026-11-27 16:43:47 +0100 | Verify round 2: own Hektor measurement; control-plate rule fixed before download
+64e7238 | author 2026-11-27 16:30:57 +0100 | committer 2026-11-27 16:30:57 +0100 | Clean-clone rerun of 993794e: 295 of 295 checks match
+993794e | author 2026-11-27 16:26:40 +0100 | committer 2026-11-27 16:26:40 +0100 | Hektor round 3 added to the paper: hz.py replaces the hdap.py V filter (no p changed), motion check JSON, rerun 295 checks, RESULT Hektor section
+ab379a4 | author 2026-11-27 15:13:03 +0100 | committer 2026-11-27 16:01:24 +0100 | Round 3 result: Hektor detected on Heidelberg plates of 1901-08-23 (set A p_comb 1.5e-5); motion check
+94e7692 | author 2026-11-27 15:09:39 +0100 | committer 2026-11-27 16:01:24 +0100 | Round 3: drop Horizons transit rows from HDAP tracks (before measurement)
+a01e3ff | author 2026-11-27 15:00:43 +0100 | committer 2026-11-27 16:01:23 +0100 | Pre-register round 3: Hektor on 15 Heidelberg plates, trail-matched test
+34b839d | author 2026-11-27 16:00:21 +0100 | committer 2026-11-27 16:00:21 +0100 | Solve round 2: RESULT.md with answers to the verifier, clean-clone rerun 214/214, outbox
+326807e | author 2026-11-27 15:50:22 +0100 | committer 2026-11-27 15:50:22 +0100 | Solve round 2: fix Horizons transit-row parsing (i21780 midpoint), whole-region astrometry, shapes, prereg copies, 216 checks
+19daea5 | author 2026-11-27 15:25:13 +0100 | committer 2026-11-27 15:25:13 +0100 | Verify round 1: cleared (i21780 midpoint row dropped; main claim holds)
+2201781 | author 2026-11-27 14:51:04 +0100 | committer 2026-11-27 14:51:04 +0100 | Factory problem: ganymed-1898-harvard-plates (solved, owner session)
+219bf75 | author 2026-11-27 14:50:46 +0100 | committer 2026-11-27 14:50:46 +0100 | Astrometry, rerun check (81/81), result, prior art
+da6891a | author 2026-11-27 14:30:30 +0100 | committer 2026-11-27 14:30:30 +0100 | Round 2 result: Hektor not detected (p_comb 0.0028)
+907bdc5 | author 2026-11-27 14:28:05 +0100 | committer 2026-11-27 14:28:05 +0100 | Pre-register round 2: 8 unseen Hektor plates, position test
+89ca613 | author 2026-11-27 14:11:30 +0100 | committer 2026-11-27 14:11:30 +0100 | Results of the pre-registered run; post hoc stamps, position and shape checks
+c64fc2c | author 2026-11-27 14:07:44 +0100 | committer 2026-11-27 14:07:44 +0100 | Pre-register Hektor and Ganymed plate search: plates, predictions, measurement code

@@ -1,0 +1,334 @@
+{
+ "plates": [
+  {
+   "plate": "G963",
+   "inst": "Wolf's Doppelastrograph",
+   "start": "1895-02-14T20:24:13",
+   "V": 14.13,
+   "scale_arcsec_px": 2.4958950667371202,
+   "polarity": 1,
+   "fit": {
+    "kind": "none",
+    "n": 2,
+    "rms_arcsec": null,
+    "shift_px_at_centre": [
+     0.0,
+     0.0
+    ]
+   },
+   "trail_arcsec": 82.64310078648126,
+   "measurable": true,
+   "S": 0.23967264448437012,
+   "n_ctrl": 2000,
+   "p": 0.3968015992003998
+  },
+  {
+   "plate": "G1139",
+   "inst": "Wolf's Doppelastrograph",
+   "start": "1896-03-15T20:46:41",
+   "V": 14.137,
+   "scale_arcsec_px": 8.957775404585561,
+   "polarity": 1,
+   "fit": {
+    "kind": "none",
+    "n": 0,
+    "rms_arcsec": null,
+    "shift_px_at_centre": [
+     0.0,
+     0.0
+    ]
+   },
+   "trail_arcsec": 53.77913470485623,
+   "measurable": true,
+   "S": 0.7600547515247772,
+   "n_ctrl": 2000,
+   "p": 0.09095452273863068
+  },
+  {
+   "plate": "B262a",
+   "start": "1901-08-17T20:54:31",
+   "measurable": false,
+   "reason": "no cutout"
+  },
+  {
+   "plate": "G2281",
+   "inst": "Wolf's Doppelastrograph",
+   "start": "1901-08-23T22:11:20",
+   "V": 14.476,
+   "scale_arcsec_px": 2.5551709399842544,
+   "polarity": 1,
+   "fit": {
+    "kind": "affine",
+    "n": 15,
+    "rms_arcsec": 1.9409876199007525,
+    "shift_px_at_centre": [
+     3.00898736670581,
+     0.12058486387024914
+    ]
+   },
+   "trail_arcsec": 26.578711265224115,
+   "measurable": true,
+   "S": 2.989513075960248,
+   "n_ctrl": 2000,
+   "p": 0.0014992503748125937
+  },
+  {
+   "plate": "G2282",
+   "inst": "Wolf's Doppelastrograph",
+   "start": "1901-08-23T22:11:25",
+   "V": 14.475,
+   "scale_arcsec_px": 2.5026970739036316,
+   "polarity": 1,
+   "fit": {
+    "kind": "affine",
+    "n": 14,
+    "rms_arcsec": 2.1752297175413635,
+    "shift_px_at_centre": [
+     3.0837981428713306,
+     -1.8419292889500412
+    ]
+   },
+   "trail_arcsec": 57.26572626955278,
+   "measurable": true,
+   "S": 1.3510083323143864,
+   "n_ctrl": 2000,
+   "p": 0.004997501249375313
+  },
+  {
+   "plate": "G2283",
+   "inst": "Wolf's Doppelastrograph",
+   "start": "1901-08-23T23:43:20",
+   "V": 14.475,
+   "scale_arcsec_px": 2.5563024156743768,
+   "polarity": 1,
+   "fit": {
+    "kind": "affine",
+    "n": 15,
+    "rms_arcsec": 1.8973346694162032,
+    "shift_px_at_centre": [
+     3.2241728760860155,
+     1.6666066693393873
+    ]
+   },
+   "trail_arcsec": 26.589365978024862,
+   "measurable": true,
+   "S": 1.8196356335589359,
+   "n_ctrl": 2000,
+   "p": 0.006496751624187906
+  },
+  {
+   "plate": "G3620",
+   "inst": "Wolf's Doppelastrograph",
+   "start": "1904-11-14T23:05:30",
+   "V": 14.578,
+   "scale_arcsec_px": 2.5551459216647374,
+   "polarity": 1,
+   "fit": {
+    "kind": "affine",
+    "n": 39,
+    "rms_arcsec": 2.159696035822396,
+    "shift_px_at_centre": [
+     -5.556951826588659,
+     1.2430642268283805
+    ]
+   },
+   "trail_arcsec": 23.83197715576764,
+   "measurable": true,
+   "S": -0.6416642724826909,
+   "n_ctrl": 2000,
+   "p": 0.9730134932533733
+  },
+  {
+   "plate": "G3621",
+   "inst": "Wolf's Doppelastrograph",
+   "start": "1904-11-14T23:05:35",
+   "V": 14.578,
+   "scale_arcsec_px": 2.5036638157312634,
+   "polarity": 1,
+   "fit": {
+    "kind": "affine",
+    "n": 43,
+    "rms_arcsec": 1.805311099382511,
+    "shift_px_at_centre": [
+     5.921568808480515,
+     -2.069970278525034
+    ]
+   },
+   "trail_arcsec": 23.84623538012536,
+   "measurable": true,
+   "S": 0.15200658450649268,
+   "n_ctrl": 2000,
+   "p": 0.6316841579210395
+  },
+  {
+   "plate": "G3623",
+   "inst": "Wolf's Doppelastrograph",
+   "start": "1904-11-15T00:47:31",
+   "V": 14.577,
+   "scale_arcsec_px": 2.5533270585732586,
+   "polarity": 1,
+   "fit": {
+    "kind": "affine",
+    "n": 113,
+    "rms_arcsec": 2.0419223512373774,
+    "shift_px_at_centre": [
+     -4.366255860514798,
+     -4.352305363773496
+    ]
+   },
+   "trail_arcsec": 35.66220971033957,
+   "measurable": true,
+   "S": 1.6801339981873078,
+   "n_ctrl": 2000,
+   "p": 0.010994502748625687
+  },
+  {
+   "plate": "G3624",
+   "inst": "Wolf's Doppelastrograph",
+   "start": "1904-11-15T00:47:36",
+   "V": 14.577,
+   "scale_arcsec_px": 2.5024603096124642,
+   "polarity": 1,
+   "fit": {
+    "kind": "affine",
+    "n": 112,
+    "rms_arcsec": 2.0653683849421434,
+    "shift_px_at_centre": [
+     -0.44321833287875734,
+     -0.3392690593915404
+    ]
+   },
+   "trail_arcsec": 35.71235544828066,
+   "measurable": true,
+   "S": 0.94319914961724,
+   "n_ctrl": 2000,
+   "p": 0.03248375812093953
+  },
+  {
+   "plate": "G3641",
+   "inst": "Wolf's Doppelastrograph",
+   "start": "1904-12-20T04:14:34",
+   "V": 14.538,
+   "scale_arcsec_px": 2.558437873042472,
+   "polarity": 1,
+   "fit": {
+    "kind": "affine",
+    "n": 7,
+    "rms_arcsec": 1.925186801985013,
+    "shift_px_at_centre": [
+     4.2218111590383955,
+     -1.2910359408151066
+    ]
+   },
+   "trail_arcsec": 18.4043766350847,
+   "measurable": true,
+   "S": 0.851423150974931,
+   "n_ctrl": 2000,
+   "p": 0.2613693153423288
+  },
+  {
+   "plate": "G3642",
+   "inst": "Wolf's Doppelastrograph",
+   "start": "1904-12-20T04:14:39",
+   "V": 14.539,
+   "scale_arcsec_px": 2.502562473213189,
+   "polarity": 1,
+   "fit": {
+    "kind": "affine",
+    "n": 7,
+    "rms_arcsec": 2.4076349012009066,
+    "shift_px_at_centre": [
+     -0.9411243292932454,
+     -0.8082553911125956
+    ]
+   },
+   "trail_arcsec": 28.64776978553631,
+   "measurable": true,
+   "S": 0.8430072667567877,
+   "n_ctrl": 2000,
+   "p": 0.18290854572713644
+  },
+  {
+   "plate": "G3643",
+   "inst": "Wolf's Doppelastrograph",
+   "start": "1904-12-20T05:18:34",
+   "V": 14.539,
+   "scale_arcsec_px": 2.5612277751614148,
+   "polarity": 1,
+   "fit": {
+    "kind": "shift",
+    "n": 4,
+    "rms_arcsec": 4.039574794478907,
+    "shift_px_at_centre": [
+     4.232091639670898,
+     1.1459869389144615
+    ]
+   },
+   "trail_arcsec": 9.145006554631939,
+   "measurable": true,
+   "S": 0.9896925403059251,
+   "n_ctrl": 2000,
+   "p": 0.41579210394802596
+  },
+  {
+   "plate": "G3652",
+   "inst": "Wolf's Doppelastrograph",
+   "start": "1904-12-27T20:32:09",
+   "V": 14.606,
+   "scale_arcsec_px": 2.551491767101271,
+   "polarity": 1,
+   "fit": {
+    "kind": "affine",
+    "n": 33,
+    "rms_arcsec": 2.151745717246706,
+    "shift_px_at_centre": [
+     -2.1713351402240733,
+     -3.0954171646364443
+    ]
+   },
+   "trail_arcsec": 17.032680118335985,
+   "measurable": true,
+   "S": 2.571232435455105,
+   "n_ctrl": 2000,
+   "p": 0.033483258370814596
+  },
+  {
+   "plate": "G3653",
+   "inst": "Wolf's Doppelastrograph",
+   "start": "1904-12-27T20:32:14",
+   "V": 14.606,
+   "scale_arcsec_px": 2.4988528680979507,
+   "polarity": 1,
+   "fit": {
+    "kind": "affine",
+    "n": 41,
+    "rms_arcsec": 2.482954546919591,
+    "shift_px_at_centre": [
+     -0.5799504430623301,
+     -3.272934569754966
+    ]
+   },
+   "trail_arcsec": 17.050981460981607,
+   "measurable": true,
+   "S": 1.031760624389335,
+   "n_ctrl": 2000,
+   "p": 0.16991504247876063
+  }
+ ],
+ "summary": {
+  "A_before_1904-09-13": {
+   "n_measurable": 5,
+   "p_comb": 1.4883879573801693e-05,
+   "n_p_lt_0.01": 3,
+   "detected": true,
+   "earliest_p_lt_0.01": "1901-08-23T22:11:20"
+  },
+  "B_all": {
+   "n_measurable": 14,
+   "p_comb": 3.2286332867301167e-06,
+   "n_p_lt_0.01": 3,
+   "detected": true,
+   "earliest_p_lt_0.01": "1901-08-23T22:11:20"
+  }
+ }
+}

@@ -1,0 +1,3 @@
+plates_1895_1907.csv: GAVO TAP https://dc.g-vo.org/tap/sync, 2026-11-27:
+SELECT plateid, instid, dateobs, centeralpha, centerdelta, exposure, coverage, object, starttime, endtime, accref
+FROM lsw.plates WHERE dateobs BETWEEN 13194 AND 17252 ORDER BY dateobs
