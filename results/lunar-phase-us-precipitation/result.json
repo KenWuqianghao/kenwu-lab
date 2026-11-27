@@ -1,0 +1,56 @@
+{
+ "slug": "lunar-phase-us-precipitation",
+ "title": "The reported lunar-phase signal in US precipitation: a held-out test and a null that keeps spatial correlation",
+ "tier": "Public data",
+ "version": 1,
+ "date": "2026-11-25",
+ "summary": "A reported lunar-phase signal in US daily precipitation (Cerveny et al. 2010) does not replicate in held-out 2009-2026 data; in 1895-2008 its national statistic is not significant under a null that keeps the correlation between stations, and its station rate is at the 0.05 boundary.",
+ "abstract": "Cerveny, Svoma and Vose (2010) reported that, at 1218 US Historical Climatology Network (HCN) stations in 1895–2008, the second harmonic of the lunar synodic month explains 0.4106 of the variance of national mean daily precipitation in 10 lunar-phase classes (p < 0.03), and that 23.1% of the stations have a significant second harmonic. We pre-registered a test of both statistics on held-out GHCN-Daily data for 2009–2026. The null model rotates the lunar phase by a random amount in each calendar year, at all stations together, so it keeps the correlation between stations. In the held-out years neither statistic is significant (national R²_2 = 0.40, p = 0.41; station rate 5.2%, p = 0.57). These 18 years detect a lunar modulation of precipitation of 10% with power 0.97 or more and one of 5% with power 0.36 to 0.52. They cannot detect one of about 1%. In 1895–2008 we reproduce the national statistic (R²_2 = 0.49, first maximum 4.5 days after new moon), but it is not significant under the same null (p = 0.12) or under an F test (p = 0.09). With the pre-registered station test, 8.05% of the stations are significant (null mean 5.5%, p = 0.10). A more liberal station test gives 23.4%, close to the published 23.1%, against a null mean of 17.8%. In exploratory analyses, the 1895–2008 station rate is at the 0.05 boundary: its p-value goes from 0.02 to 0.14 with the hour of the phase computation, which the source does not state. With a null that keeps the correlation between stations, the data do not support the reported significance of the signal, and they cannot exclude an effect of about 1%. This work has not yet been reviewed by experts. The computations, the proofs and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+ "keywords": [
+  "lunar synodic month",
+  "precipitation",
+  "Historical Climatology Network",
+  "GHCN-Daily",
+  "field significance",
+  "pre-registration",
+  "placebo test"
+ ],
+ "related": [
+  {
+   "doi": "10.1029/2010GL045564",
+   "relation": "cites"
+  },
+  {
+   "doi": "10.1126/science.137.3532.748",
+   "relation": "cites"
+  },
+  {
+   "doi": "10.1175/1520-0469(1964)021<0386:TLSPAP>2.0.CO;2",
+   "relation": "cites"
+  },
+  {
+   "doi": "10.1175/1520-0469(1965)022<0024:IOALSP>2.0.CO;2",
+   "relation": "cites"
+  },
+  {
+   "doi": "10.1023/A:1017099427908",
+   "relation": "cites"
+  },
+  {
+   "doi": "10.1175/1520-0450(1987)026<1358:PATLSC>2.0.CO;2",
+   "relation": "cites"
+  },
+  {
+   "doi": "10.1175/1520-0493(1983)111<0046:SFSAID>2.0.CO;2",
+   "relation": "cites"
+  },
+  {
+   "doi": "10.1175/JTECH-D-11-00103.1",
+   "relation": "cites"
+  },
+  {
+   "doi": "10.3847/1538-3881/abd414",
+   "relation": "cites"
+  }
+ ]
+}
