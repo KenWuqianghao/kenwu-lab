@@ -27,6 +27,8 @@ SITE = {"name": "Ken Wu Lab", "tagline": "Small findings from AI-assisted resear
 STATUSES = ("Published", "Proved", "Audited", "Checked", "Not audited")
 RESULTS = ROOT.parent / "results"
 REPO = "https://github.com/KenWuqianghao/kenwu-lab"
+URL = "https://kenwu-lab.wooqianghao.workers.dev"
+CARD = "assets/card.png"
 
 
 def parse(path):
@@ -84,12 +86,23 @@ math{font-size:1.05em}
 """
 
 
-def page(title, body, depth):
+def social_tags(title, description, path, image):
+    """Open Graph tags for link previews; X reads them with twitter:card. path and image are site-relative."""
+    tags = {"og:type": "article" if path else "website", "og:site_name": SITE["name"], "og:title": title,
+            "og:description": description, "og:url": f"{URL}/{path}", "og:image": f"{URL}/{image}"}
+    out = [f'<meta name="description" content="{html.escape(description)}">',
+           '<meta name="twitter:card" content="summary_large_image">']
+    out += [f'<meta property="{k}" content="{html.escape(v)}">' for k, v in tags.items()]
+    return "\n".join(out)
+
+
+def page(title, body, depth, description, path, image=CARD):
     up = "../" * depth
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(title)}</title>
+{social_tags(title, description, path, image)}
 <link rel="stylesheet" href="{up}style.css">
 </head><body>
 <header><a class="site" href="{up}index.html">{SITE['name']}</a>
@@ -137,7 +150,7 @@ def paper_page(r):
     shutil.copy(r["folder"] / "paper/paper.pdf", d / "paper.pdf")
     doi = f'<p>DOI: <a href="https://doi.org/{r["doi"]}">{r["doi"]}</a></p>' if r.get("doi") else ""
     body = f"<h1>{html.escape(r['title'])}</h1>{meta_line(r)}{doi}" + markdown(readme)
-    (d / "index.html").write_text(page(r["title"], body, 2))
+    (d / "index.html").write_text(page(r["title"], body, 2, r["summary"], f"papers/{r['slug']}/"))
 
 
 def build():
@@ -155,7 +168,8 @@ def build():
                 + markdown(e["body"].replace("](assets/", "](../assets/").replace('src="assets/', 'src="../assets/')))
         d = OUT / e["slug"]
         d.mkdir()
-        (d / "index.html").write_text(page(e["title"], body, 1))
+        image = e["image"] if e.get("image", "").endswith((".png", ".jpg", ".jpeg", ".gif", ".webp")) else CARD
+        (d / "index.html").write_text(page(e["title"], body, 1, e["summary"], f"{e['slug']}/", image))
     for r in papers:
         paper_page(r)
 
@@ -167,9 +181,9 @@ def build():
     if papers:
         index += f'<h2>Papers</h2><ul class="entries">{items(papers, "papers/")}</ul><h2>Notes</h2>'
     index += f'<ul class="entries">{items(entries, "")}</ul>'
-    (OUT / "index.html").write_text(page(SITE["name"], index, 0))
+    (OUT / "index.html").write_text(page(SITE["name"], index, 0, SITE["tagline"], ""))
     for e in entries:
-        for ref in re.findall(r"\]\((assets/[^)\s]+)", e["body"]) + re.findall(r'src="(assets/[^"]+)"', e["body"]):
+        for ref in re.findall(r"\]\((assets/[^)\s]+)", e["body"]) + re.findall(r'src="(assets/[^"]+)"', e["body"]) + [e.get("image", CARD)]:
             if not (ROOT / ref).exists():
                 sys.exit(f"{e['slug']}: missing {ref}")
     print(f"built {len(papers)} papers and {len(entries)} entries into {OUT}")
