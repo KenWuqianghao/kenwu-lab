@@ -1,0 +1,4 @@
+had.16.3: 16 x 16, H H^T = 16 I, row 0 all +1: PASS
+U = had.16.3 without row 0: PASS
+U, S = (0, 1, 2, 3, 4, 12), w = (1,1,1,1,1,2)/7: ||U_S w||_inf = 3/7 : PASS
+Sylvester rows 1..15 on S0 = (0, 1, 2, 4, 8, 15): row sums are +-2: PASS

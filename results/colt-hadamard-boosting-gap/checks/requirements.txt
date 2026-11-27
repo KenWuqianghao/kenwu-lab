@@ -1,0 +1,4 @@
+# check.py, check_extra.py, draw.py and make_lean.py use only the standard library.
+# vcheck.py --lp uses SciPy (HiGHS) and NumPy. Python 3.13.
+numpy==2.5.5
+scipy==1.18.1
