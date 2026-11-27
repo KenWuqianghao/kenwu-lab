@@ -51,3 +51,5 @@ Xinmin Hou and Li Tan defined T'_{n,k} and asked the question ([arXiv:2607.11061
   howpublished = {\url{https://github.com/KenWuqianghao/kenwu-lab/tree/main/results/matching-number-minimal-spectral}}
 }
 ```
+
+Archived on Zenodo: [doi:10.5281/zenodo.24580879](https://doi.org/10.5281/zenodo.24580879)

@@ -32,5 +32,9 @@
       "doi": "10.1016/j.laa.2026.05.011",
       "relation": "cites"
     }
-  ]
+  ],
+  "doi": "10.5281/zenodo.24580879",
+  "concept_doi": "10.5281/zenodo.24580878",
+  "zenodo_id": 24580879,
+  "doi_version": 1
 }

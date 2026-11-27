@@ -2,6 +2,11 @@
 
 Each result is versioned on its own and tagged `<slug>-vN`.
 
+## matching-number-minimal-spectral v1 (2026-11-27)
+
+- Hou and Tan's Construction 9 gives no tree of order 2k for k ≥ 3, so their question whether every spectrally minimal graph with matching number k lies in T'_{n,k} has a negative answer at the boundary n = 2k; Lean checks the degree count, and the range n ≥ 2k+1 stays open.
+- Zenodo: [10.5281/zenodo.24580879](https://doi.org/10.5281/zenodo.24580879)
+
 ## square-plus-product-divisors v1 (2026-11-27)
 
 - The sum of σ0(N − k²) over 1 ≤ k < √N is divisible by 4 for every N ≡ 6 (mod 8); this proves Conjecture 7 of Jirattikansakul et al. (N = 16n + 6) with an elementary proof by involutions, and Lean checks it.
