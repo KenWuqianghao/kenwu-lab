@@ -19,5 +19,9 @@
       "doi": "10.1073/pnas.2107848118",
       "relation": "cites"
     }
-  ]
+  ],
+  "doi": "10.5281/zenodo.24580831",
+  "concept_doi": "10.5281/zenodo.24580830",
+  "zenodo_id": 24580831,
+  "doi_version": 1
 }

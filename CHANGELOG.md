@@ -2,6 +2,11 @@
 
 Each result is versioned on its own and tagged `<slug>-vN`.
 
+## rationality-ngram-random-placebo v1 (2026-11-27)
+
+- In a pre-registered placebo test on Google Books English, random word pairs matched in frequency, part of speech and fiction skew show the 1980 turn of the rationality/intuition word ratio as often as the original words (p = 0.126), so the test does not show that the turn is specific to these words beyond their register.
+- Zenodo: [10.5281/zenodo.24580831](https://doi.org/10.5281/zenodo.24580831)
+
 ## chess-opening-zipf-lichess v1 (2026-11-27)
 
 - On 44.8 million Lichess games the pooled opening-weight exponent is 2.09, as Blasius and Tönjes predicted, but their finite-size laws fail: alpha_d crosses 2 at depth 7.4, not about 18.

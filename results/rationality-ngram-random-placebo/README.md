@@ -43,3 +43,5 @@ Marten Scheffer, Ingrid van de Leemput, Els Weinans and Johan Bollen published t
   note   = {Public data; computer-assisted; not yet reviewed by experts}
 }
 ```
+
+Archived on Zenodo: [doi:10.5281/zenodo.24580831](https://doi.org/10.5281/zenodo.24580831)
