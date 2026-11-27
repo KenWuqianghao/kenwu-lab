@@ -2,6 +2,11 @@
 
 Each result is versioned on its own and tagged `<slug>-vN`.
 
+## applause-site-time-errors v1 (2026-11-27)
+
+- Four APPLAUSE DR4 site records have longitude and latitude exchanged, and the Vatican archive times are local sidereal time stored as UT, which puts 40.8% of its exposures in daylight.
+- Zenodo: [10.5281/zenodo.24585269](https://doi.org/10.5281/zenodo.24585269)
+
 ## pell-automatic-repetition-threshold v1 (2026-11-27)
 
 - The repetition threshold of the binary Pell-automatic sequences is 7/3; this settles the Pell case of a remark of Allouche, Rampersad and Shallit, with a 4-state squarefree Pell automaton that Walnut and a second decision procedure check.

@@ -31,5 +31,9 @@
       "doi": "10.5281/zenodo.24523190",
       "relation": "cites"
     }
-  ]
+  ],
+  "doi": "10.5281/zenodo.24585269",
+  "concept_doi": "10.5281/zenodo.24585268",
+  "zenodo_id": 24585269,
+  "doi_version": 1
 }

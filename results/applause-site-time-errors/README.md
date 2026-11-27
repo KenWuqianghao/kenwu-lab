@@ -46,3 +46,5 @@ The plates, scans and metadata come from APPLAUSE DR4 (Leibniz Institute for Ast
   howpublished = {\url{https://github.com/KenWuqianghao/kenwu-lab/tree/main/results/applause-site-time-errors}}
 }
 ```
+
+Archived on Zenodo: [doi:10.5281/zenodo.24585269](https://doi.org/10.5281/zenodo.24585269)
