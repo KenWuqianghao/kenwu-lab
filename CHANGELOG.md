@@ -2,6 +2,11 @@
 
 Each result is versioned on its own and tagged `<slug>-vN`.
 
+## ganymed-1898-harvard-plates v1 (2026-11-27)
+
+- A pre-registered search of public Harvard plate scans finds the near-Earth asteroid (1036) Ganymed on plates of 1898-1899, 26 years before its 1924 discovery; a weaker signal of the Jupiter Trojan (624) Hektor on Heidelberg plates of 1901 is a candidate only.
+- Zenodo: [10.5281/zenodo.24600765](https://doi.org/10.5281/zenodo.24600765)
+
 ## applause-site-time-errors v1 (2026-11-27)
 
 - Four APPLAUSE DR4 site records have longitude and latitude exchanged, and the Vatican archive times are local sidereal time stored as UT, which puts 40.8% of its exposures in daylight.

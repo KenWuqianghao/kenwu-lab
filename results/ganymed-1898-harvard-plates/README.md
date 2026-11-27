@@ -42,3 +42,5 @@ Plate scans: DASCH (Digital Access to a Sky Century @ Harvard), Harvard College 
   howpublished = {\url{https://github.com/KenWuqianghao/kenwu-lab/tree/main/results/ganymed-1898-harvard-plates}}
 }
 ```
+
+Archived on Zenodo: [doi:10.5281/zenodo.24600765](https://doi.org/10.5281/zenodo.24600765)

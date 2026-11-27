@@ -38,5 +38,9 @@
       "doi": "10.3847/1538-4357/aae386",
       "relation": "cites"
     }
-  ]
+  ],
+  "doi": "10.5281/zenodo.24600765",
+  "concept_doi": "10.5281/zenodo.24600764",
+  "zenodo_id": 24600765,
+  "doi_version": 1
 }
