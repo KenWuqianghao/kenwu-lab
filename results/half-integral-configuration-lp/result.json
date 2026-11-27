@@ -1,0 +1,36 @@
+{
+  "slug": "half-integral-configuration-lp",
+  "title": "The configuration LP of restricted assignment need not have a half-integral point at the LP makespan",
+  "tier": "Proved in Lean",
+  "version": 1,
+  "date": "2026-11-27",
+  "summary": "Conjecture 10 of Encz, Mastrolilli and Vercesi is false: a restricted assignment instance with 12 machines, 20 jobs and LP(P) = 3 has no half-integral point in CLP(P, LP(P)), by a count modulo 3; Lean checks the disproof from the definitions.",
+  "abstract": "Encz, Mastrolilli and Vercesi conjectured that for every instance P of the restricted assignment problem, the configuration LP CLP(P, LP(P)) at the smallest feasible integer makespan LP(P) contains a half-integral point (their Conjecture 10). If it were true, the integrality gap of the configuration LP would reduce to the graph balancing case. We show that the conjecture is false. Our counterexample has 12 machines and 20 jobs with processing times 1 and 3, and LP(P) = 3. The total processing time is 36 = 12 · 3, so every configuration in the support of a feasible point has load exactly 3. Each such configuration contains 0 or 3 jobs of a fixed set of 4 jobs. In a half-integral point these 4 jobs are covered 8 times in total, with weights 1/2, and 8 is not a multiple of 3. Lean 4 with Mathlib checks the disproof from the definitions, with only the standard axioms. We also give a second counterexample with 5 machines and 14 jobs, found by a random search and checked by an exhaustive search. The counterexample does not change the known bounds on the integrality gap. This work has not yet been reviewed by experts. The computations, the proofs and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+  "keywords": [
+    "restricted assignment",
+    "configuration LP",
+    "half-integrality",
+    "integrality gap",
+    "scheduling",
+    "counterexample",
+    "Lean"
+  ],
+  "related": [
+    {
+      "doi": "10.48550/arXiv.2609.19967",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.48550/arXiv.1611.01934",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.48550/arXiv.1811.00955",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1145/1993636.1993718",
+      "relation": "cites"
+    }
+  ]
+}

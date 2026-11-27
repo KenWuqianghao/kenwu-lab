@@ -1,0 +1,12 @@
+instance.json equals the instance built from the prose: True
+n=20 m=12 T=3 volume=36
+  configurations per machine at T: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+given point in CLP(P,T): True
+CLP(P,T) feasible (exact simplex): True
+volume > m(T-1): True
+CLP(P,T-1) feasible (exact simplex): False
+  search nodes: 2227
+half-integral point in CLP(P,T) exists: False
+  search nodes: 414
+control T=4: True
+RESULT: COUNTEREXAMPLE CONFIRMED

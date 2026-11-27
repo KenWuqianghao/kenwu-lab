@@ -1,0 +1,2 @@
+1. loads of the integral assignment: [4, 4, 4, 4, 4, 4, 4, 4, 1, 1, 1, 1] makespan 4
+2. IP(P) = 4, LP(P) = 3, gap of this instance: 4/3
