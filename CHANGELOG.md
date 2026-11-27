@@ -2,6 +2,11 @@
 
 Each result is versioned on its own and tagged `<slug>-vN`.
 
+## half-integral-configuration-lp v1 (2026-11-27)
+
+- Conjecture 10 of Encz, Mastrolilli and Vercesi is false: a restricted assignment instance with 12 machines, 20 jobs and LP(P) = 3 has no half-integral point in CLP(P, LP(P)), by a count modulo 3; Lean checks the disproof from the definitions.
+- Zenodo: [10.5281/zenodo.24600794](https://doi.org/10.5281/zenodo.24600794)
+
 ## ganymed-1898-harvard-plates v1 (2026-11-27)
 
 - A pre-registered search of public Harvard plate scans finds the near-Earth asteroid (1036) Ganymed on plates of 1898-1899, 26 years before its 1924 discovery; a weaker signal of the Jupiter Trojan (624) Hektor on Heidelberg plates of 1901 is a candidate only.

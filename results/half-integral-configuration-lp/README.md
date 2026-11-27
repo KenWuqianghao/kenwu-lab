@@ -64,3 +64,5 @@ K. I. Encz, M. Mastrolilli and E. Vercesi stated the conjecture and its conseque
   howpublished = {\url{https://github.com/KenWuqianghao/kenwu-lab/tree/main/results/half-integral-configuration-lp}}
 }
 ```
+
+Archived on Zenodo: [doi:10.5281/zenodo.24600794](https://doi.org/10.5281/zenodo.24600794)
