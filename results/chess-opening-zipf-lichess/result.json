@@ -1,0 +1,23 @@
+{
+  "slug": "chess-opening-zipf-lichess",
+  "title": "The Zipf law of chess openings on 44.8 million Lichess games: the exponent 2 holds, the finite-size laws do not",
+  "tier": "Public data",
+  "version": 1,
+  "date": "2026-11-26",
+  "summary": "On 44.8 million Lichess games the pooled opening-weight exponent is 2.09, as Blasius and Tönjes predicted, but their finite-size laws fail: alpha_d crosses 2 at depth 7.4, not about 18.",
+  "abstract": "Blasius and Tönjes (2009) found that the weights of opening lines in a database of 1.4 million chess games follow a Zipf law with the universal exponent α = 2. Their theory also predicts how the database size N changes the depth-dependent exponents: the slope of α_d against the depth d is 1/ln N, and α_d crosses 2 at d_cr = 1 + ln N. The source tested these finite-size laws at one value of N only. We tested all three predictions out of sample on 44,832,865 rated games from the public Lichess database (2013–2015), with a pre-registered protocol, random subsets from 10^4 games to the full set, and the authors' own branching model as a known-answer control. The pooled exponent is 2.086 at the full N, inside the pre-registered band 2 ± 0.10. The finite-size laws fail. The fitted slope falls with N as (ln N)^−1.76, while the same estimator applied to the model gives (ln N)^−0.79. The exponent α_d crosses 2 at depth 7.4, while the model gives 17.3. At the source's own sample size the crossing depth is 6.1, against the reported value of about 15. Both failures repeat in every speed, rating and period stratum. A placebo that shuffles moves between games also gives a pooled exponent near 2, so the value 2 alone is not specific to chess. On Lichess, α_d is concave in d: its steps are larger than 1/ln N only in the first 7 or 8 plies. These are statements about online play in 2013–2015; we did not re-test the source's database. This work has not yet been reviewed by experts. The computations and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+  "keywords": [
+    "Zipf's law",
+    "chess openings",
+    "finite-size scaling",
+    "Lichess",
+    "pre-registration",
+    "replication"
+  ],
+  "related": [
+    {
+      "doi": "10.1103/PhysRevLett.103.218701",
+      "relation": "cites"
+    }
+  ]
+}
