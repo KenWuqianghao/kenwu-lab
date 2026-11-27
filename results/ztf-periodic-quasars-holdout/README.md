@@ -51,3 +51,5 @@ Yong-Jie Chen and colleagues made the candidate list and wrote down how they mad
   howpublished = {\url{https://github.com/KenWuqianghao/kenwu-lab/tree/main/results/ztf-periodic-quasars-holdout}}
 }
 ```
+
+Archived on Zenodo: [doi:10.5281/zenodo.24580702](https://doi.org/10.5281/zenodo.24580702)
