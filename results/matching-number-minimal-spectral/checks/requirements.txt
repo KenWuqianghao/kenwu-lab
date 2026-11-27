@@ -1,0 +1,4 @@
+# checks/verify.py and checks/draw_figure.py use only the Python standard library.
+# checks/verifier_check.py, checks/search.py and checks/compare_search.py use:
+networkx==3.7
+numpy==2.5.5
