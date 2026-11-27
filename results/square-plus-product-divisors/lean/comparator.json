@@ -1,0 +1,1 @@
+{"challenge_module": "Challenge", "solution_module": "Solution", "theorem_names": ["sum_card_divisors_mod_four", "conjecture_7"], "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"]}
