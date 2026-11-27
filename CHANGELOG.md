@@ -2,6 +2,11 @@
 
 Each result is versioned on its own and tagged `<slug>-vN`.
 
+## colt-hadamard-boosting-gap v1 (2026-11-27)
+
+- Conjecture 2 of Nie, Warmuth, Vishwanathan and Zhang (COLT 2013) is false for the Sylvester Hadamard matrix of order 16: at t = 6 a ±1 matrix of value 0 has best value −3/7 < −1/3; Lean checks the disproof from the definitions.
+- Zenodo: [10.5281/zenodo.24613532](https://doi.org/10.5281/zenodo.24613532)
+
 ## half-integral-configuration-lp v1 (2026-11-27)
 
 - Conjecture 10 of Encz, Mastrolilli and Vercesi is false: a restricted assignment instance with 12 machines, 20 jobs and LP(P) = 3 has no half-integral point in CLP(P, LP(P)), by a count modulo 3; Lean checks the disproof from the definitions.

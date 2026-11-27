@@ -57,3 +57,5 @@ Jiazhong Nie, Manfred K. Warmuth, S. V. N. Vishwanathan and Xinhua Zhang posed t
   howpublished = {\url{https://github.com/KenWuqianghao/kenwu-lab/tree/main/results/colt-hadamard-boosting-gap}}
 }
 ```
+
+Archived on Zenodo: [doi:10.5281/zenodo.24613532](https://doi.org/10.5281/zenodo.24613532)
