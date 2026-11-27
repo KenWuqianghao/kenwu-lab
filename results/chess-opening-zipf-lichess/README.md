@@ -51,3 +51,5 @@ Bernd Blasius and Ralf Tönjes stated the law and the finite-size theory that we
   howpublished = {\url{https://github.com/KenWuqianghao/kenwu-lab/tree/main/results/chess-opening-zipf-lichess}}
 }
 ```
+
+Archived on Zenodo: [doi:10.5281/zenodo.24580807](https://doi.org/10.5281/zenodo.24580807)

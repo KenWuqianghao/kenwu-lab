@@ -2,6 +2,11 @@
 
 Each result is versioned on its own and tagged `<slug>-vN`.
 
+## chess-opening-zipf-lichess v1 (2026-11-27)
+
+- On 44.8 million Lichess games the pooled opening-weight exponent is 2.09, as Blasius and Tönjes predicted, but their finite-size laws fail: alpha_d crosses 2 at depth 7.4, not about 18.
+- Zenodo: [10.5281/zenodo.24580807](https://doi.org/10.5281/zenodo.24580807)
+
 ## rich-words-five-letters v1 (2026-11-27)
 
 - A morphism π from 9 letters to 5 letters makes π(u_9) rich with critical exponent E*(u_9) ≈ 2.0592854, so the repetition threshold of 5-ary rich words is at most E*(u_9).

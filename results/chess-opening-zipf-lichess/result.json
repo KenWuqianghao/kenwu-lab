@@ -19,5 +19,9 @@
       "doi": "10.1103/PhysRevLett.103.218701",
       "relation": "cites"
     }
-  ]
+  ],
+  "doi": "10.5281/zenodo.24580807",
+  "concept_doi": "10.5281/zenodo.24580806",
+  "zenodo_id": 24580807,
+  "doi_version": 1
 }
