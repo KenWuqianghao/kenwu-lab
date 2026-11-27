@@ -58,3 +58,5 @@ S. Jirattikansakul, T. Kittipassorn, K. Kongsiri, N. Moonwichit and K. Sriamorn 
   howpublished = {\url{https://github.com/KenWuqianghao/kenwu-lab/tree/main/results/square-plus-product-divisors}}
 }
 ```
+
+Archived on Zenodo: [doi:10.5281/zenodo.24580854](https://doi.org/10.5281/zenodo.24580854)

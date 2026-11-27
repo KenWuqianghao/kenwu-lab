@@ -2,6 +2,11 @@
 
 Each result is versioned on its own and tagged `<slug>-vN`.
 
+## square-plus-product-divisors v1 (2026-11-27)
+
+- The sum of σ0(N − k²) over 1 ≤ k < √N is divisible by 4 for every N ≡ 6 (mod 8); this proves Conjecture 7 of Jirattikansakul et al. (N = 16n + 6) with an elementary proof by involutions, and Lean checks it.
+- Zenodo: [10.5281/zenodo.24580854](https://doi.org/10.5281/zenodo.24580854)
+
 ## rationality-ngram-random-placebo v1 (2026-11-27)
 
 - In a pre-registered placebo test on Google Books English, random word pairs matched in frequency, part of speech and fiction skew show the 1980 turn of the rationality/intuition word ratio as often as the original words (p = 0.126), so the test does not show that the turn is specific to these words beyond their register.
