@@ -2,6 +2,11 @@
 
 Each result is versioned on its own and tagged `<slug>-vN`.
 
+## pell-automatic-repetition-threshold v1 (2026-11-27)
+
+- The repetition threshold of the binary Pell-automatic sequences is 7/3; this settles the Pell case of a remark of Allouche, Rampersad and Shallit, with a 4-state squarefree Pell automaton that Walnut and a second decision procedure check.
+- Zenodo: [10.5281/zenodo.24580907](https://doi.org/10.5281/zenodo.24580907)
+
 ## matching-number-minimal-spectral v1 (2026-11-27)
 
 - Hou and Tan's Construction 9 gives no tree of order 2k for k ≥ 3, so their question whether every spectrally minimal graph with matching number k lies in T'_{n,k} has a negative answer at the boundary n = 2k; Lean checks the degree count, and the range n ≥ 2k+1 stays open.

@@ -39,5 +39,9 @@
       "doi": "10.48550/arXiv.1603.06017",
       "relation": "cites"
     }
-  ]
+  ],
+  "doi": "10.5281/zenodo.24580907",
+  "concept_doi": "10.5281/zenodo.24580906",
+  "zenodo_id": 24580907,
+  "doi_version": 1
 }

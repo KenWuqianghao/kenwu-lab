@@ -66,3 +66,5 @@ J.-P. Allouche, N. Rampersad and J. Shallit posed the question and gave the meth
   howpublished = {\url{https://github.com/KenWuqianghao/kenwu-lab/tree/main/results/pell-automatic-repetition-threshold}}
 }
 ```
+
+Archived on Zenodo: [doi:10.5281/zenodo.24580907](https://doi.org/10.5281/zenodo.24580907)
