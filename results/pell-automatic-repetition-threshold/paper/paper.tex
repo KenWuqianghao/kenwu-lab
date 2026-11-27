@@ -1,0 +1,287 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\DeclareMathOperator{\ce}{ce}
+\DeclareMathOperator{\rt}{rt}
+\newcommand{\AP}{\mathcal{A}_P}
+\newcommand{\PSQ}{\mathbf{s}}
+\newcommand{\tm}{\mathbf{t}}
+
+\title{The repetition threshold for binary Pell-automatic sequences is $7/3$}
+\author{Qianghao Wu}
+\date{27 November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The critical exponent of an infinite word is the supremum of the exponents of its finite factors. The repetition threshold of a set of infinite words is the infimum of their critical exponents. Allouche, Rampersad and Shallit proved that the repetition threshold of the binary Fibonacci-automatic sequences and of the binary Tribonacci-automatic sequences is $7/3$. They wrote that $7/3$ is likely the critical exponent for many other binary generalized automatic sequences, such as the Pell-automatic sequences. We prove that the repetition threshold of the binary Pell-automatic sequences is $7/3$, and that one Pell-automatic sequence attains it. The upper bound uses a 4-state Pell automaton whose output word $\mathbf{s}$ over 4 letters is squarefree. The theorem prover Walnut proves that $\mathbf{s}$ is squarefree, and a separate decision procedure that does not use Walnut confirms it. A 21-uniform morphism of Karhum\"aki and Shallit then gives a binary Pell-automatic sequence with critical exponent exactly $7/3$. The lower bound follows the argument of Allouche, Rampersad and Shallit, with Durand's theorem for substitutions. We give the non-erasing substitution that this argument needs for the Pell numeration system. The proof is computer-assisted and uses published lemmas that we do not prove again. The method is the method of Allouche, Rampersad and Shallit, applied to one more numeration system; the general question for other numeration systems remains open. This work has not yet been reviewed by experts. The computations, the proofs and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.
+\end{abstract}
+
+\section{Introduction}
+
+Let $w$ be a finite nonempty word. An integer $p$ with $1 \le p \le |w|$ is a period of $w$ if $w[i] = w[i+p]$ for all $i$ with $1 \le i \le |w|-p$. The exponent of $w$ is $\exp(w) = |w|/p$, where $p$ is the least period of $w$. For example, $1001001$ has least period $3$ and exponent $7/3$. A word is \emph{squarefree} if it has no factor of exponent $2$ or more. A word is \emph{$\alpha$-free} if it has no factor of exponent $\alpha$ or more, and \emph{$\alpha^+$-free} if it has no factor of exponent more than $\alpha$. The \emph{critical exponent} $\ce(\mathbf{x})$ of an infinite word $\mathbf{x}$ is the supremum of $\exp(w)$ over all finite nonempty factors $w$ of $\mathbf{x}$. The \emph{repetition threshold} $\rt(S)$ of a nonempty set $S$ of infinite words is the infimum of $\ce(\mathbf{x})$ over $\mathbf{x} \in S$. These are the definitions of Allouche, Rampersad and Shallit~\cite{ARS}.
+
+The introduction of~\cite{ARS} gives the history of the repetition threshold. For all infinite binary words, the value is $2$, and the Thue--Morse word attains it. Repetition thresholds are also known for subsets such as the Sturmian, balanced, rich and episturmian words; \cite{ARS} lists the references.
+
+Allouche, Rampersad and Shallit~\cite{ARS} study the binary automatic sequences. Let $\mathcal{A}_k$ be the set of binary $k$-automatic sequences. They prove:
+\begin{itemize}
+\item $\rt(\mathcal{A}_k) = 2$ if $k$ is a power of $2$, and $\rt(\mathcal{A}_k) = 7/3$ otherwise \cite[Theorem~1]{ARS};
+\item $\rt(\mathcal{A}_F) = 7/3$ for the binary Fibonacci-automatic sequences \cite[Theorem~11]{ARS};
+\item the repetition threshold of the binary Tribonacci-automatic sequences is $7/3$ \cite[Theorem~13]{ARS}.
+\end{itemize}
+In each case the value $7/3$ comes from two parts. A squarefree automatic word over 4 letters and a 21-uniform morphism $h$ of Karhum\"aki and Shallit~\cite{KS} give the upper bound. A structure theorem for $7/3$-free binary words~\cite{KS,RSS} and a Cobham-type theorem (Cobham's theorem for base $k$, Durand's theorem~\cite{Durand} for Fibonacci and Tribonacci) give the lower bound. Section~4 of~\cite{ARS} (v3, February 2026), which has the title ``Going further'', is the following sentence:
+\begin{quote}
+``It seems likely that $7/3$ is the critical exponent for many other binary generalized automatic sequences, such as the Pell-automatic sequences [3], but a general theorem seems hard to prove.''
+\end{quote}
+Here [3] is Baranwal and Shallit~\cite{BS}, who use the Pell numeration system in Walnut to find the least critical exponent of balanced words over 5 letters.
+
+\paragraph{Result.} Let $\AP$ be the set of binary Pell-automatic sequences (Definition~\ref{def:pell}).
+
+\begin{theorem}\label{thm:main}
+$\rt(\AP) = 7/3$. Moreover, there is a sequence in $\AP$ whose critical exponent is exactly $7/3$.
+\end{theorem}
+
+This settles the Pell case that~\cite{ARS} names. The proof is the proof of~\cite[Theorem~11]{ARS} with two new parts: a Pell automaton for a squarefree word (Section~\ref{sec:upper}), and the non-erasing substitution that Durand's theorem needs for the Pell system (Section~\ref{sec:lower}). The general question of~\cite{ARS} for ``many other binary generalized automatic sequences'' remains open.
+
+\paragraph{Prior work on this question.} We searched the two public collections of AI-produced results that we track, the issue trackers and archives where such results are posted, Zenodo, GitHub and the web for the Pell case (27 November 2026). We found no proof. One public list of open targets names this case as open. Version 3 of~\cite{ARS} (February 2026) still calls the question open. Semantic Scholar and OpenAlex list no paper that cites~\cite{ARS} (checked 27 November 2026). These indexes can be incomplete, so we cannot exclude that a paper we did not find settles the case.
+
+\paragraph{Kind of result.} The result is computer-assisted. The squarefree property of the 4-letter word rests on Walnut and on a second decision procedure. Four published results are used and not proved again here: \cite[Lemma~8]{KS}, \cite[Theorem~1]{RSS}, \cite[Lemma~10]{ARS} and \cite[Theorem~1]{Durand}. There is no Lean proof.
+
+\section{The Pell numeration system}
+
+The Pell numbers that we use as weights are $P_0 = 1$, $P_1 = 2$ and $P_{i+2} = 2P_{i+1} + P_i$, so $(P_i) = 1, 2, 5, 12, 29, 70, \dots$. Each $n \ge 0$ has a unique representation $n = \sum_{0 \le i < m} d_i P_i$ with digits $d_i \in \{0,1,2\}$ that satisfy the conditions of Baranwal and Shallit~\cite[Section~2.1]{BS}:
+\begin{enumerate}
+\item $d_0 \in \{0,1\}$;
+\item if $d_i = 2$ with $i > 0$, then $d_{i-1} = 0$.
+\end{enumerate}
+The greedy algorithm gives this representation. We write it most significant digit first, $d_{m-1} \cdots d_0$, and call a word over $\{0,1,2\}$ \emph{valid} if it satisfies conditions 1 and 2. A valid word can have leading zeros. Let $W_m$ be the set of valid words of length $m$. Then $W_0 = \{\varepsilon\}$, $W_1 = \{0, 1\}$, and for $m \ge 1$,
+\begin{equation}\label{eq:W}
+W_{m+1} = 0W_m \cup 1W_m \cup 20W_{m-1}.
+\end{equation}
+The words of $W_m$ in lexicographic order represent $0, 1, \dots, P_m - 1$ in increasing order. This is Walnut's numeration system \texttt{msd\_pell}.
+
+\begin{definition}\label{def:pell}
+A \emph{Pell DFAO} is a tuple $(Q, \delta, q_0, \tau)$ with a finite set $Q$, a map $\delta : Q \times \{0,1,2\} \to Q$, a state $q_0 \in Q$ with $\delta(q_0, 0) = q_0$, and a map $\tau : Q \to \Delta$ to a finite alphabet $\Delta$. It computes the sequence $x(n) = \tau(\delta(q_0, \operatorname{rep}(n)))$, $n \ge 0$, where $\operatorname{rep}(n)$ is the greedy representation of $n$. A sequence is \emph{Pell-automatic} if a Pell DFAO computes it.
+\end{definition}
+
+A DFAO that reads the digits least significant digit first gives the same class of sequences, because the reversal of a regular language is regular.
+
+The condition $\delta(q_0, 0) = q_0$ costs no generality. If a DFAO reads the representations without leading zeros and has $\delta(q_0, 0) \ne q_0$, add a new initial state $q_0'$ with $\delta(q_0', 0) = q_0'$, $\delta(q_0', d) = \delta(q_0, d)$ for $d \in \{1, 2\}$ and $\tau(q_0') = \tau(q_0)$. The new DFAO computes the same sequence and ignores leading zeros. The Pell system is \emph{addable}: a finite automaton recognizes the relation $x + y = z$ on valid representations~\cite[Section~2.2]{BS}. Walnut ships this automaton, and our second decision procedure builds its own (Section~\ref{sec:checks}).
+
+\section{The upper bound}\label{sec:upper}
+
+Let $\PSQ$ be the sequence over $\{0,1,2,3\}$ that the Pell DFAO of Table~\ref{tab:dfao} computes. Each state outputs its own number.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{cccc}
+\toprule
+state $q$ & $\delta(q, 0)$ & $\delta(q, 1)$ & $\delta(q, 2)$ \\
+\midrule
+$0$ (initial) & $0$ & $1$ & $2$ \\
+$1$ & $0$ & $2$ & $0$ \\
+$2$ & $3$ & $1$ & $2$ \\
+$3$ & $1$ & $2$ & $2$ \\
+\bottomrule
+\end{tabular}
+\caption{The Pell DFAO for $\PSQ$; $\tau(q) = q$. File \texttt{data/PSQ.txt}, in Walnut's format.}
+\label{tab:dfao}
+\end{table}
+
+The first 60 letters of $\PSQ$ are
+\[
+\texttt{010230131012010231202301023130102301310120231301310120102301}.
+\]
+For example, $\operatorname{rep}(3) = 11$, and $\delta(0,1) = 1$, $\delta(1,1) = 2$, so $\PSQ(3) = 2$.
+
+We found this DFAO with a depth-first search over Pell DFAOs with at most 4 states and 4 output letters, for a squarefree prefix of length 3000 (\texttt{checks/search/Sqf.java}). It is the first DFAO that the search finds. The same search with at most 3 states finds none; its longest squarefree prefix has length 11.
+
+\begin{proposition}\label{prop:sqf}
+The infinite word $\PSQ$ is squarefree.
+\end{proposition}
+
+\begin{proof}[Proof (computer-assisted)]
+Walnut~\cite{Mousavi,Walnut} (commit \texttt{c61231a}) evaluates the first-order sentence
+\[
+\neg \exists i, n\ \bigl(n \ge 1 \wedge \forall t\ (t < n \Rightarrow \PSQ[i+t] = \PSQ[i+t+n])\bigr)
+\]
+in \texttt{msd\_pell} and returns \texttt{TRUE}. This is the form that~\cite[proof of Theorem~11]{ARS} uses for the Fibonacci case. Section~\ref{sec:checks} gives a second decision procedure that does not use Walnut and gives the same answer.
+\end{proof}
+
+Let $h : \{0,1,2,3\}^* \to \{0,1\}^*$ be the 21-uniform morphism of Karhum\"aki and Shallit~\cite[Section~5]{KS}, as quoted in~\cite[Lemma~5]{ARS}:
+\begin{align*}
+h(0) &= 011010011001001101001, & h(1) &= 100101100100110010110,\\
+h(2) &= 100101100110110010110, & h(3) &= 011010011011001101001.
+\end{align*}
+
+\begin{lemma}[{\cite[Lemma~8]{KS}, \cite[Lemma~5]{ARS}}]\label{lem:ks}
+If $\mathbf{a}$ is a squarefree word over $\{0,1,2,3\}$, then $h(\mathbf{a})$ is $(7/3)^+$-free.
+\end{lemma}
+
+\begin{lemma}\label{lem:hpell}
+The binary sequence $h(\PSQ)$ is Pell-automatic.
+\end{lemma}
+
+\begin{proof}
+Bit $n$ of $h(\PSQ)$ is $1$ if and only if there are $q$ and $r$ with $n = 21q + r$, $r < 21$, and $h(\PSQ(q))[r] = 1$. For each letter $a$ the set of such $r$ is finite, so this is a first-order formula over $\langle \mathbb{N}, +, \PSQ \rangle$. Since the Pell system is addable, Walnut's decision procedure turns such a formula into a Pell automaton. Walnut builds this automaton (\texttt{def hb} in \texttt{checks/walnut/hb.txt}; it has 1518 states) and confirms that its first four values are $0,1,1,0$, the first four letters of $h(0)$. A script checks that the positions $r$ in this formula are exactly the positions of the letters $1$ in $h(0), \dots, h(3)$ (\texttt{checks/ci.sh}).
+\end{proof}
+
+\begin{corollary}\label{cor:upper}
+$\ce(h(\PSQ)) = 7/3$.
+\end{corollary}
+
+\begin{proof}
+By Proposition~\ref{prop:sqf} and Lemma~\ref{lem:ks}, $h(\PSQ)$ has no factor of exponent more than $7/3$. Its factor at positions $8$ to $14$ (counted from $0$) is $1001001$, inside $h(0)$. This factor has length 7, least period 3 and exponent $7/3$.
+\end{proof}
+
+\section{The lower bound}\label{sec:lower}
+
+\begin{proposition}\label{prop:lower}
+Every $\mathbf{x} \in \AP$ has $\ce(\mathbf{x}) \ge 7/3$.
+\end{proposition}
+
+The proof is the argument of~\cite[proofs of Theorems~1(b) and~11]{ARS}. We state the steps and the facts that each step uses. Let $\mu$ be the Thue--Morse morphism $0 \mapsto 01$, $1 \mapsto 10$, let $\tm = \mu^\omega(0)$, and let $\overline{\tm}$ be its complement.
+
+\paragraph{Step 1.} Suppose $\ce(\mathbf{x}) < 7/3$. Then each factor of $\mathbf{x}$ has exponent less than $7/3$, so $\mathbf{x}$ is $7/3$-free. By~\cite[Theorem~1]{RSS} (Lemma~7 and Corollary~8 of~\cite{ARS}), $\mathbf{x}$ contains $\mu^i(0)$ and $\mu^i(1)$ for all $i$. So every prefix of $\overline{\tm}$ is a factor of $\mathbf{x}$, and $\overline{\tm}$ is in the orbit closure of $\mathbf{x}$.
+
+\paragraph{Step 2.} Each sequence in the orbit closure of $\mathbf{x}$ is $7/3$-free. By~\cite[Lemma~9]{ARS}, the lexicographically least $7/3$-free binary sequence that starts with $1$ is $\overline{\tm}$. So the lexicographically least sequence in the orbit closure of $\mathbf{x}$ that starts with $1$ is $\overline{\tm}$.
+
+\paragraph{Step 3.} By~\cite[Lemma~10]{ARS}, which holds for every addable numeration system, this least sequence is generalized automatic in the same system. So $\overline{\tm}$ is Pell-automatic. (The proof of~\cite[Lemma~10]{ARS} is one sentence that refers to Walnut methods; we use the lemma as published.)
+
+\paragraph{Step 4.} Lemma~\ref{lem:subst} below shows that every Pell-automatic sequence is $(1+\sqrt{2})$-substitutive in the sense of Durand~\cite[Definition~2]{Durand}. The sequence $\overline{\tm}$ is also $2$-substitutive: it is the fixed point of $\mu$ that starts with $1$, with the identity coding, and the incidence matrix of $\mu$ has dominating eigenvalue $2$.
+
+\paragraph{Step 5.} The numbers $1+\sqrt{2}$ and $2$ are Perron numbers. They are multiplicatively independent: for $k \ge 1$, $(1+\sqrt{2})^k = a_k + b_k\sqrt{2}$ with integers $a_k, b_k \ge 1$, so $(1+\sqrt{2})^k$ is irrational and is not equal to $2^l$. The cases $k = 0$ and $k < 0$ reduce to this case. By Durand's theorem~\cite[Theorem~1]{Durand}, a sequence that is both $(1+\sqrt{2})$-substitutive and $2$-substitutive is ultimately periodic. But $\overline{\tm}$ is not ultimately periodic. An ultimately periodic word contains a cube $uuu$ with $u$ nonempty, and $\overline{\tm}$, like $\tm$, has no factor of exponent more than $2$~\cite[Section~1]{ARS}. This contradiction proves Proposition~\ref{prop:lower}.
+
+\medskip
+
+Durand's definition~\cite[Definition~2]{Durand} needs a substitution $\sigma$ that is prolongable on a letter $a$, such that every letter occurs in $\sigma^\omega(a)$, the incidence matrix of $\sigma$ has dominating eigenvalue $\alpha$, and the sequence is the image of $\sigma^\omega(a)$ under a \emph{coding} (a letter-to-letter map). Durand shows by an example that the theorem fails if the coding is replaced by an erasing morphism~\cite[after Corollary~6]{Durand}. The obvious automaton for valid Pell words has the substitution $A \mapsto AAB$, $B \mapsto A$, but the letter $B$ stands for a digit $2$ in the last position, which is not valid. That route therefore gives the sequence only after the letters of type $B$ are erased. The next lemma avoids the erasure.
+
+\begin{lemma}\label{lem:subst}
+Let $(Q, \delta, q_0, \tau)$ be a Pell DFAO with $\delta(q_0, 0) = q_0$, and let $\mathbf{x}$ be the sequence that it computes. On the alphabet $\{A_q : q \in Q\} \cup \{C_{q,r} : q, r \in Q\}$ define the substitution
+\begin{align*}
+\sigma(A_q) &= A_{\delta(q,0)}\, C_{\delta(q,1), \delta(q,2)},\\
+\sigma(C_{q,r}) &= A_{\delta(q,0)}\, C_{\delta(q,1), \delta(q,2)}\, A_{\delta(r,0)},
+\end{align*}
+and the coding $\varphi(A_q) = \varphi(C_{q,r}) = \tau(q)$. Then $\sigma$ is prolongable on $A_{q_0}$, and $\mathbf{x} = \varphi(\sigma^\omega(A_{q_0}))$. If $\sigma$ is restricted to the letters that occur in $\sigma^\omega(A_{q_0})$, its incidence matrix has dominating eigenvalue $1 + \sqrt{2}$. So $\mathbf{x}$ is $(1+\sqrt{2})$-substitutive.
+\end{lemma}
+
+\begin{proof}
+For $q \in Q$ and $m \ge 0$, let $X_m(q)$ be the word $\tau(\delta(q, w))$, $w \in W_m$, in lexicographic order of $w$. Put $X_{-1}(q) = \varepsilon$. For $m \ge 0$ let $Z_m(q, r) = X_m(q)\, X_{m-1}(\delta(r, 0))$. By~\eqref{eq:W}, and since $W_1 = 0W_0 \cup 1W_0$, for all $m \ge 0$
+\[
+X_{m+1}(q) = X_m(\delta(q,0))\, X_m(\delta(q,1))\, X_{m-1}(\delta(\delta(q,2), 0)) = X_m(\delta(q,0))\, Z_m(\delta(q,1), \delta(q,2)).
+\]
+Then
+\[
+Z_{m+1}(q, r) = X_{m+1}(q)\, X_m(\delta(r,0)) = X_m(\delta(q,0))\, Z_m(\delta(q,1), \delta(q,2))\, X_m(\delta(r,0)).
+\]
+These two identities have the same form as the two rules of $\sigma$. Since $X_0(q) = Z_0(q, r) = \tau(q)$, induction on $m$ gives $\varphi(\sigma^m(A_q)) = X_m(q)$ and $\varphi(\sigma^m(C_{q,r})) = Z_m(q,r)$ for all $m \ge 0$.
+
+Since $\delta(q_0, 0) = q_0$, $\sigma(A_{q_0})$ starts with $A_{q_0}$ and has length 2, so $\sigma$ is prolongable on $A_{q_0}$. The word $X_m(q_0)$ lists $\mathbf{x}(0), \dots, \mathbf{x}(P_m - 1)$, because leading zeros do not change the state. So $\varphi(\sigma^\omega(A_{q_0})) = \mathbf{x}$.
+
+Each image under $\sigma$ of a letter $A$ contains one letter $A$ and one letter $C$. Each image of a letter $C$ contains two letters $A$ and one letter $C$. So $a_m = |\sigma^m(A_q)|$ and $c_m = |\sigma^m(C_{q,r})|$ do not depend on $q$ and $r$, and $a_{m+1} = a_m + c_m$, $c_{m+1} = 2a_m + c_m$, $a_0 = c_0 = 1$. This gives $a_m = P_m$ and $c_m = P_m + P_{m-1}$ ($P_{-1} = 0$). Both grow as a constant times $(1+\sqrt{2})^m$. By Gelfand's formula, the spectral radius of a square matrix $N$ is $\lim_m \|N^m\|^{1/m}$ for every matrix norm; we use the largest column sum. Let $M$ be the incidence matrix of $\sigma$ restricted to the letters that occur (this set of letters is closed under $\sigma$), with column $b$ counting the letters of $\sigma(b)$. Then the largest column sum of $M^m$ is the largest length $|\sigma^m(b)|$. So the spectral radius is $1 + \sqrt{2}$, and by the Perron--Frobenius theorem it is the dominating eigenvalue. All conditions of~\cite[Definition~2]{Durand} hold.
+\end{proof}
+
+\begin{remark}
+A computer check confirms the identity $\mathbf{x} = \varphi(\sigma^\omega(A_{q_0}))$ for $\PSQ$ on its first 100000 letters, and for 200 random 4-state Pell DFAOs on their first 3000 letters (\texttt{checks/prefix.py}). The verifier also checked it for $\PSQ$ on 3000000 letters.
+\end{remark}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Proposition~\ref{prop:lower} gives $\rt(\AP) \ge 7/3$. Lemma~\ref{lem:hpell} and Corollary~\ref{cor:upper} give a sequence in $\AP$ with critical exponent $7/3$.
+\end{proof}
+
+\section{How the result was checked}\label{sec:checks}
+
+Table~\ref{tab:checks} lists the checks. ``Infinite'' means that the check is a decision procedure for the whole infinite word. ``Prefix'' means a finite check that only supports the result.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{p{4.6cm}p{1.4cm}p{8.4cm}}
+\toprule
+Check & Kind & Result \\
+\midrule
+Walnut, Proposition~\ref{prop:sqf} (two forms of the sentence) & infinite & \texttt{TRUE}, \texttt{TRUE}; solver run, verifier run on a fresh clone, write-stage run with a Walnut jar built from source \\
+Second decision procedure \texttt{checks/decide.py} & infinite & no square in $\PSQ$; 442377 reachable states in the final search \\
+Controls for \texttt{decide.py} & infinite & 32 of 32 changed DFAOs: a square found and confirmed \\
+Walnut, Lemma~\ref{lem:hpell} & infinite & automaton for $h(\PSQ)$ built; first values $0,1,1,0$ \\
+\texttt{checks/prefix.py} & prefix & no square in the first 50000 letters of $\PSQ$; largest exponent of a factor of the first 200000 letters of $h(\PSQ)$ is exactly $7/3$ \\
+Verifier's Java checker & prefix & no square in 3000000 letters of $\PSQ$; no factor of exponent above $7/3$ in 63000000 letters of $h(\PSQ)$ \\
+\bottomrule
+\end{tabular}
+\caption{Checks of the computational claims.}
+\label{tab:checks}
+\end{table}
+
+\paragraph{The second decision procedure.} The verifier wrote \texttt{checks/decide.py} without Walnut code or Walnut data. It reads the DFAO file and builds three things. First, it builds its own Pell adder. Its state is the pending carry $c_1\alpha + c_2$ with $\alpha^2 = 2\alpha + 1$. The program bounds the carries, checks that a doubled bound gives the same automaton, and tests the adder against integer addition. Second, it builds an automaton $M$ for the relation ``$\PSQ[u] \neq \PSQ[u+n]$''; after determinization $M$ has 151 states. Third, it builds an automaton for ``some $u$ with $i \le u < i+n$ satisfies $M(u, n)$'', and it searches all valid pairs $(i, n)$ with $n \ge 1$ for one where this relation is false. Such a pair is exactly a square $\PSQ[i..i+2n-1]$. The search reaches 442377 states and finds no such pair. The run takes about 6 minutes on one core.
+
+\paragraph{Controls.} A decision procedure that always answers ``no square'' would pass the main check. So \texttt{checks/controls.py} changes one transition of the DFAO of Table~\ref{tab:dfao}, in all 33 possible ways that keep $\delta(0,0) = 0$. In 32 of the 33 changed DFAOs a brute-force search finds a square in the first 4000 letters. For each of these 32, \texttt{decide.py} reports a pair $(i, n)$, and the program confirms that the reported factor is a square. In 11 of the 32 cases the reported square has period at least 2. The one remaining change, $\delta(1,2) = 1$, computes $\PSQ$ itself: a digit $2$ in a valid word is always followed by a digit $0$, and $\delta(0,0) = \delta(1,0) = 0$. The verifier also ran bounded Walnut controls: a square test restricted to $n \le 6$ returns \texttt{FALSE} on a changed DFAO and \texttt{TRUE} on $\PSQ$. An unbounded Walnut control (``no factor of exponent at least $3/2$ in $\PSQ$'', expected \texttt{FALSE}) did not finish: Java ran out of memory at 3 GB. That run gives no evidence for or against the result.
+
+\paragraph{Prefix checks.} \texttt{checks/prefix.py} computes $\PSQ$ from the greedy representations and, separately, from the substitution of Lemma~\ref{lem:subst}; the two agree. For each period $p$ it finds the longest run of positions $j$ with $z[j] = z[j-p]$, and this gives the exact largest exponent in a finite prefix $z$. The largest exponent in the first 200000 letters of $h(\PSQ)$ is $7/3$. The first factor with this exponent starts at position 8 and has length 7 and period 3. Two controls work as expected: a copy of $\PSQ$ with one changed letter has a square, and the first 20000 letters of the Thue--Morse word have largest exponent 2.
+
+\paragraph{What was not checked.} A direct Walnut proof that $h(\PSQ)$ is $(7/3)^+$-free ran out of memory (Java heap at 3.2 GB). It is not needed for the proof, because Lemma~\ref{lem:ks} covers it, but it would be an independent check of Lemma~\ref{lem:ks} for this word. We did not rebuild the proofs of the four published results listed in the introduction. We read their statements in the sources.
+
+\section{Limits}
+
+\begin{itemize}
+\item The result rests on Walnut and on \texttt{decide.py} for Proposition~\ref{prop:sqf}. Neither program is formally verified. The two programs share no code.
+\item Lemma~\ref{lem:ks} and Steps 1, 2, 3 and 5 of Section~\ref{sec:lower} use published results that we do not prove again. The proof of~\cite[Lemma~10]{ARS} in its source is a short sketch. The same lemma carries the Fibonacci and Tribonacci theorems of~\cite{ARS}.
+\item Lemma~\ref{lem:hpell} uses Walnut's construction. The general fact behind it, that a first-order formula over an addable numeration system defines an automatic sequence, is the basis of Walnut.
+\item Our DFAO for $h(\PSQ)$ is not known to be the smallest Pell DFAO for a $(7/3)^+$-free binary word. A direct search for binary Pell DFAOs with at most 10 and at most 14 states did not reach a $(7/3)^+$-free prefix of length 100 in 9 minutes.
+\item The source asks a wider question, for ``many other binary generalized automatic sequences''. We answer only the Pell case. The method is the method of~\cite{ARS}, and the new parts are the DFAO and the substitution of Lemma~\ref{lem:subst}.
+\end{itemize}
+
+\section*{Data and code}
+The release folder has the DFAO (\texttt{data/PSQ.txt}), the Walnut commands and a script that builds Walnut from source and reruns them (\texttt{checks/walnut/}), the decision procedure, the controls and the prefix checks (\texttt{checks/}), and the search program (\texttt{checks/search/Sqf.java}).
+
+\begin{thebibliography}{9}
+
+\bibitem{ARS}
+J.-P. Allouche, N. Rampersad, J. Shallit.
+\newblock Repetition threshold for binary automatic sequences.
+\newblock arXiv:2406.06513v3, 2026. \url{https://arxiv.org/abs/2406.06513}
+
+\bibitem{BS}
+A. R. Baranwal, J. Shallit.
+\newblock Critical exponent of infinite balanced words via the Pell number system.
+\newblock In \emph{WORDS 2019}, Lecture Notes in Comput. Sci. 11682, Springer, 2019, pp.~80--92. doi:10.1007/978-3-030-28796-2\_6. arXiv:1902.00503.
+
+\bibitem{Durand}
+F. Durand.
+\newblock Cobham's theorem for substitutions.
+\newblock \emph{J. Eur. Math. Soc.} 13 (2011), 1799--1814. doi:10.4171/JEMS/294. arXiv:1010.4009.
+
+\bibitem{KS}
+J. Karhum\"aki, J. Shallit.
+\newblock Polynomial versus exponential growth in repetition-free binary words.
+\newblock \emph{J. Combin. Theory Ser. A} 105 (2004), 335--347. doi:10.1016/j.jcta.2003.12.004. arXiv:math/0304095.
+
+\bibitem{Mousavi}
+H. Mousavi.
+\newblock Automatic theorem proving in Walnut.
+\newblock arXiv:1603.06017, 2016.
+
+\bibitem{RSS}
+N. Rampersad, J. Shallit, A. M. Shur.
+\newblock Fife's theorem for $(7/3)$-powers.
+\newblock In \emph{WORDS 2011}, EPTCS 63 (2011), 189--198. doi:10.4204/EPTCS.63.25. arXiv:1104.3500.
+
+\bibitem{Walnut}
+Walnut theorem prover, source code.
+\newblock \url{https://github.com/Walnut-Theorem-Prover/Walnut}, commit c61231a (23 November 2026).
+
+\end{thebibliography}
+\end{document}

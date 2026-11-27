@@ -1,0 +1,4 @@
+def hb "?msd_pell Eq,r n=21*q+r & r<21 & ((PSQ[q]=@0 & (r=1 | r=2 | r=4 | r=7 | r=8 | r=11 | r=14 | r=15 | r=17 | r=20)) | (PSQ[q]=@1 & (r=0 | r=3 | r=5 | r=6 | r=9 | r=12 | r=13 | r=16 | r=18 | r=19)) | (PSQ[q]=@2 & (r=0 | r=3 | r=5 | r=6 | r=9 | r=10 | r=12 | r=13 | r=16 | r=18 | r=19)) | (PSQ[q]=@3 & (r=1 | r=2 | r=4 | r=7 | r=8 | r=10 | r=11 | r=14 | r=15 | r=17 | r=20)))";
+eval hbprefix "?msd_pell $hb(1) & $hb(2) & ~$hb(0) & ~$hb(3)";
+eval pskind "?msd_pell An (PSQ[n]=@0 | PSQ[n]=@1 | PSQ[n]=@2 | PSQ[n]=@3)";
+exit;
