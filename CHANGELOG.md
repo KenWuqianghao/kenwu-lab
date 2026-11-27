@@ -2,6 +2,11 @@
 
 Each result is versioned on its own and tagged `<slug>-vN`.
 
+## lunar-phase-us-precipitation v1 (2026-11-27)
+
+- A reported lunar-phase signal in US daily precipitation (Cerveny et al. 2010) does not replicate in held-out 2009-2026 data; in 1895-2008 its national statistic is not significant under a null that keeps the correlation between stations, and its station rate is at the 0.05 boundary.
+- Zenodo: [10.5281/zenodo.24580728](https://doi.org/10.5281/zenodo.24580728)
+
 ## personal-best-quitting-lichess v1 (2026-11-27)
 
 - On Lichess blitz 2013-2015, the jump in quitting at a new personal-best rating is +0.51 pp (95% CI -0.38 to +1.39); the 4.5 pp that Anderson and Green found on FICS is outside the interval, and the same method detects the round-number effect.

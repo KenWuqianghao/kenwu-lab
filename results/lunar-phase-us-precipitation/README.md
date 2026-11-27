@@ -46,3 +46,5 @@ Randall S. Cerveny, Bohumil M. Svoma and Russell S. Vose published the claim and
   howpublished = {\url{https://github.com/KenWuqianghao/kenwu-lab/tree/main/results/lunar-phase-us-precipitation}}
 }
 ```
+
+Archived on Zenodo: [doi:10.5281/zenodo.24580728](https://doi.org/10.5281/zenodo.24580728)
