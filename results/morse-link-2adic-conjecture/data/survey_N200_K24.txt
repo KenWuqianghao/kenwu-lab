@@ -1,0 +1,24 @@
+k= 1 k%4=1 d(3)=  4  n>=2: consistent c=2   n>=4: consistent c=2
+k= 2 k%4=2 d(3)= 11  n>=2: FAILS (19, 'conflict with n=19')   n>=4: consistent c=3
+k= 3 k%4=3 d(3)=  4  n>=2: consistent c=2   n>=4: consistent c=2
+k= 4 k%4=0 d(3)=  7  n>=2: consistent c=4   n>=4: consistent c=4
+k= 5 k%4=1 d(3)=  4  n>=2: consistent c=2   n>=4: consistent c=2
+k= 6 k%4=2 d(3)=  7  n>=2: FAILS (19, 'conflict with n=19')   n>=4: consistent c=3
+k= 7 k%4=3 d(3)=  4  n>=2: consistent c=2   n>=4: consistent c=2
+k= 8 k%4=0 d(3)=  8  n>=2: consistent c=5   n>=4: consistent c=5
+k= 9 k%4=1 d(3)=  4  n>=2: consistent c=2   n>=4: consistent c=2
+k=10 k%4=2 d(3)=  8  n>=2: FAILS (19, 'conflict with n=3')   n>=4: consistent c=3
+k=11 k%4=3 d(3)=  4  n>=2: consistent c=2   n>=4: consistent c=2
+k=12 k%4=0 d(3)=  7  n>=2: consistent c=4   n>=4: consistent c=4
+k=13 k%4=1 d(3)=  4  n>=2: consistent c=2   n>=4: consistent c=2
+k=14 k%4=2 d(3)=  7  n>=2: FAILS (19, 'conflict with n=19')   n>=4: consistent c=3
+k=15 k%4=3 d(3)=  4  n>=2: consistent c=2   n>=4: consistent c=2
+k=16 k%4=0 d(3)=  9  n>=2: consistent c=6   n>=4: consistent c=6
+k=17 k%4=1 d(3)=  4  n>=2: consistent c=2   n>=4: consistent c=2
+k=18 k%4=2 d(3)=  9  n>=2: FAILS (19, 'conflict with n=19')   n>=4: consistent c=3
+k=19 k%4=3 d(3)=  4  n>=2: consistent c=2   n>=4: consistent c=2
+k=20 k%4=0 d(3)=  7  n>=2: consistent c=4   n>=4: consistent c=4
+k=21 k%4=1 d(3)=  4  n>=2: consistent c=2   n>=4: consistent c=2
+k=22 k%4=2 d(3)=  7  n>=2: FAILS (19, 'conflict with n=19')   n>=4: consistent c=3
+k=23 k%4=3 d(3)=  4  n>=2: consistent c=2   n>=4: consistent c=2
+k=24 k%4=0 d(3)=  8  n>=2: consistent c=5   n>=4: consistent c=5
