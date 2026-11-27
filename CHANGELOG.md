@@ -2,6 +2,11 @@
 
 Each result is versioned on its own and tagged `<slug>-vN`.
 
+## personal-best-quitting-lichess v1 (2026-11-27)
+
+- On Lichess blitz 2013-2015, the jump in quitting at a new personal-best rating is +0.51 pp (95% CI -0.38 to +1.39); the 4.5 pp that Anderson and Green found on FICS is outside the interval, and the same method detects the round-number effect.
+- Zenodo: [10.5281/zenodo.24580717](https://doi.org/10.5281/zenodo.24580717)
+
 ## ztf-periodic-quasars-holdout v1 (2026-11-27)
 
 - The sinusoids of the 86 ZTF periodic-quasar candidates of Chen et al. (2024), frozen on DR11 data, do not predict the next 3.6 years of ZTF data better than red noise or than unselected quasars; none of the three named candidates is confirmed.

@@ -47,3 +47,5 @@ Ashton Anderson and Etan A. Green stated the claim and its definitions. Lichess 
   howpublished = {\url{https://github.com/KenWuqianghao/kenwu-lab/tree/main/results/personal-best-quitting-lichess}}
 }
 ```
+
+Archived on Zenodo: [doi:10.5281/zenodo.24580717](https://doi.org/10.5281/zenodo.24580717)
