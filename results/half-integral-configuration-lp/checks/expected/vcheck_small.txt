@@ -1,0 +1,9 @@
+n=14 m=5 T=14 volume=68
+  configurations per machine at T: [9, 74, 105, 49, 70]
+given point in CLP(P,T): True
+CLP(P,T) feasible (exact simplex): True
+volume > m(T-1): True
+CLP(P,T-1) feasible (exact simplex): False
+  search nodes: 155269
+half-integral point in CLP(P,T) exists: False
+RESULT: COUNTEREXAMPLE CONFIRMED

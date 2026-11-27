@@ -1,0 +1,5 @@
+1. x is a point of CLP(P,T): verified
+2. sum p = 36 > m(T-1) = 24: CLP(P,T-1) empty, LP(P) = 3: verified
+3. sum p = m T = 36: support configurations are full: verified
+4. all 36 full configurations have w(C) = 0 mod 3: verified
+5. 2 * sum w = 8 != 0 mod 3: no half-integral point in CLP(P,LP(P)): verified
