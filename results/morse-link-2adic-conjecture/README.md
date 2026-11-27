@@ -55,3 +55,5 @@ Yibo Gao and Andrew Gu stated the conjecture and the definitions ([arXiv:1908.03
   howpublished = {\url{https://github.com/KenWuqianghao/kenwu-lab/tree/main/results/morse-link-2adic-conjecture}}
 }
 ```
+
+Archived on Zenodo: [doi:10.5281/zenodo.24579593](https://doi.org/10.5281/zenodo.24579593)

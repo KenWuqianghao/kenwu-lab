@@ -2,6 +2,11 @@
 
 Each result is versioned on its own and tagged `<slug>-vN`.
 
+## morse-link-2adic-conjecture v1 (2026-11-27)
+
+- Gao and Gu's Conjecture 4.12 on the 2-adic valuations of weighted Morse link numbers is false for k = 2, and Lean checks it; the failure comes from n = 3, and the version for n ≥ 4 stays open.
+- Zenodo: [10.5281/zenodo.24579593](https://doi.org/10.5281/zenodo.24579593)
+
 ## ternary-legendre-pair-35 v1 (2026-11-25)
 
 - A ternary Legendre pair of length 35 exists; this settles one of the two smallest open cases of a conjecture of Kotsireas, Liu and Winterhof, and Lean checks it.
