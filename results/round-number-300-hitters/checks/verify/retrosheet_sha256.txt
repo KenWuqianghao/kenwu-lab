@@ -1,0 +1,17 @@
+5fb9b3f3c55d645fbd02b70c365b9731ed0cd79d6b403037121f780473ce15eb  ../../.tmp/verify-round-number-300-hitters/work/raw/2009eve.zip
+0cb40d4b0dde0367096420612c3bb841b061ee46cd300ac4b94118cd2d2b2365  ../../.tmp/verify-round-number-300-hitters/work/raw/2010eve.zip
+b77a5f97ccd32e962bd729d1387ac3535edd6ee37bb8979878faa46214197c9f  ../../.tmp/verify-round-number-300-hitters/work/raw/2011eve.zip
+0e6d8bfb8fea91fec06e582977c63dc9dc8547306094e20298fd8de87fc2359b  ../../.tmp/verify-round-number-300-hitters/work/raw/2012eve.zip
+ac838f6371c8e7d8b448b1d7a5ecec5ef91994058b21d4a3bf49bd9e8fbb09ec  ../../.tmp/verify-round-number-300-hitters/work/raw/2013eve.zip
+2fb186ae2cef4d7ca54ebc8706786489cb9029e4fe35b72944fd605e8619be72  ../../.tmp/verify-round-number-300-hitters/work/raw/2014eve.zip
+7a3aef2cef1cdf07b7d85fe929fd805b79b4ca3038a6d2992fe72386582456ae  ../../.tmp/verify-round-number-300-hitters/work/raw/2015eve.zip
+2a7a2586cb860292f3183fa93a695a543bf6d69fd4cb46f39ee2371a41cf546d  ../../.tmp/verify-round-number-300-hitters/work/raw/2016eve.zip
+59a62d6b9c9aa7594ff069f183605b739f5f63865169a2b23b6ec5b9ebf7035f  ../../.tmp/verify-round-number-300-hitters/work/raw/2017eve.zip
+a80fc7f04177490e24e1c2bc151a0b86e08e4e12947bd5563de0684f1229ede8  ../../.tmp/verify-round-number-300-hitters/work/raw/2018eve.zip
+174c3a0d57ee6e7758332d27d0b9a9ff23e5d5ac0fe223c013a198d18ad65837  ../../.tmp/verify-round-number-300-hitters/work/raw/2019eve.zip
+66153e64e09d31b802fa3ac3f1535e9199bdc4dcaab130765cadd1990c78be09  ../../.tmp/verify-round-number-300-hitters/work/raw/2020eve.zip
+954f8099ddaa93790f0214a65563f4d9666ce4841f9d58e37adf852209733b5b  ../../.tmp/verify-round-number-300-hitters/work/raw/2021eve.zip
+cce73b21bed02283eb70f95e18575f4c8b60b968c75f926530b43f35c85f4c61  ../../.tmp/verify-round-number-300-hitters/work/raw/2022eve.zip
+301e6d36afd58f3c2f9b3dfa546cb7953b24c90a4de57a69565ccc2f2a5eb8d1  ../../.tmp/verify-round-number-300-hitters/work/raw/2023eve.zip
+5dfd9ed678c9c619f6a216322922c99234c067d0ec15b12790546f620ced2fa4  ../../.tmp/verify-round-number-300-hitters/work/raw/2024eve.zip
+5ece2be6c8ec5b47b9d8d90f2ca533ceca7eee915c7e0997f9bd6d64b879303c  ../../.tmp/verify-round-number-300-hitters/work/raw/2025eve.zip

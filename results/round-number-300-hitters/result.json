@@ -1,0 +1,26 @@
+{
+  "slug": "round-number-300-hitters",
+  "title": "The .300 hitter after 2008: a pre-registered held-out test of the round-number claims of Pope and Simonsohn",
+  "tier": "Public data",
+  "version": 1,
+  "date": "2026-11-28",
+  "summary": "On MLB 2009-2025, 47 batter-seasons end at .300 and 20 at .299 (one-sided p = 0.00065, but a placebo threshold fails the pre-registered rule); the no-walk and hit claims for .299 hitters in their last plate appearance do not replicate, while pinch-hit substitution at .300 is present (30.0% vs 5.7%, post hoc).",
+  "abstract": "Pope and Simonsohn (2011) reported that Major League Baseball batters of 1975–2008 were nearly 4 times as likely to end a season at a .300 batting average as at .299. They also reported that in the last scheduled plate appearance of the season, batters at .299 never walked (0 of 61), got more hits, and were rarely replaced by a pinch hitter, while batters at .300 were often replaced. We re-tested these statements on the seasons 2009–2025, which were not in the original sample, with a protocol that we committed before we computed any outcome. The data are the public Retrosheet event files. Our parsed season totals agree with the MLB Stats API for 5,446 of 5,447 batter-seasons with at least 200 at-bats. The season-end excess at .300 is a re-test: three earlier studies re-tested it, and one already reports a smaller ratio for 2005–2018. The excess persists: 47 batter-seasons end at .300 and 20 at .299 (ratio 2.35, 95% CI 1.37–4.19; one-sided binomial p = 0.00065). The pre-registered rule also required the .300 ratio to exceed the ratio at 10 placebo thresholds, and it did not (.330: 8 vs 3). So this claim is not supported under the registered rule. The final-plate-appearance statements had no held-out test before. The zero count of walks at .299 does not persist (3 walks in 23 plate appearances), and we find no walk suppression (p = 0.89). The hit advantage at .299 has the paper's direction but is not significant (.421 vs .200, p = 0.125). In a post hoc, exploratory analysis with the paper's own definitions, the substitution pattern is present: a pinch hitter took 30.0% of the last scheduled plate appearances at .300 and 5.7% at the other values from .280 to .320 (Holm-adjusted p = 0.0002). The post hoc substitution result and the descriptive exit check agree better with batters who stop at .300 than with batters who hit better below it. This work has not yet been reviewed by experts. The computations and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+  "keywords": [
+    "round numbers",
+    "reference points",
+    "goals",
+    "batting average",
+    "Major League Baseball",
+    "Retrosheet",
+    "replication",
+    "pre-registration",
+    "placebo test"
+  ],
+  "related": [
+    {
+      "doi": "10.1177/0956797610391098",
+      "relation": "cites"
+    }
+  ]
+}
