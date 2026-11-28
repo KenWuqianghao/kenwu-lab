@@ -1,0 +1,46 @@
+{
+  "slug": "almagest-virgo-uranus",
+  "title": "Is Almagest Virgo 17 Uranus seen by Hipparchus? A pre-registered position test",
+  "tier": "Public data",
+  "version": 1,
+  "date": "2026-11-28",
+  "summary": "A pre-registered position test of Hertzog's proposal that Almagest Virgo 17 is Uranus seen by Hipparchus is inconclusive: Uranus fits at an ordinary catalogue error (56th percentile) and the usual star 76 Vir at a large but not exceptional one (88th percentile).",
+  "abstract": "K. P. Hertzog (1988) proposed that the 17th star of Virgo in Ptolemy's star catalogue (Baily no. 513; longitude Virgo 27 1/4°, latitude +0 1/6°, magnitude 6), usually identified with 76 Virginis, is the planet Uranus, observed by Hipparchus near 25 March -127. N. M. Swerdlow (2020) wrote that he does not know how to decide the question. We tested the identification by position only, with a protocol that we committed to git before we computed any distance. We moved the entry into the frame of Hipparchus with the median offset of 266 securely identified zodiacal entries. We then compared two distances with the errors of the catalogue itself: the distance from the entry to the nearest real star with V ≤ 6.0, and the smallest distance from the entry to Uranus on the nights of 149-127 BC with solar elongation of at least 120°. The reference errors are those of 103 faint identified entries (median 32.1', 95th percentile 88.5'). The nearest star is 76 Vir at 63.7', at the 88.3rd percentile. Uranus passes 36.6' from the entry on 128 BC April 7, at the 56.3rd percentile. Support for Hertzog required the star above the 95th percentile and Uranus at or below the 50th. Neither the support rule nor the refutation rule is met, so the registered result is inconclusive. In a registered placebo, 6 of 108 identified entries near the ecliptic come as close to the Uranus track; 6 of the 31 entries inside the longitude range of the track do. Uranus passes equally close (37.7') in Ptolemy's own time, so position alone also does not separate a Hipparchan from a Ptolemaic origin. An independent recomputation with another precession model gives the same verdict. This work has not yet been reviewed by experts. The analysis, the code and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+  "keywords": [
+    "Ptolemy's star catalogue",
+    "Almagest",
+    "Hipparchus",
+    "Uranus",
+    "pre-discovery observations",
+    "76 Virginis",
+    "history of astronomy",
+    "pre-registration",
+    "JPL Horizons"
+  ],
+  "related": [
+    {
+      "doi": "10.5281/zenodo.3975731",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1051/0004-6361/201219596",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.26093/cds/vizier.35440031",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.3847/1538-3881/abd414",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.3847/1538-4357/ac7c74",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.48550/arXiv.2604.02521",
+      "relation": "cites"
+    }
+  ]
+}
