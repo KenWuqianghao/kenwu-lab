@@ -1,0 +1,40 @@
+# python3 -I checks/run_rc.py 16 374409 --workers 4 (write stage, 2026-11-28, Steam Deck, compiler leanc -O2)
+n=16 T=374409; compiler leanc; 12 processes, 4 at a time; outputs in ../work/rc16
+v2 5: exit 0, 285 s
+v2 6: exit 0, 324 s
+v2 7: exit 0, 372 s
+v2 8: exit 0, 410 s
+v2 2: exit 0, 39 s
+v2 1: exit 0, 8 s
+v2 3: exit 0, 95 s
+v2 4: exit 0, 146 s
+obb 0: exit 0, 978 s
+obb 1: exit 0, 1071 s
+obb 2: exit 0, 1151 s
+obb 3: exit 0, 1215 s
+PASS obb: all processes exit 0 and print SUMMARY
+PASS obb: 2 distinct permutations with t >= 374409
+PASS obb: every listed permutation re-evaluated
+obb: tmax(16) = 374409; 2 maximisers with pi_1 <= 8
+PASS v2: all processes exit 0 and print SUMMARY
+PASS v2: 2 distinct permutations with t >= 374409
+PASS v2: every listed permutation re-evaluated
+v2: tmax(16) = 374409; 2 maximisers with pi_1 <= 8
+PASS the two programs give the same maximisers
+RESULT n=16 tmax=374409 |RC(n)|=4 odd_sum_members=4 closed_under_reversal=True
+wrote data/rc16.txt
+run_rc: ALL PASS
+exit=0 seconds=1649
+# SUMMARY lines of the 12 processes
+SUMMARY n=16 T=374409 mode=0 job=2 K=4 found=0 best=-1 nodes=1044830739 splitnodes=120
+SUMMARY n=16 T=374409 mode=0 job=3 K=4 found=1 best=374409 nodes=1109614694 splitnodes=120
+SUMMARY n=16 T=374409 mode=0 first=1..1 baseW=458633 budget=84224 nodes=16851195 found=0 best=-1
+SUMMARY n=16 T=374409 mode=0 first=2..2 baseW=458633 budget=84224 nodes=97072971 found=0 best=-1
+SUMMARY n=16 T=374409 mode=0 first=3..3 baseW=458633 budget=84224 nodes=226317533 found=0 best=-1
+SUMMARY n=16 T=374409 mode=0 first=7..7 baseW=458633 budget=84224 nodes=917757507 found=0 best=-1
+SUMMARY n=16 T=374409 mode=0 first=6..6 baseW=458633 budget=84224 nodes=773380074 found=0 best=-1
+SUMMARY n=16 T=374409 mode=0 job=0 K=4 found=0 best=-1 nodes=890980082 splitnodes=120
+SUMMARY n=16 T=374409 mode=0 first=8..8 baseW=458633 budget=84224 nodes=996395883 found=2 best=374409
+SUMMARY n=16 T=374409 mode=0 job=1 K=4 found=1 best=374409 nodes=967706912 splitnodes=120
+SUMMARY n=16 T=374409 mode=0 first=4..4 baseW=458633 budget=84224 nodes=396388287 found=0 best=-1
+SUMMARY n=16 T=374409 mode=0 first=5..5 baseW=458633 budget=84224 nodes=588968597 found=0 best=-1
