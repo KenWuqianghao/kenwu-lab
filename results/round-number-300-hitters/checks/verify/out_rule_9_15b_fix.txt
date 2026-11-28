@@ -1,0 +1,61 @@
+unknown event heads {}
+midPA K reassignments 86 [('BOS200908110', 'cabrm001', 'rabur001', 'K'), ('SDN200906300', 'headc001', 'blank002', 'K'), ('SLN200909140', 'waina001', 'thurj001', 'K'), ('TEX200908180', 'kubej002', 'harrb001', 'K'), ('ATL201008270', 'maybc001', 'stanm004', 'K'), ('MIL201007080', 'runzd001', 'bumgm001', 'K')]
+lahman years 2009 2021
+MLB multiset mismatch 2009 api-only {(142, 543): 1} retro-only {(142, 544): 1}
+MLB multiset mismatch 2010 api-only {(58, 247): 1} retro-only {(58, 246): 1}
+MLB multiset match 2011 335
+MLB multiset match 2012 319
+MLB multiset match 2013 341
+MLB multiset match 2014 335
+MLB multiset match 2015 334
+MLB multiset match 2016 333
+MLB multiset match 2017 330
+MLB multiset match 2018 332
+MLB multiset match 2019 347
+MLB multiset match 2020 68
+MLB multiset match 2021 343
+MLB multiset mismatch 2022 api-only {(78, 311): 1, (62, 299): 1, (40, 241): 1} retro-only {(40, 240): 1, (62, 300): 1, (79, 311): 1}
+MLB multiset match 2023 344
+MLB multiset match 2024 351
+MLB multiset mismatch 2025 api-only {(129, 491): 1} retro-only {(129, 492): 1}
+lahman check: batter-seasons with AB>=200: 4082 mismatch: 2 [((2009, 'headc001'), (142, 544), (142, 543)), ((2010, 'castl001'), (58, 246), (58, 247))]
+eligible 5447
+fin 295..305 [(295, 30), (296, 25), (297, 34), (298, 24), (299, 20), (300, 47), (301, 23), (302, 25), (303, 24), (304, 27), (305, 27)]
+T1 p 0.0006535843428817998 CI ConfidenceInterval(low=np.float64(0.5772812044312087), high=np.float64(0.8072054216875708))
+ratio CI 1.3656388371717543 4.186867850502886
+end 298/299 44 300/301 70 binom p 0.00940537441244204
+top adjacent ratios (den>=15) [(2.35, 300, 47, 20), (1.53125, 288, 49, 32), (1.509090909090909, 259, 83, 55), (1.5, 307, 24, 16), (1.4285714285714286, 290, 40, 28)]
+smallest adjacent-pair p over .200-.350 [(np.float64(0.0006535843428817998), 300, 47, 20), (np.float64(0.010543202856568819), 238, 67, 42), (np.float64(0.010599774846169602), 259, 83, 55), (np.float64(0.011767001063005003), 233, 69, 44), (np.float64(0.03271484375), 324, 9, 2)]
+== last actual PA (solver definition)
+ 299: n=23 AB=19 H=8 BB=3 SUB=0  hit/n=0.348 bb/n=0.130 sub/n=0.000 H/AB=0.421
+ 300: n=23 AB=20 H=4 BB=1 SUB=0  hit/n=0.174 bb/n=0.043 sub/n=0.000 H/AB=0.200
+ 298/299: n=60 AB=54 H=18 BB=3 SUB=0  hit/n=0.300 bb/n=0.050 sub/n=0.000 H/AB=0.333
+ 300/301: n=52 AB=46 H=8 BB=3 SUB=0  hit/n=0.154 bb/n=0.058 sub/n=0.000 H/AB=0.174
+ 280-320 excl 299: n=1115 AB=993 H=253 BB=90 SUB=0  hit/n=0.227 bb/n=0.081 sub/n=0.000 H/AB=0.255
+ 280-320 excl 299,300: n=1092 AB=973 H=249 BB=89 SUB=0  hit/n=0.228 bb/n=0.082 sub/n=0.000 H/AB=0.256
+ hits 298/299 vs 300/301 per n, fisher greater p= 0.05345092117332934
+ walks 298/299 vs 300/301 per n, fisher less p= 0.5900922627965413
+ subs 298/299 vs 300/301, fisher less p= 1.0
+ hits 299 vs others per n, fisher greater p= 0.13370821852274986
+ subs 300 vs others, fisher greater p= 1.0 0 23 0 1115
+ T3 H/AB 299 vs 300 p= 0.12545256204878005
+ T2 p= 0.8855426883084692
+ 299 walkers: [((2009, 'fielp001'), 'Prince Fielder', 'SLN200910040'), ((2011, 'fielp001'), 'Prince Fielder', 'MIL201109280'), ((2024, 'diazy004'), 'Yainer Diaz', 'CLE202409270')]
+ 299 subs: []
+== last scheduled PA incl. pinch-hit substitution (paper definition, my reading)
+ 299: n=23 AB=19 H=8 BB=3 SUB=0  hit/n=0.348 bb/n=0.130 sub/n=0.000 H/AB=0.421
+ 300: n=30 AB=18 H=4 BB=1 SUB=9  hit/n=0.133 bb/n=0.033 sub/n=0.300 H/AB=0.222
+ 298/299: n=58 AB=51 H=16 BB=3 SUB=1  hit/n=0.276 bb/n=0.052 sub/n=0.017 H/AB=0.314
+ 300/301: n=55 AB=39 H=8 BB=2 SUB=11  hit/n=0.145 bb/n=0.036 sub/n=0.200 H/AB=0.205
+ 280-320 excl 299: n=1112 AB=924 H=229 BB=85 SUB=72  hit/n=0.206 bb/n=0.076 sub/n=0.065 H/AB=0.248
+ 280-320 excl 299,300: n=1082 AB=906 H=225 BB=84 SUB=63  hit/n=0.208 bb/n=0.078 sub/n=0.058 H/AB=0.248
+ hits 298/299 vs 300/301 per n, fisher greater p= 0.07092880643955402
+ walks 298/299 vs 300/301 per n, fisher less p= 0.8011109672634394
+ subs 298/299 vs 300/301, fisher less p= 0.0014931416921868815
+ hits 299 vs others per n, fisher greater p= 0.0860319075136974
+ subs 300 vs others, fisher greater p= 4.91840207232537e-05 9 30 63 1105
+ T3 H/AB 299 vs 300 p= 0.17393199651264166
+ T2 p= 0.899769450460452
+ 299 walkers: [((2009, 'fielp001'), 'Prince Fielder', 'SLN200910040'), ((2011, 'fielp001'), 'Prince Fielder', 'MIL201109280'), ((2024, 'diazy004'), 'Yainer Diaz', 'CLE202409270')]
+ 299 subs: []
+T4 B [242, 217, 62, 19] A [74, 67, 14, 5] 0.13887716833732572 0.702967553683886
