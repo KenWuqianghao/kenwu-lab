@@ -1,0 +1,45 @@
+{
+  "slug": "j0159-periodic-quasar-forecast",
+  "title": "The published 741-day light-curve formula of the quasar SDSS J0159+0105 fails on held-out ZTF data; post hoc, a weaker persistent 741-day signal is not excluded",
+  "tier": "Public data",
+  "version": 1,
+  "date": "2026-11-28",
+  "summary": "A pre-registered test on 2448 ZTF points from 2018 to 2025 refutes the published 741-day sinusoid of the binary-black-hole candidate quasar SDSS J0159+0105 (fitted amplitude T = -0.59 against a predicted 1, p < 2e-4), but post hoc, with the period-fit error of the CRTS data included, a weaker persistent 741-day signal is not excluded, and ZTF gives no evidence for it either.",
+  "abstract": "Zheng et al. (2016) reported two periodic signals, at about 741 and 1500 days, in the 8.1-year Catalina (CRTS) V-band light curve of the radio-quiet quasar SDSS J0159+0105 (z = 0.217), and proposed a supermassive black hole binary. They gave the 741-day signal as a formula: V = 0.1 sin(2π(t − 53413.09)/741) + 16.59. Their data end in 2013. Before we downloaded any later data, we registered a test of this formula on public Zwicky Transient Facility (ZTF) g and r data from June 2018 to October 2025 (2448 points, 2.3 to 5.9 cycles after the last CRTS point). The fitted amplitude of the continued formula is T = -0.59, where the formula predicts T = 1. In 5000 simulations of the formula plus damped-random-walk red noise, none gives T <= -0.59 (p < 2e-4; power 0.82). By the registered rule, the formula at its published amplitude, period and phase is refuted. A part of this failure is not new: the 252 CRTS points that we read from the paper's own figure give a 741-day amplitude of 0.050 mag, half of the published 0.1 mag. The new information from ZTF is the sign of T. Post hoc, we also tested a persistent sinusoid whose period, amplitude and phase are refitted to the CRTS points in each simulation. The period of this refit has a scatter of 15 to 72 d, so its phase at the ZTF epochs is uncertain by 0.1 to 0.8 cycle. Such a signal gives a ZTF result as low as the observed one in 0.6% to 9.8% of simulations over eight noise models. So a persistent signal near 741 days is not refuted. Red noise alone gives the observed result in 20% of simulations, so the ZTF data give no evidence for the signal either. The 1500-day signal is not tested. This work has not yet been reviewed by experts. The computations and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+  "keywords": [
+    "quasars",
+    "periodic variability",
+    "supermassive black hole binaries",
+    "red noise",
+    "Catalina Real-time Transient Survey",
+    "Zwicky Transient Facility",
+    "forward test",
+    "pre-registration"
+  ],
+  "related": [
+    {
+      "doi": "10.3847/0004-637X/827/1/56",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1093/mnras/sty516",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1093/mnras/stv1726",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1093/mnras/stw1412",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1088/1538-3873/aaecbe",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1088/1538-3873/aae8ac",
+      "relation": "cites"
+    }
+  ]
+}
