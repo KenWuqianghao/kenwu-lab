@@ -1,0 +1,36 @@
+{
+  "slug": "j0252-periodic-quasar-forecast",
+  "title": "A forward test of the circumbinary-accretion model of the periodic quasar SDSS J025214.67-002813.7 on ZTF data from 2020 to 2025",
+  "tier": "Public data",
+  "version": 1,
+  "date": "2026-11-28",
+  "summary": "ZTF r-band data from 2020 to 2025 run in anti-phase with the 1466-day continuation of the best-fit bursty circumbinary model of the periodic quasar J0252 (T = -0.66 against a predicted 1), but after a calibration for the detection limit and excess noise the pre-registered threshold is not reached (p = 0.01 to 0.04), so the forecast is disfavoured, not refuted.",
+  "abstract": "Liao et al. (2021) reported a 4.4-yr periodicity in the optical light curves of the quasar SDSS J025214.67-002813.7 (J0252) and found that a bursty circumbinary-accretion model (mass ratio q = 0.11) fits them best. Their r-band fit has a period of 1466 d, and their data end in early 2019. We continued their plotted r-band model in phase at 1466 d and compared it with the public ZTF r-band data from July 2020 to October 2025 (97 detections, about 1.3 cycles). We wrote down the test before we compared the data with the model. The fitted amplitude of the continued curve is T = -0.66, where the forecast predicts T = 1 and no relation gives T = 0. So the data run in anti-phase with the continuation. The quasar is near the ZTF detection limit, and the first noise model did not include this. A post hoc addendum, written before its computation, added detection censoring and the damped-random-walk parameters that Liao et al. published. In this model, if the forecast is true, the probability of T <= -0.66 is 0.0005 at their best-fit noise parameters and at most 0.002 in their 68% region. Nearby ZTF objects show 1.7 to 2.1 times more scatter in T than the model gives. After this calibration the probability is 0.01 to 0.04, which is above the registered threshold of 0.01. So the data disfavour the continuation but do not refute it. The test has low power (about 0.3). Post hoc, continuations at 1604 and 1607 d, inside the period ranges of Liao et al., give a positive T. The result does not test the 4.4-yr periodicity as such. This work has not yet been reviewed by experts. The computations and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+  "keywords": [
+    "quasars",
+    "periodic variability",
+    "supermassive black hole binaries",
+    "circumbinary accretion",
+    "Zwicky Transient Facility",
+    "forward test",
+    "pre-registration"
+  ],
+  "related": [
+    {
+      "doi": "10.1093/mnras/staa3055",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1093/mnras/stac596",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1093/mnras/staa2957",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.3847/1538-4357/ac4af1",
+      "relation": "cites"
+    }
+  ]
+}

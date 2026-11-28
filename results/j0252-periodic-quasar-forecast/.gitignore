@@ -1,0 +1,6 @@
+work/
+.venv/
+__pycache__/
+paper/*.aux
+paper/*.log
+paper/*.out
