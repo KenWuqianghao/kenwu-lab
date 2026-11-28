@@ -1,0 +1,57 @@
+{
+ "b27907": {
+  "jd": 2415583.906944,
+  "objects": [
+   {
+    "num": "1627",
+    "name": "Ivar",
+    "class": "NEA>Amor",
+    "Mv": 12.0,
+    "d_arcsec": 23.3
+   },
+   {
+    "num": "7388",
+    "name": "Marcomorelli",
+    "class": "MB>Outer",
+    "Mv": 18.7,
+    "d_arcsec": 254.2
+   }
+  ]
+ },
+ "b28342": {
+  "jd": 2415621.789583,
+  "objects": [
+   {
+    "num": "1627",
+    "name": "Ivar",
+    "class": "NEA>Amor",
+    "Mv": 12.0,
+    "d_arcsec": 32.6
+   }
+  ]
+ },
+ "b28520": {
+  "jd": 2415639.828472,
+  "objects": [
+   {
+    "num": "1627",
+    "name": "Ivar",
+    "class": "NEA>Amor",
+    "Mv": 12.0,
+    "d_arcsec": 19.2
+   }
+  ]
+ },
+ "b28598": {
+  "jd": 2415649.725694,
+  "objects": [
+   {
+    "num": "1627",
+    "name": "Ivar",
+    "class": "NEA>Amor",
+    "Mv": 12.1,
+    "d_arcsec": 26.5
+   }
+  ]
+ }
+}

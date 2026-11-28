@@ -1,0 +1,110 @@
+{
+ "b27808": {
+  "site": {
+   "center": "800",
+   "offset_arcsec": 0.0,
+   "V": 11.446
+  },
+  "solution": "JPL#1545",
+  "geocentre": {
+   "center": "500",
+   "offset_arcsec": 19.39,
+   "V": 11.447
+  },
+  "other_site": {
+   "center": "802",
+   "offset_arcsec": 33.65,
+   "V": 11.446
+  }
+ },
+ "b27907": {
+  "site": {
+   "center": "800",
+   "offset_arcsec": 0.0,
+   "V": 11.389
+  },
+  "solution": "JPL#1545",
+  "geocentre": {
+   "center": "500",
+   "offset_arcsec": 13.8,
+   "V": 11.389
+  },
+  "other_site": {
+   "center": "802",
+   "offset_arcsec": 34.32,
+   "V": 11.389
+  }
+ },
+ "b28342": {
+  "site": {
+   "center": "800",
+   "offset_arcsec": 0.0,
+   "V": 11.493
+  },
+  "solution": "JPL#1545",
+  "geocentre": {
+   "center": "500",
+   "offset_arcsec": 10.67,
+   "V": 11.494
+  },
+  "other_site": {
+   "center": "802",
+   "offset_arcsec": 27.61,
+   "V": 11.493
+  }
+ },
+ "b28520": {
+  "site": {
+   "center": "800",
+   "offset_arcsec": 0.0,
+   "V": 11.649
+  },
+  "solution": "JPL#1545",
+  "geocentre": {
+   "center": "500",
+   "offset_arcsec": 5.48,
+   "V": 11.649
+  },
+  "other_site": {
+   "center": "802",
+   "offset_arcsec": 22.92,
+   "V": 11.649
+  }
+ },
+ "b28598": {
+  "site": {
+   "center": "800",
+   "offset_arcsec": 0.0,
+   "V": 11.814
+  },
+  "solution": "JPL#1545",
+  "geocentre": {
+   "center": "500",
+   "offset_arcsec": 5.16,
+   "V": 11.815
+  },
+  "other_site": {
+   "center": "802",
+   "offset_arcsec": 20.39,
+   "V": 11.815
+  }
+ },
+ "ac27730": {
+  "site": {
+   "center": "802",
+   "offset_arcsec": 0.0,
+   "V": 11.127
+  },
+  "solution": "JPL#1545",
+  "geocentre": {
+   "center": "500",
+   "offset_arcsec": 28.56,
+   "V": 11.127
+  },
+  "other_site": {
+   "center": "800",
+   "offset_arcsec": 25.14,
+   "V": 11.127
+  }
+ }
+}
