@@ -1,0 +1,44 @@
+{
+  "slug": "ivar-1901-harvard-plates",
+  "title": "Candidate images of the near-Earth asteroid (1627) Ivar on Harvard plates of 1901, 28 years before its discovery",
+  "tier": "Public data",
+  "version": 1,
+  "date": "2026-11-28",
+  "summary": "A pre-registered search of public Harvard plate scans finds candidate images of the near-Earth asteroid (1627) Ivar on all four measurable Arequipa plates of 1901 Jul 18 to Sep 22, 28 years before its 1929 discovery.",
+  "abstract": "The earliest observation of the near-Earth asteroid (1627) Ivar in the JPL Small-Body Database and in the Minor Planet Center observation list is its discovery on 1929 Sep 25. We searched public scans of Harvard plates of the bright apparitions of 1901, 1906 and 1929 for it with a test that we registered in advance: the plate rule, the predicted positions, the statistic and the decision rule were committed before any image was downloaded. The rule selected six plates. One plate does not cover the position, and no 1906 plate met the rule. All four measurable plates of 1901, taken at Arequipa from 1901 Jul 18 to 1901 Sep 22, pass the per-plate threshold. The probability of four passes under the per-plate null rates, which come from 300 random regions on each plate, is about 1e-6 (1.2e-6; 1.8e-5 with the upper 95% limit of each rate), below the registered threshold of 1e-3. The one plate of 1929, 13 days before the discovery, fails. Plates of other dates show no source at the three positions where such plates exist. A measurement made after the decision puts the source within about 4\" of the JPL Horizons position on three plates. On the fourth plate, the earliest, the source is a 162\" trail along the predicted direction of motion. That plate alone is weak in the registered test, and it has no control plate. We report the four images as candidates. Nobody has examined the glass plates, and no position has been reported to the Minor Planet Center. If confirmed, the images extend the observed arc of Ivar by 28.2 years. This work has not yet been reviewed by experts. The computations, the code and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+  "keywords": [
+    "(1627) Ivar",
+    "precovery",
+    "near-Earth asteroids",
+    "archival photographic plates",
+    "DASCH",
+    "pre-registration",
+    "Harvard College Observatory"
+  ],
+  "related": [
+    {
+      "doi": "10.5281/zenodo.24600765",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.5281/zenodo.24523190",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.5281/zenodo.24387450",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.48550/arXiv.2611.02371",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1017/S1743921312000166",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.3847/1538-4357/aae386",
+      "relation": "cites"
+    }
+  ]
+}

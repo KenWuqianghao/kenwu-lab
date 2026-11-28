@@ -1,0 +1,8 @@
+d391f3b author 2026-11-28 01:03:02 +0100 committer 2026-11-28 01:03:02 +0100 Ivar precovery: prior art, screening and coverage scripts
+46da2c1 author 2026-11-28 01:04:15 +0100 committer 2026-11-28 01:04:15 +0100 PROTOCOL.md: pre-registered Ivar precovery test (before any image)
+7c3db31 author 2026-11-28 01:04:21 +0100 committer 2026-11-28 01:04:21 +0100 measure.py: skip plates with no cutout (not covered), as PROTOCOL.md says
+3e78161 author 2026-11-28 01:12:01 +0100 committer 2026-11-28 01:12:01 +0100 Fixed plate list (data/coverage.json) and predictions (data/predictions.json), before any image
+b7b4d0b author 2026-11-28 01:13:43 +0100 committer 2026-11-28 01:13:43 +0100 Pre-registered run: Ivar detected on 4 of 4 measurable 1901 Arequipa plates
+db5c37d author 2026-11-28 01:17:42 +0100 committer 2026-11-28 01:17:42 +0100 Controls, rerun check, expected values
+3c804ad author 2026-11-28 01:29:05 +0100 committer 2026-11-28 01:29:05 +0100 Ivar 1901 precovery: RESULT, STATEMENT, LOG, outbox
+fe1b19c author 2026-11-28 01:48:03 +0100 committer 2026-11-28 01:48:03 +0100 Verify round 1: verified, eight write issues
