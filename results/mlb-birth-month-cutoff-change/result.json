@@ -1,0 +1,37 @@
+{
+  "slug": "mlb-birth-month-cutoff-change",
+  "title": "The August excess of US-born major leaguers is not seen in the cohorts born after the 2006 youth-baseball cutoff change: a pre-registered test",
+  "tier": "Public data",
+  "version": 1,
+  "date": "2026-11-28",
+  "summary": "Among US-born major leaguers who debuted before 25, the Aug-Oct over May-Jul birth ratio falls from 1.46 (born 1976-92, July 31 youth cutoff) to 1.00 (born 1996-2001, April 30 cutoff; OR 1.46, one-sided Fisher p = 0.0079, pre-registered), but the fall starts with players born from 1992 and is not significant with a debut limit of 24.",
+  "abstract": "G. Spira (Slate, 2008) counted 503 August and 313 July births among US-born major leaguers and attributed the excess to the July 31 age cutoff of US youth baseball. Little League moved the cutoff to April 30 from the 2006 season. We pre-registered a test of whether the ratio of August–October to May–July births changed between US-born players born from August 1976 to July 1992 (July 31 rule at league ages 9 to 12) and those born from May 1996 to April 2001 (April 30 rule at those ages). The data are the MLB Stats API player lists for the seasons 1985–2026. A player counts only if he debuted before age 25, so that every birth month has the same time to reach the major leagues. The ratio is 445/304 = 1.46 in the earlier cohort and 112/112 = 1.00 (95% interval 0.77 to 1.30) in the later cohort. The odds ratio is 1.46 (95% CI 1.08 to 1.98), one-sided Fisher p = 0.0079. A placebo split of the earlier cohort gives p = 0.74. By the pre-registered rule, the result supports a change. Spira's predicted May peak is not seen. Exploratory analyses limit the result. The fall starts about three birth years before the later cohort, with players who played most or all of league ages 9 to 12 under the old rule, so the data cannot place the effect at those ages. With a debut limit of 24 instead of 25, the change is not significant (p = 0.29). Players born outside the USA show no excess and no change, and US birth seasonality predicts an odds ratio of 1.002. The result is an association across birth cohorts. This work has not yet been reviewed by experts. The computations, the code and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+  "keywords": [
+    "relative age effect",
+    "Major League Baseball",
+    "birth month",
+    "Little League",
+    "age cutoff",
+    "natural experiment",
+    "pre-registration",
+    "placebo test"
+  ],
+  "related": [
+    {
+      "doi": "10.1123/ssj.8.2.146",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1080/19485565.2002.9989098",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.7352/IJSP.2018.49.448",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.1519/JSC.0000000000003951",
+      "relation": "cites"
+    }
+  ]
+}
