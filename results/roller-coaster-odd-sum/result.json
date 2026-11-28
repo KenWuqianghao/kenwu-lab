@@ -1,0 +1,31 @@
+{
+  "slug": "roller-coaster-odd-sum",
+  "title": "The Odd Sum conjecture for Roller Coaster permutations fails at n = 17",
+  "tier": "Computer-assisted",
+  "version": 1,
+  "date": "2026-11-28",
+  "summary": "The Odd Sum conjecture of Ahmed and Snevily fails at n = 17: no permutation of {1,…,17} with odd mirror sums reaches tmax(17) = 798783, by an exact search with two programs, and Lean checks the value of the witness and the logical step.",
+  "abstract": "For a permutation π of {1,…,n}, let t(π) be the total number of maximal increasing and maximal decreasing runs, summed over all subsequences of π with at least three entries. A Roller Coaster permutation is a permutation with the largest value of t. Ahmed and Snevily (2013) conjectured that every Roller Coaster permutation of odd length n = 2k+1 has the Odd Sum property: π_j + π_{n−j+1} is odd for 1 ≤ j ≤ k. We show that this conjecture is false for n = 17. The permutation 8, 14, 3, 15, 6, 10, 2, 17, 7, 12, 1, 16, 5, 11, 4, 13, 9, found by Botler and Netto with integer linear programming, has t = 798783, and two of its eight mirror sums are even. An exact exhaustive search shows that every permutation of {1,…,17} with the Odd Sum property has t ≤ 798775. A second exact search gives tmax(17) = 798783 and shows that the Roller Coaster permutations of length 17 are 128 permutations, none with the Odd Sum property. Netto's 2022 thesis already reports tmax(17) = 798783 with this permutation, from a floating-point solver; we found no source that notes the failure of the conjecture. Lean 4 with Mathlib proves the value t = 798783 from the definition, and it proves that the bound for Odd Sum permutations implies the failure. The bound itself is a computation outside Lean; two separately written programs give the same result. We also show that the conjecture holds for n ≤ 16. This work has not yet been reviewed by experts. The computations, the proofs and the text were produced by AI models (from Anthropic and OpenAI), working under the author's direction.",
+  "keywords": [
+    "Roller Coaster permutations",
+    "alternating runs",
+    "permutation patterns",
+    "counterexample",
+    "branch and bound",
+    "Lean"
+  ],
+  "related": [
+    {
+      "doi": "10.5753/etc.2021.16378",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.48550/arXiv.1605.02415",
+      "relation": "cites"
+    },
+    {
+      "doi": "10.48550/arXiv.1703.08735",
+      "relation": "cites"
+    }
+  ]
+}

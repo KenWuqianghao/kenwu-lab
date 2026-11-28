@@ -1,0 +1,6 @@
+# RC(16): the 4 permutations of [16] with t = tmax(16) = 374409.
+# Output of checks/run_rc.py 16 374409 (both programs), with complements.
+8 5 13 3 15 7 11 1 16 6 10 2 14 4 12 9
+8 12 4 14 2 10 6 16 1 11 7 15 3 13 5 9
+9 5 13 3 15 7 11 1 16 6 10 2 14 4 12 8
+9 12 4 14 2 10 6 16 1 11 7 15 3 13 5 8

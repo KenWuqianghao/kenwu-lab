@@ -1,0 +1,40 @@
+t = 798783
+pair sums [(1, 17), (2, 27), (3, 7), (4, 26), (5, 11), (6, 26), (7, 3), (8, 29)]
+identity = definition on 100 random permutations, n = 4..8
+n=5 mode=0 T=37: brute 6 program 6 SAME
+n=5 mode=0 T=32: brute 46 program 46 SAME
+n=5 mode=0 T=-13: brute 72 program 72 SAME
+n=5 mode=0 T=35: brute 14 program 14 SAME
+n=5 mode=1 T=37: brute 6 program 6 SAME
+n=5 mode=1 T=32: brute 20 program 20 SAME
+n=5 mode=1 T=-13: brute 28 program 28 SAME
+n=5 mode=1 T=35: brute 12 program 12 SAME
+n=6 mode=0 T=106: brute 2 program 2 SAME
+n=6 mode=0 T=101: brute 21 program 21 SAME
+n=6 mode=0 T=56: brute 359 program 359 SAME
+n=6 mode=0 T=102: brute 13 program 13 SAME
+n=7 mode=0 T=270: brute 12 program 12 SAME
+n=7 mode=0 T=265: brute 48 program 48 SAME
+n=7 mode=0 T=220: brute 2207 program 2207 SAME
+n=7 mode=0 T=261: brute 174 program 174 SAME
+n=7 mode=1 T=270: brute 12 program 12 SAME
+n=7 mode=1 T=265: brute 24 program 24 SAME
+n=7 mode=1 T=220: brute 532 program 532 SAME
+n=7 mode=1 T=261: brute 60 program 60 SAME
+n=8 mode=0 T=653: brute 2 program 2 SAME
+n=8 mode=0 T=648: brute 51 program 51 SAME
+n=8 mode=0 T=603: brute 5049 program 5049 SAME
+n=8 mode=0 T=633: brute 639 program 639 SAME
+n=9 mode=0 T=1523: brute 24 program 24 SAME
+n=9 mode=0 T=1518: brute 84 program 84 SAME
+n=9 mode=0 T=1473: brute 6053 program 6053 SAME
+n=9 mode=0 T=1477: brute 4724 program 4724 SAME
+n=9 mode=1 T=1523: brute 24 program 24 SAME
+n=9 mode=1 T=1518: brute 48 program 48 SAME
+n=9 mode=1 T=1473: brute 1204 program 1204 SAME
+n=9 mode=1 T=1477: brute 928 program 928 SAME
+n=10 mode=0 T=3480: brute 2 program 2 SAME
+n=10 mode=0 T=3475: brute 28 program 28 SAME
+n=10 mode=0 T=3430: brute 1771 program 1771 SAME
+n=10 mode=0 T=3375: brute 19912 program 19912 SAME
+ALL SAME
